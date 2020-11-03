@@ -6,7 +6,8 @@ use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
 use MediaWikiIntegrationTestCase;
 use Psr\Log\LoggerInterface;
@@ -52,47 +53,57 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Basic create-read-update-delete tests using CRUD.
+	 * Create-Read-Update-Delete tests using CRUD.
 	 * Ensures that serialization and deserialization match.
 	 */
 	public function testCRUD() {
-		$instance = $this->crud->instanceFactory();
-		$this->setInstance( $instance );
+		// create initial
 
+		$instance = $this->crud->instanceFactory();
+		$instance->accept( new PersistentCompleteOneBuilder() );
 		$this->assertNull( $instance->getIdentity() );
+
+		// initial instance
+
 		$this->crud->create( $instance );
 		$this->assertNotNull( $instance->getIdentity() );
 
 		$readInstance = $this->crud->read( $instance->getIdentity() );
 		$this->logger->debug( 'Instance @ CRUD read#1 is ' . $readInstance );
-		$this->assertSame( $instance->getIdentity(), $readInstance->getIdentity() );
 		$this->assertThat( $instance,
 			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
-		$this->modifyInstance( $readInstance );
+		// update instance fields
+
+		$readInstance->accept( new PersistentCompleteTwoBuilder() );
 		$this->crud->update( $readInstance );
 
 		$updatedInstance = $this->crud->read( $instance->getIdentity() );
 		$this->logger->debug( 'Instance @ CRUD read#2 is ' . $updatedInstance );
-		$this->assertSame( $instance->getIdentity(), $updatedInstance->getIdentity() );
 		$this->assertThat( $readInstance,
 			$updatedInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
+		// delete instance
+
 		$this->crud->delete( $instance->getIdentity() );
 		$deletedInstance = $this->crud->read( $instance->getIdentity() );
-		$this->logger->debug( 'Instance @ CRUD read#3 is ' . $deletedInstance );
+		$this->logger->debug( 'Instance @ CRUD read#4 is ' . $deletedInstance );
 		$this->assertNull( $deletedInstance );
 	}
 
 	/**
-	 * Basic create-load-update-delete tests using CLUD.
+	 * Create-Load-Update-Delete tests using CLUD.
 	 * Ensures that serialization and deserialization match.
 	 */
 	public function testCLUD() {
-		$instance = $this->crud->instanceFactory();
-		$this->setInstance( $instance );
+		// create instance
 
+		$instance = $this->crud->instanceFactory();
+		$instance->accept( new PersistentCompleteOneBuilder() );
 		$this->assertNull( $instance->getIdentity() );
+
+		// initial instance
+
 		$this->clud->create( $instance );
 		$this->assertNotNull( $instance->getIdentity() );
 
@@ -104,7 +115,9 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$this->assertThat( $instance,
 			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
-		$this->modifyInstance( $readInstance );
+		// update instance fields
+
+		$readInstance->accept( new PersistentCompleteTwoBuilder() );
 		$this->clud->update( $readInstance );
 
 		$updatedInstance = $this->crud->instanceFactory();
@@ -114,6 +127,8 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( $instance->getIdentity(), $updatedInstance->getIdentity() );
 		$this->assertThat( $readInstance,
 			$updatedInstance->accept( new PersistentEqualsConstraintFactory() ) );
+
+		// delete instance
 
 		$deletedInstance = $this->crud->instanceFactory();
 		$deletedInstance->setIdentity( $instance->getIdentity() );
@@ -128,26 +143,5 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 	abstract protected function crudFactory(
 		ILoadBalancer $dbLoadBalancer
 	): AbstractCRUD;
-
-	/**
-	 * Set valid values to all instance fields except the identity.
-	 * Nullable values should at this point be set non null.
-	 *
-	 * @param Persistent $instance
-	 * @return void
-	 */
-	abstract protected function setInstance(
-		&$instance
-	): void;
-
-	/**
-	 * Make valid changes to all instance fields except the identity.
-	 * Nullable values should at this point be set to null.
-	 *
-	 * @param Persistent &$instance
-	 */
-	abstract protected function modifyInstance(
-		&$instance
-	): void;
 
 }

@@ -4,7 +4,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingAnnotationStereotypeCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -20,26 +19,5 @@ class RecordingAnnotationStereotypeCRUDTest extends AbstractCRUDTest {
 		ILoadBalancer $dbLoadBalancer
 	): AbstractCRUD {
 		return new RecordingAnnotationStereotypeCRUD( $dbLoadBalancer );
-	}
-
-	/**
-	 * @param RecordingAnnotationStereotype $instance
-	 * @return void
-	 */
-	protected function setInstance(
-		&$instance
-	): void {
-		$instance->setDescription( 'A string' );
-		$instance->setValueClass( 'string' );
-	}
-
-	/**
-	 * @param RecordingAnnotationStereotype &$instance
-	 */
-	protected function modifyInstance(
-		&$instance
-	): void {
-		$instance->setDescription( 'An integer' );
-		$instance->setValueClass( 'int' );
 	}
 }
