@@ -4,7 +4,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
-use MWTimestamp;
 
 /**
  * Class RecordingCRUD
@@ -61,10 +60,10 @@ class RecordingCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setRecorded( new MWTimestamp( $row[ self::COLUMN_RECORDED ] ) );
-		$instance->setVoiceOf( strval( $row[ self::COLUMN_VOICE_OF ] ) );
-		$instance->setSpokenDialect( strval( $row[ self::COLUMN_SPOKEN_DIALECT ] ) );
-		$instance->setManuscriptPrompt( strval( $row[ self::COLUMN_MANUSCRIPT_PROMPT ] ) );
+		$instance->setRecorded( $this->deserializeTimestamp( $row, self::COLUMN_RECORDED ) );
+		$instance->setVoiceOf( $this->deserializeUuid( $row, self::COLUMN_VOICE_OF ) );
+		$instance->setSpokenDialect( $this->deserializeUuid( $row, self::COLUMN_SPOKEN_DIALECT ) );
+		$instance->setManuscriptPrompt( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT_PROMPT ) );
 	}
 
 	/**

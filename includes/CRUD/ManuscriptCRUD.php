@@ -4,7 +4,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Manuscript;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MWTimestamp;
 
 /**
  * Class ManuscriptCRUD
@@ -63,13 +62,11 @@ class ManuscriptCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setName( strval( $row[ self::COLUMN_NAME ] ) );
-		$instance->setCreated( new MWTimestamp( $row[ self::COLUMN_CREATED ] ) );
-		if ( $row[ self::COLUMN_DISABLED ] ) {
-			$instance->setDisabled( new MWTimestamp( $row[ self::COLUMN_DISABLED ] ) );
-		}
-		$instance->setLanguage( strval( $row[ self::COLUMN_LANGUAGE ] ) );
-		$instance->setDomain( strval( $row[ self::COLUMN_DOMAIN ] ) );
+		$instance->setName( $this->deserializeString( $row, self::COLUMN_NAME ) );
+		$instance->setCreated( $this->deserializeTimestamp( $row, self::COLUMN_CREATED ) );
+		$instance->setDisabled( $this->deserializeTimestamp( $row, self::COLUMN_DISABLED ) );
+		$instance->setLanguage( $this->deserializeUuid( $row, self::COLUMN_LANGUAGE ) );
+		$instance->setDomain( $this->deserializeUuid( $row, self::COLUMN_DOMAIN ) );
 	}
 
 	/**

@@ -5,6 +5,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWTimestamp;
 use Wikimedia\Rdbms\ILoadBalancer;
 
@@ -30,9 +31,9 @@ class RecordingCRUDTest extends AbstractCRUDTest {
 	protected function setInstance(
 		&$instance
 	): void {
-		$instance->setManuscriptPrompt( 'ManuscriptPrompt' );
-		$instance->setSpokenDialect( 'SpokenDialect' );
-		$instance->setVoiceOf( 'VoiceOf' );
+		$instance->setManuscriptPrompt( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
+		$instance->setSpokenDialect( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
+		$instance->setVoiceOf( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 		$instance->setRecorded( MWTimestamp::getInstance( 20200713145000 ) );
 	}
 
@@ -42,9 +43,9 @@ class RecordingCRUDTest extends AbstractCRUDTest {
 	protected function modifyInstance(
 		&$instance
 	): void {
-		$instance->setManuscriptPrompt( 'UpdatedManuscriptPrompt' );
-		$instance->setSpokenDialect( 'UpdatedSpokenDialect' );
-		$instance->setVoiceOf( 'UpdatedVoiceOf' );
+		$instance->setManuscriptPrompt( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
+		$instance->setSpokenDialect( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
+		$instance->setVoiceOf( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 		$instance->setRecorded( MWTimestamp::getInstance( 20200714145000 ) );
 	}
 }

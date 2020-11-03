@@ -6,6 +6,7 @@ use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\UserDialectCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\LanguageProficiencyLevel;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -30,8 +31,8 @@ class UserDialectCRUDTest extends AbstractCRUDTest {
 	protected function setInstance(
 		&$instance
 	): void {
-		$instance->setUser( 'User' );
-		$instance->setLanguage( 'Language' );
+		$instance->setUser( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
+		$instance->setLanguage( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 		$instance->setSpokenProficiencyLevel( LanguageProficiencyLevel::NATIVE );
 		$instance->setLocation( 'Location' );
 	}
@@ -42,8 +43,8 @@ class UserDialectCRUDTest extends AbstractCRUDTest {
 	protected function modifyInstance(
 		&$instance
 	): void {
-		$instance->setUser( 'UpdatedUser' );
-		$instance->setLanguage( 'UpdatedLanguage' );
+		$instance->setUser( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
+		$instance->setLanguage( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 		$instance->setSpokenProficiencyLevel( LanguageProficiencyLevel::BASIC );
 		$instance->setLocation( 'UpdatedLocation' );
 	}

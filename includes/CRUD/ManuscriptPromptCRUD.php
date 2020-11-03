@@ -58,9 +58,9 @@ class ManuscriptPromptCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setManuscript( strval( $row[ self::COLUMN_MANUSCRIPT ] ) );
-		$instance->setIndex( intval( $row[ self::COLUMN_INDEX ] ) );
-		$instance->setContent( strval( $row[ self::COLUMN_CONTENT ] ) );
+		$instance->setManuscript( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT ) );
+		$instance->setIndex( $this->deserializeInt( $row, self::COLUMN_INDEX ) );
+		$instance->setContent( $this->deserializeString( $row, self::COLUMN_CONTENT ) );
 	}
 
 	/**

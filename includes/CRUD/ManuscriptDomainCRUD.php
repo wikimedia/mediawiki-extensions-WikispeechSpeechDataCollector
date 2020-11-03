@@ -56,8 +56,8 @@ class ManuscriptDomainCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setName( strval( $row[ self::COLUMN_NAME ] ) );
-		$instance->setParent( strval( $row[ self::COLUMN_PARENT ] ) );
+		$instance->setName( $this->deserializeString( $row, self::COLUMN_NAME ) );
+		$instance->setParent( $this->deserializeUuid( $row, self::COLUMN_PARENT ) );
 	}
 
 	/**

@@ -56,8 +56,8 @@ class UserCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setMediaWikiUser( intval( $row[ self::COLUMN_MEDIAWIKI_USER ] ) );
-		$instance->setYearBorn( intval( $row[ self::COLUMN_YEAR_BORN ] ) );
+		$instance->setMediaWikiUser( $this->deserializeInt( $row, self::COLUMN_MEDIAWIKI_USER ) );
+		$instance->setYearBorn( $this->deserializeInt( $row, self::COLUMN_YEAR_BORN ) );
 	}
 
 	/**

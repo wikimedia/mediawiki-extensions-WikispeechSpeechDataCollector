@@ -5,6 +5,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\ManuscriptCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Manuscript;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWTimestamp;
 use Wikimedia\Rdbms\ILoadBalancer;
 
@@ -30,8 +31,8 @@ class ManuscriptCRUDTest extends AbstractCRUDTest {
 	protected function setInstance(
 		&$instance
 	): void {
-		$instance->setLanguage( 'Language' );
-		$instance->setDomain( 'Domain' );
+		$instance->setLanguage( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
+		$instance->setDomain( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 		$instance->setDisabled( null );
 		$instance->setName( 'Manuscript name' );
 		$instance->setCreated( MWTimestamp::getInstance( 20200711145000 ) );
@@ -43,8 +44,8 @@ class ManuscriptCRUDTest extends AbstractCRUDTest {
 	protected function modifyInstance(
 		&$instance
 	): void {
-		$instance->setLanguage( 'UpdatedLanguage' );
-		$instance->setDomain( 'UpdatedDomain' );
+		$instance->setLanguage( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
+		$instance->setDomain( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 		$instance->setDisabled( MWTimestamp::getInstance( 20200713145000 ) );
 		$instance->setName( 'Updated manuscript name' );
 		$instance->setCreated( MWTimestamp::getInstance( 20200712145000 ) );

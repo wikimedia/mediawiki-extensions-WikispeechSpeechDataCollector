@@ -62,11 +62,11 @@ class LanguageCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setNativeName( strval( $row[ self::COLUMN_NATIVE_NAME ] ) );
-		$instance->setIso639a1( strval( $row[ self::COLUMN_ISO639A1 ] ) );
-		$instance->setIso639a2b( strval( $row[ self::COLUMN_ISO639A2B ] ) );
-		$instance->setIso639a2t( strval( $row[ self::COLUMN_ISO639A2T ] ) );
-		$instance->setIso639a3( strval( $row[ self::COLUMN_ISO639A3 ] ) );
+		$instance->setNativeName( $this->deserializeString( $row, self::COLUMN_NATIVE_NAME ) );
+		$instance->setIso639a1( $this->deserializeString( $row, self::COLUMN_ISO639A1 ) );
+		$instance->setIso639a2b( $this->deserializeString( $row, self::COLUMN_ISO639A2B ) );
+		$instance->setIso639a2t( $this->deserializeString( $row, self::COLUMN_ISO639A2T ) );
+		$instance->setIso639a3( $this->deserializeString( $row, self::COLUMN_ISO639A3 ) );
 	}
 
 	/**

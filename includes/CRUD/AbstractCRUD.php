@@ -3,6 +3,8 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MWTimestamp;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -254,4 +256,52 @@ abstract class AbstractCRUD implements CRUD {
 		$instance,
 		array &$array
 	): void;
+
+	/**
+	 * @param array $row
+	 * @param string $columnName
+	 * @return string|null
+	 */
+	protected function deserializeString( array $row, string $columnName ): ?string {
+		if ( !array_key_exists( $columnName, $row ) ) {
+			return null;
+		}
+		return $row[$columnName] !== null ? strval( $row[$columnName] ) : null;
+	}
+
+	/**
+	 * @param array $row
+	 * @param string $columnName
+	 * @return int|null
+	 */
+	protected function deserializeInt( array $row, string $columnName ): ?int {
+		if ( !array_key_exists( $columnName, $row ) ) {
+			return null;
+		}
+		return $row[$columnName] !== null ? intval( $row[$columnName] ) : null;
+	}
+
+	/**
+	 * @param array $row
+	 * @param string $columnName
+	 * @return string|null
+	 */
+	protected function deserializeUuid( array $row, string $columnName ): ?string {
+		if ( !array_key_exists( $columnName, $row ) ) {
+			return null;
+		}
+		return $row[$columnName] !== null ? UUID::asBytes( strval( $row[$columnName] ) ) : null;
+	}
+
+	/**
+	 * @param array $row
+	 * @param string $columnName
+	 * @return MWTimestamp|null
+	 */
+	protected function deserializeTimestamp( array $row, string $columnName ): ?MWTimestamp {
+		if ( !array_key_exists( $columnName, $row ) ) {
+			return null;
+		}
+		return $row[$columnName] !== null ? new MWTimestamp( $row[$columnName] ) : null;
+	}
 }

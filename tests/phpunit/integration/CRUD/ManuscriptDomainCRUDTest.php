@@ -5,6 +5,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\ManuscriptDomainCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -30,7 +31,7 @@ class ManuscriptDomainCRUDTest extends AbstractCRUDTest {
 		&$instance
 	): void {
 		$instance->setName( 'Name' );
-		$instance->setParent( 'Parent' );
+		$instance->setParent( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 	}
 
 	/**
@@ -40,6 +41,6 @@ class ManuscriptDomainCRUDTest extends AbstractCRUDTest {
 		&$instance
 	): void {
 		$instance->setName( 'Updated name' );
-		$instance->setParent( 'UpdatedParent' );
+		$instance->setParent( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 	}
 }

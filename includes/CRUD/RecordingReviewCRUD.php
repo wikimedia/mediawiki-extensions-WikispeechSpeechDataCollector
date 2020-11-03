@@ -60,10 +60,10 @@ class RecordingReviewCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setCreated( new \MWTimestamp( $row[ self::COLUMN_CREATED ] ) );
-		$instance->setValue( intval( $row[ self::COLUMN_VALUE ] ) );
-		$instance->setReviewer( strval( $row[ self::COLUMN_REVIEWER ] ) );
-		$instance->setRecording( strval( $row[ self::COLUMN_RECORDING ] ) );
+		$instance->setCreated( $this->deserializeTimestamp( $row, self::COLUMN_CREATED ) );
+		$instance->setValue( $this->deserializeInt( $row, self::COLUMN_VALUE ) );
+		$instance->setReviewer( $this->deserializeUuid( $row, self::COLUMN_REVIEWER ) );
+		$instance->setRecording( $this->deserializeUuid( $row, self::COLUMN_RECORDING ) );
 	}
 
 	/**

@@ -58,9 +58,9 @@ class UserLanguageProficiencyLevelCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setUser( strval( $row[ self::COLUMN_USER ] ) );
-		$instance->setLanguage( strval( $row[ self::COLUMN_LANGUAGE ] ) );
-		$instance->setProficiencyLevel( intval( $row[ self::COLUMN_PROFICIENCY_LEVEL ] ) );
+		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
+		$instance->setLanguage( $this->deserializeUuid( $row, self::COLUMN_LANGUAGE ) );
+		$instance->setProficiencyLevel( $this->deserializeInt( $row, self::COLUMN_PROFICIENCY_LEVEL ) );
 	}
 
 	/**

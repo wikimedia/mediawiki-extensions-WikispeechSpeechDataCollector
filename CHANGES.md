@@ -31,6 +31,7 @@ Update the version in extension.json.
 
 202Y-MM-DD
 
+* [T267109](https://phabricator.wikimedia.org/T267109) Correctly deserialize null values in CRUDs.
 * [T267112](https://phabricator.wikimedia.org/T257109) Introduce UUID helper class.
 * [T267114](https://phabricator.wikimedia.org/T267114) Extract reusable Persistent IsSame constraints.
 * [T257109](https://phabricator.wikimedia.org/T257109) Create initial boilerplate extension.

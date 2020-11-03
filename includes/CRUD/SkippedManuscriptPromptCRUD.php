@@ -4,7 +4,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
-use MWTimestamp;
 
 /**
  * Class SkippedManuscriptPromptCRUD
@@ -59,9 +58,9 @@ class SkippedManuscriptPromptCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setManuscriptPrompt( strval( $row[ self::COLUMN_MANUSCRIPT_PROMPT ] ) );
-		$instance->setUser( strval( $row[ self::COLUMN_USER ] ) );
-		$instance->setSkipped( new MWTimestamp( $row[ self::COLUMN_SKIPPED ] ) );
+		$instance->setManuscriptPrompt( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT_PROMPT ) );
+		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
+		$instance->setSkipped( $this->deserializeTimestamp( $row, self::COLUMN_SKIPPED ) );
 	}
 
 	/**

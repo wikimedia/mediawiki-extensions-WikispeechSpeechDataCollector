@@ -62,12 +62,11 @@ class RecordingAnnotationCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setRecording( strval( $row[ self::COLUMN_RECORDING ] ) );
-		$instance->setStart( intval( $row[ self::COLUMN_START ] ) );
-		$instance->setEnd( intval( $row[ self::COLUMN_END ] ) );
-		$instance->setStereotype( strval( $row[ self::COLUMN_STEREOTYPE ] ) );
-		// @todo Implement select that joins in stereotype value class
-		$instance->setValue( strval( $row[ self::COLUMN_VALUE ] ) );
+		$instance->setRecording( $this->deserializeUuid( $row, self::COLUMN_RECORDING ) );
+		$instance->setStart( $this->deserializeInt( $row, self::COLUMN_START ) );
+		$instance->setEnd( $this->deserializeInt( $row, self::COLUMN_END ) );
+		$instance->setStereotype( $this->deserializeUuid( $row, self::COLUMN_STEREOTYPE ) );
+		$instance->setValue( $this->deserializeString( $row, self::COLUMN_VALUE ) );
 	}
 
 	/**

@@ -5,6 +5,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingAnnotationCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -29,10 +30,10 @@ class RecordingAnnotationCRUDTest extends AbstractCRUDTest {
 	protected function setInstance(
 		&$instance
 	): void {
-		$instance->setRecording( 'Recording' );
+		$instance->setRecording( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 		$instance->setStart( 1 );
 		$instance->setEnd( 2 );
-		$instance->setStereotype( 'Stereotype' );
+		$instance->setStereotype( UUID::asBytes( '5f48b564-f127-4b09-a7cc-a784bed2aa52' ) );
 		$instance->setValue( 'Value' );
 	}
 
@@ -42,10 +43,10 @@ class RecordingAnnotationCRUDTest extends AbstractCRUDTest {
 	protected function modifyInstance(
 		&$instance
 	): void {
-		$instance->setRecording( 'UpdatedRecording' );
+		$instance->setRecording( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 		$instance->setStart( 3 );
 		$instance->setEnd( 4 );
-		$instance->setStereotype( 'UpdatedStereotype' );
+		$instance->setStereotype( UUID::asBytes( '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ) );
 		$instance->setValue( 'Updated value' );
 	}
 }

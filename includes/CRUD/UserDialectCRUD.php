@@ -61,10 +61,11 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setUser( strval( $row[ self::COLUMN_USER ] ) );
-		$instance->setLanguage( strval( $row[ self::COLUMN_LANGUAGE ] ) );
-		$instance->setSpokenProficiencyLevel( intval( $row[ self::COLUMN_SPOKEN_PROFICIENCY_LEVEL ] ) );
-		$instance->setLocation( strval( $row[ self::COLUMN_LOCATION ] ) );
+		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
+		$instance->setLanguage( $this->deserializeUuid( $row, self::COLUMN_LANGUAGE ) );
+		$instance->setSpokenProficiencyLevel(
+			$this->deserializeInt( $row, self::COLUMN_SPOKEN_PROFICIENCY_LEVEL ) );
+		$instance->setLocation( $this->deserializeString( $row, self::COLUMN_LOCATION ) );
 	}
 
 	/**

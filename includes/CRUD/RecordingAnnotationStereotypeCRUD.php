@@ -56,8 +56,8 @@ class RecordingAnnotationStereotypeCRUD extends AbstractUuidCRUD {
 		&$instance,
 		array $row
 	): void {
-		$instance->setValueClass( strval( $row[ self::COLUMN_VALUE_CLASS ] ) );
-		$instance->setDescription( strval( $row[ self::COLUMN_DESCRIPTION ] ) );
+		$instance->setValueClass( $this->deserializeString( $row, self::COLUMN_VALUE_CLASS ) );
+		$instance->setDescription( $this->deserializeString( $row, self::COLUMN_DESCRIPTION ) );
 	}
 
 	/**
