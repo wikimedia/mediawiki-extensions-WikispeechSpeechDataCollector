@@ -23,6 +23,8 @@ then replace all @since 0.1.2 tags in the code to 0.2.0 using a new task.
 Update [mediawiki.org documentation](https://www.mediawiki.org/wiki/Extension:WikispeechSpeechDataCollector)
 the match the new release version.
 
+Update the version in extension.json.
+
 ## Versions
 
 ### 0.1.0-SNAPSHOT
