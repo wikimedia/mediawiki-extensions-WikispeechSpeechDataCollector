@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_recording(
     wssdcr_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcr_recorded varbinary(14) NOT NULL default '',
     wssdcr_voice_of varbinary(32) NOT NULL default '',
-    wssdcr_spoken_dialect varbinary(32) NOT NULL default '',
+    wssdcr_spoken_dialect varbinary(32),
     wssdcr_manuscript_prompt varbinary(32) NOT NULL default ''
 )/*$wgDBTableOptions*/;
 
