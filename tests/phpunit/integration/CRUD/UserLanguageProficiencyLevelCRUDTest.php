@@ -45,17 +45,4 @@ class UserLanguageProficiencyLevelCRUDTest extends AbstractCRUDTest {
 		$instance->setLanguage( 'UpdatedLanguage' );
 		$instance->setProficiencyLevel( LanguageProficiencyLevel::NEAR_NATIVE );
 	}
-
-	/**
-	 * @param UserLanguageProficiencyLevel $expected
-	 * @param UserLanguageProficiencyLevel $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getUser(), $actual->getUser() );
-		$this->assertSame( $expected->getLanguage(), $actual->getLanguage() );
-		$this->assertSame( $expected->getProficiencyLevel(), $actual->getProficiencyLevel() );
-	}
 }

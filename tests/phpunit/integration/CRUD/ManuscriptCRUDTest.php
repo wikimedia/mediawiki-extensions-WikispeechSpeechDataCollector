@@ -49,19 +49,4 @@ class ManuscriptCRUDTest extends AbstractCRUDTest {
 		$instance->setName( 'Updated manuscript name' );
 		$instance->setCreated( MWTimestamp::getInstance( 20200712145000 ) );
 	}
-
-	/**
-	 * @param Manuscript $expected
-	 * @param Manuscript $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getLanguage(), $actual->getLanguage() );
-		$this->assertSame( $expected->getDomain(), $actual->getDomain() );
-		$this->assertEquals( $expected->getDisabled(), $actual->getDisabled() );
-		$this->assertSame( $expected->getName(), $actual->getName() );
-		$this->assertEquals( $expected->getCreated(), $actual->getCreated() );
-	}
 }

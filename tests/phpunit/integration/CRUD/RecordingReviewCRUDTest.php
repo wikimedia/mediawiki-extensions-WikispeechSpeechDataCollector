@@ -48,18 +48,4 @@ class RecordingReviewCRUDTest extends AbstractCRUDTest {
 		$instance->setRecording( 'UpdatedRecording' );
 		$instance->setValue( RecordingReviewValue::THUMB_DOWN );
 	}
-
-	/**
-	 * @param RecordingReview $expected
-	 * @param RecordingReview $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertEquals( $expected->getCreated(), $actual->getCreated() );
-		$this->assertSame( $expected->getReviewer(), $actual->getReviewer() );
-		$this->assertSame( $expected->getRecording(), $actual->getRecording() );
-		$this->assertSame( $expected->getValue(), $actual->getValue() );
-	}
 }

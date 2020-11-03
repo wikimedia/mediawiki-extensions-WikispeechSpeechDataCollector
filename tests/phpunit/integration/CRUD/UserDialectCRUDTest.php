@@ -47,18 +47,4 @@ class UserDialectCRUDTest extends AbstractCRUDTest {
 		$instance->setSpokenProficiencyLevel( LanguageProficiencyLevel::BASIC );
 		$instance->setLocation( 'UpdatedLocation' );
 	}
-
-	/**
-	 * @param UserDialect $expected
-	 * @param UserDialect $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getUser(), $actual->getUser() );
-		$this->assertSame( $expected->getLanguage(), $actual->getLanguage() );
-		$this->assertSame( $expected->getSpokenProficiencyLevel(), $actual->getSpokenProficiencyLevel() );
-		$this->assertSame( $expected->getLocation(), $actual->getLocation() );
-	}
 }

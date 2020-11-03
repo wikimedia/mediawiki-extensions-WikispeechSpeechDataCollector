@@ -48,19 +48,4 @@ class LanguageCRUDTest extends AbstractCRUDTest {
 		$instance->setIso639a2t( 'e2t' );
 		$instance->setIso639a3( 'e3' );
 	}
-
-	/**
-	 * @param Language $expected
-	 * @param Language $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getNativeName(), $actual->getNativeName() );
-		$this->assertSame( $expected->getIso639a1(), $actual->getIso639a1() );
-		$this->assertSame( $expected->getIso639a2b(), $actual->getIso639a2b() );
-		$this->assertSame( $expected->getIso639a2t(), $actual->getIso639a2t() );
-		$this->assertSame( $expected->getIso639a3(), $actual->getIso639a3() );
-	}
 }

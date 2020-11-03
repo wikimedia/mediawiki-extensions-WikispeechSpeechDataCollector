@@ -45,17 +45,4 @@ class SkippedManuscriptPromptCRUDTest extends AbstractCRUDTest {
 		$instance->setUser( 'UpdatedUser' );
 		$instance->setManuscriptPrompt( 'UpdatedManuscriptPrompt' );
 	}
-
-	/**
-	 * @param SkippedManuscriptPrompt $expected
-	 * @param SkippedManuscriptPrompt $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertEquals( $expected->getSkipped(), $actual->getSkipped() );
-		$this->assertSame( $expected->getUser(), $actual->getUser() );
-		$this->assertSame( $expected->getManuscriptPrompt(), $actual->getManuscriptPrompt() );
-	}
 }

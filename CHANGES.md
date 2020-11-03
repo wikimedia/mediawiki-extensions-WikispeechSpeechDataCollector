@@ -28,4 +28,5 @@ the match the new release version.
 ### 0.1.0-SNAPSHOT
 
 202Y-MM-DD
+* [T267114](https://phabricator.wikimedia.org/T267114) Extract reusable Persistent IsSame constraints.
 * [T257109](https://phabricator.wikimedia.org/T257109) Create initial boilerplate extension.
