@@ -23,7 +23,7 @@ class UserDialectEqualsConstraint extends PersistentEqualsContraint {
 		$this->matchIsSame( 'language', $expected->getLanguage(), $actual->getLanguage() );
 		$this->matchIsSame( 'spokenProficiencyLevel',
 			$expected->getSpokenProficiencyLevel(), $actual->getSpokenProficiencyLevel() );
-		$this->matchIsSame( 'location', $expected->getLocation(), $actual->getLocation() );
+		$this->matchIsJsonSame( 'location', $expected->getLocation(), $actual->getLocation() );
 	}
 
 }
