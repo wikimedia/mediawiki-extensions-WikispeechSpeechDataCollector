@@ -2,9 +2,9 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
-use Exception;
 use ExternalStoreException;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 
 /**
  * Class AbstractUuidCRUD
@@ -14,15 +14,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  * Assigns a UUID as identity in local scope before insert to table.
  */
 abstract class AbstractUuidCRUD extends AbstractCRUD {
-
-	/**
-	 * @todo implement better and perhaps deterministic v4 uuids?
-	 * @return string
-	 * @throws Exception If it was not possible to gather enough entropy
-	 */
-	private function uuidFactory() {
-		return random_bytes( 16 );
-	}
 
 	/**
 	 * Given a persistent domain object instance with at least identity set,
@@ -37,7 +28,7 @@ abstract class AbstractUuidCRUD extends AbstractCRUD {
 		if ( $instance->getIdentity() ) {
 			throw new ExternalStoreException( 'Identity already set' );
 		}
-		$instance->setIdentity( $this->uuidFactory() );
+		$instance->setIdentity( UUID::v4BytesFactory() );
 		$rows = [];
 		$this->serializeFields( $instance, $rows );
 		$rows[ $this->getIdentityColumn() ] = $instance->getIdentity();
