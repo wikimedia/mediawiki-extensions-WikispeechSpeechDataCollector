@@ -42,16 +42,4 @@ class UserCRUDTest extends AbstractCRUDTest {
 		$instance->setYearBorn( 1914 );
 		$instance->setMediaWikiUser( 234 );
 	}
-
-	/**
-	 * @param User $expected
-	 * @param User $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getYearBorn(), $actual->getYearBorn() );
-		$this->assertSame( $expected->getMediaWikiUser(), $actual->getMediaWikiUser() );
-	}
 }

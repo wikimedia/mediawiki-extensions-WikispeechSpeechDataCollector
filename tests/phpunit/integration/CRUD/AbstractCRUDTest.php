@@ -7,6 +7,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
 use MediaWikiIntegrationTestCase;
 use Psr\Log\LoggerInterface;
 use Wikimedia\Rdbms\ILoadBalancer;
@@ -65,7 +66,8 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$readInstance = $this->crud->read( $instance->getIdentity() );
 		$this->logger->debug( 'Instance @ CRUD read#1 is ' . $readInstance );
 		$this->assertSame( $instance->getIdentity(), $readInstance->getIdentity() );
-		$this->assertPersistentEquals( $instance, $readInstance );
+		$this->assertThat( $instance,
+			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
 		$this->modifyInstance( $readInstance );
 		$this->crud->update( $readInstance );
@@ -73,7 +75,8 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$updatedInstance = $this->crud->read( $instance->getIdentity() );
 		$this->logger->debug( 'Instance @ CRUD read#2 is ' . $updatedInstance );
 		$this->assertSame( $instance->getIdentity(), $updatedInstance->getIdentity() );
-		$this->assertPersistentEquals( $readInstance, $updatedInstance );
+		$this->assertThat( $readInstance,
+			$updatedInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
 		$this->crud->delete( $instance->getIdentity() );
 		$deletedInstance = $this->crud->read( $instance->getIdentity() );
@@ -98,7 +101,8 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$this->assertTrue( $this->clud->load( $readInstance ) );
 		$this->logger->debug( 'Instance @ CLUD read#1 is ' . $readInstance );
 		$this->assertSame( $instance->getIdentity(), $readInstance->getIdentity() );
-		$this->assertPersistentEquals( $instance, $readInstance );
+		$this->assertThat( $instance,
+			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
 		$this->modifyInstance( $readInstance );
 		$this->clud->update( $readInstance );
@@ -108,7 +112,8 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$this->assertTrue( $this->clud->load( $updatedInstance ) );
 		$this->logger->debug( 'Instance @ CLUD read#2 is ' . $updatedInstance );
 		$this->assertSame( $instance->getIdentity(), $updatedInstance->getIdentity() );
-		$this->assertPersistentEquals( $readInstance, $updatedInstance );
+		$this->assertThat( $readInstance,
+			$updatedInstance->accept( new PersistentEqualsConstraintFactory() ) );
 
 		$deletedInstance = $this->crud->instanceFactory();
 		$deletedInstance->setIdentity( $instance->getIdentity() );
@@ -145,12 +150,4 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		&$instance
 	): void;
 
-	/**
-	 * @param Persistent $expected
-	 * @param Persistent $actual
-	 */
-	abstract protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void;
 }

@@ -47,18 +47,4 @@ class RecordingCRUDTest extends AbstractCRUDTest {
 		$instance->setVoiceOf( 'UpdatedVoiceOf' );
 		$instance->setRecorded( MWTimestamp::getInstance( 20200714145000 ) );
 	}
-
-	/**
-	 * @param Recording $expected
-	 * @param Recording $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getManuscriptPrompt(), $actual->getManuscriptPrompt() );
-		$this->assertSame( $expected->getSpokenDialect(), $actual->getSpokenDialect() );
-		$this->assertSame( $expected->getVoiceOf(), $actual->getVoiceOf() );
-		$this->assertEquals( $expected->getRecorded(), $actual->getRecorded() );
-	}
 }

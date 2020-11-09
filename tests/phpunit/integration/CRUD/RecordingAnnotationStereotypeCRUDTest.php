@@ -42,16 +42,4 @@ class RecordingAnnotationStereotypeCRUDTest extends AbstractCRUDTest {
 		$instance->setDescription( 'An integer' );
 		$instance->setValueClass( 'int' );
 	}
-
-	/**
-	 * @param RecordingAnnotationStereotype $expected
-	 * @param RecordingAnnotationStereotype $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getDescription(), $actual->getDescription() );
-		$this->assertSame( $expected->getValueClass(), $actual->getValueClass() );
-	}
 }

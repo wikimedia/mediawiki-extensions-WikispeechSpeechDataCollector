@@ -42,16 +42,4 @@ class ManuscriptDomainCRUDTest extends AbstractCRUDTest {
 		$instance->setName( 'Updated name' );
 		$instance->setParent( 'UpdatedParent' );
 	}
-
-	/**
-	 * @param ManuscriptDomain $expected
-	 * @param ManuscriptDomain $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getName(), $actual->getName() );
-		$this->assertSame( $expected->getParent(), $actual->getParent() );
-	}
 }

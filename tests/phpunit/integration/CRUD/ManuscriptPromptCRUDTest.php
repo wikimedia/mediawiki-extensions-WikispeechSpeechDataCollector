@@ -44,17 +44,4 @@ class ManuscriptPromptCRUDTest extends AbstractCRUDTest {
 		$instance->setIndex( 2 );
 		$instance->setContent( 'Updated content' );
 	}
-
-	/**
-	 * @param ManuscriptPrompt $expected
-	 * @param ManuscriptPrompt $actual
-	 */
-	protected function assertPersistentEquals(
-		$expected,
-		$actual
-	): void {
-		$this->assertSame( $expected->getManuscript(), $actual->getManuscript() );
-		$this->assertSame( $expected->getIndex(), $actual->getIndex() );
-		$this->assertSame( $expected->getContent(), $actual->getContent() );
-	}
 }
