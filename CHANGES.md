@@ -30,7 +30,7 @@ Update the version in extension.json.
 ### 0.1.0-SNAPSHOT
 
 202Y-MM-DD
-
+* [T269335](https://phabricator.wikimedia.org/T269335) Create special page for recording
 * [T266004](https://phabricator.wikimedia.org/T266004) Remove use of &$byref from PersistentVisitor.
 * [T267117](https://phabricator.wikimedia.org/T267117) Introduce Persistent serialization for API.
 * [T266004](https://phabricator.wikimedia.org/T266004) Remove use of &$byref from CRUD.

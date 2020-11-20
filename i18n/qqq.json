@@ -1,11 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Karl Wettin"
+			"Karl Wettin",
+			"Sebastian Berlin"
 		]
 	},
 	"wikispeech-sdc": "{{name}}\nThe name of the extension",
 	"wikispeech-sdc-desc": "{{desc|name=Wikispeech Speech Data Collector|url=https://www.mediawiki.org/wiki/Extension:WikispeechSpeechDataCollector}}",
 	"right-wikispeech-sdc-record": "{{doc-right|wikispeech-sdc-record}}",
-	"action-wikispeech-sdc-record": "{{doc-action|wikispeech-sdc-record}}"
+	"action-wikispeech-sdc-record": "{{doc-action|wikispeech-sdc-record}}",
+	"recordspeech": "Record speech special page titel.",
+	"wikispeech-sdc-record": "Label for button that starts recording on the Record special page.",
+	"wikispeech-sdc-play": "Label for button that plays recording on the Record special page.",
+	"wikispeech-sdc-save": "Label for button that saves recording on the Record special page.",
+	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page."
 }

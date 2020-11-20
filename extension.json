@@ -26,6 +26,23 @@
 	"TestAutoloadNamespaces": {
 		"MediaWiki\\WikispeechSpeechDataCollector\\Tests\\": "tests/phpunit/"
 	},
+	"SpecialPages": {
+		"RecordSpeech": "MediaWiki\\WikispeechSpeechDataCollector\\Specials\\SpecialRecordSpeech"
+	},
+	"ExtensionMessagesFiles": {
+		"WikispeechSpeechDataCollectorAlias": "WikispeechSpeechDataCollector.alias.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "WikispeechSpeechDataCollector/modules"
+	},
+	"ResourceModules": {
+		"ext.wikispeech-sdc.record-speech": {
+			"styles": [
+				"ext.wikispeech-sdc.record-speech.css"
+			]
+		}
+	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "db",
 		"ApiBeforeMain": "api"
