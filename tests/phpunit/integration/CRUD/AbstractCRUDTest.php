@@ -9,6 +9,7 @@ use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentSetNullableNull;
 use MediaWikiIntegrationTestCase;
 use Psr\Log\LoggerInterface;
 use Wikimedia\Rdbms\ILoadBalancer;
@@ -92,8 +93,27 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
+	 * Ensures that serialization and deserialization match
+	 * for all nullable fields when set to null.
+	 */
+	public function testCRUD_setNullableNull_deserializationMatches() {
+		$instance = $this->crud->instanceFactory();
+		$instance->accept( new PersistentCompleteTwoBuilder() );
+		$instance->accept( new PersistentSetNullableNull() );
+		$this->crud->create( $instance );
+		$readInstance = $this->crud->read( $instance->getIdentity() );
+		$this->assertThat( $instance,
+			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
+	}
+
+	/**
 	 * Create-Load-Update-Delete tests using CLUD.
 	 * Ensures that serialization and deserialization match.
+	 *
+	 * As the CLUD is just a generic facade against all CRUDs,
+	 * there is no need to execute further tests on CLUD
+	 * (e.g. testCLUD_setNullableNull_deserializationMatches)
+	 * to ensure specific features in regard to persistent instances.
 	 */
 	public function testCLUD() {
 		// create instance
