@@ -69,7 +69,7 @@ class RecordingReview implements Persistent {
 
 	/**
 	 * @see RecordingReview::$identity
-	 * @param string $identity
+	 * @param string|null $identity
 	 */
 	public function setIdentity( $identity ): void {
 		$this->identity = $identity;
