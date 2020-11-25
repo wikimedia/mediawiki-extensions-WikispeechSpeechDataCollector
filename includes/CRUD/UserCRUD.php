@@ -49,11 +49,11 @@ class UserCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param User &$instance
+	 * @param User $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setMediaWikiUser( $this->deserializeInt( $row, self::COLUMN_MEDIAWIKI_USER ) );
@@ -62,14 +62,15 @@ class UserCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param User $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_MEDIAWIKI_USER ] = $instance->getMediaWikiUser();
 		$array[ self::COLUMN_YEAR_BORN ] = $instance->getYearBorn();
+		return $array;
 	}
 
 	/**

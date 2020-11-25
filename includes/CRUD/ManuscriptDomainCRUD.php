@@ -49,11 +49,11 @@ class ManuscriptDomainCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param ManuscriptDomain &$instance
+	 * @param ManuscriptDomain $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setName( $this->deserializeString( $row, self::COLUMN_NAME ) );
@@ -62,14 +62,15 @@ class ManuscriptDomainCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param ManuscriptDomain $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_NAME ] = $instance->getName();
 		$array[ self::COLUMN_PARENT ] = $instance->getParent();
+		return $array;
 	}
 
 	/**

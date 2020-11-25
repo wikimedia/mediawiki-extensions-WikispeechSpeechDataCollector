@@ -53,11 +53,11 @@ class RecordingReviewCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param RecordingReview &$instance
+	 * @param RecordingReview $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setCreated( $this->deserializeTimestamp( $row, self::COLUMN_CREATED ) );
@@ -68,16 +68,17 @@ class RecordingReviewCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param RecordingReview $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_CREATED ] = $instance->getCreated()->getTimestamp( TS_MW );
 		$array[ self::COLUMN_VALUE ] = $instance->getValue();
 		$array[ self::COLUMN_REVIEWER ] = $instance->getReviewer();
 		$array[ self::COLUMN_RECORDING ] = $instance->getRecording();
+		return $array;
 	}
 
 	/**

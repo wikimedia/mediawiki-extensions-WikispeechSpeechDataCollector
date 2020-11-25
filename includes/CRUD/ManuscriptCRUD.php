@@ -55,11 +55,11 @@ class ManuscriptCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param Manuscript &$instance
+	 * @param Manuscript $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setName( $this->deserializeString( $row, self::COLUMN_NAME ) );
@@ -71,18 +71,19 @@ class ManuscriptCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param Manuscript $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_NAME ] = $instance->getName();
 		$array[ self::COLUMN_CREATED ] = $instance->getCreated()->getTimestamp( TS_MW );
 		$array[ self::COLUMN_DISABLED ] =
 			$instance->getDisabled() ? $instance->getDisabled()->getTimestamp( TS_MW ) : null;
 		$array[ self::COLUMN_LANGUAGE ] = $instance->getLanguage();
 		$array[ self::COLUMN_DOMAIN ] = $instance->getDomain();
+		return $array;
 	}
 
 	/**

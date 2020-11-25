@@ -32,9 +32,9 @@ class CLUD {
 
 	/**
 	 * Will set new identity using {@link Persistent::setIdentity()}.
-	 * @param Persistent &$instance Instance to be inserted to the persistent layer.
+	 * @param Persistent $instance Instance to be inserted to the persistent layer.
 	 */
-	public function create( Persistent &$instance ) {
+	public function create( Persistent $instance ) {
 		$instance
 			->accept( $this->crudFactory )
 			->create( $instance );
@@ -42,11 +42,11 @@ class CLUD {
 
 	/**
 	 * Expects identity is available via {@link Persistent::getIdentity()}.
-	 * @param Persistent &$instance Object instance to be loaded from persistent layer.
+	 * @param Persistent $instance Object instance to be loaded from persistent layer.
 	 *  Identity must be set.
 	 * @return bool true if found, false if not found.
 	 */
-	public function load( Persistent &$instance ): bool {
+	public function load( Persistent $instance ): bool {
 		return $instance
 			->accept( $this->crudFactory )
 			->load( $instance );

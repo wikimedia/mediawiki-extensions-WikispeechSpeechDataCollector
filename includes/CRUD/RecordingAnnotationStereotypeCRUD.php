@@ -49,11 +49,11 @@ class RecordingAnnotationStereotypeCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype &$instance
+	 * @param RecordingAnnotationStereotype $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setValueClass( $this->deserializeString( $row, self::COLUMN_VALUE_CLASS ) );
@@ -62,13 +62,14 @@ class RecordingAnnotationStereotypeCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param RecordingAnnotationStereotype $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_VALUE_CLASS ] = $instance->getValueClass();
 		$array[ self::COLUMN_DESCRIPTION ] = $instance->getDescription();
+		return $array;
 	}
 }

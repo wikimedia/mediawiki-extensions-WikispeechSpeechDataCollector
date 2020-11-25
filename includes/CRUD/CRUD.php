@@ -20,10 +20,10 @@ interface CRUD {
 	 * creates representation in database to correspond to the data set in the domain object.
 	 *
 	 * @since 0.1.0
-	 * @param Persistent &$instance Instance to be inserted to the persistent layer.
+	 * @param Persistent $instance Instance to be inserted to the persistent layer.
 	 */
 	public function create(
-		Persistent &$instance
+		Persistent $instance
 	): void;
 
 	/**
@@ -43,11 +43,11 @@ interface CRUD {
 	 * updates the domain object to correspond data retrieved from the database.
 	 *
 	 * @see read()
-	 * @param Persistent &$instance instance to be loaded. Identity must be set.
+	 * @param Persistent $instance Instance to be loaded. Identity must be set.
 	 * @return bool true if found, false if not found.
 	 */
 	public function load(
-		Persistent &$instance
+		Persistent $instance
 	): bool;
 
 	/**
