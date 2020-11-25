@@ -1,5 +1,15 @@
 # Wikispeech Speech Data Collector
 
+## Acronyms
+
+Wikispeech Speech Data Collector is a very long name.
+We thus use acronyms for this throughout the project.
+
+* Database tables: `wikispeech_sdc`
+* Database columns: `wssdc`
+* extension.json configuration keys: `WikispeechSdc`
+* Modules: `wikispeech-sdc`
+
 ## Namespaces
 
 * MediaWiki\WikispeechSpeechDataCollector\CRUD
