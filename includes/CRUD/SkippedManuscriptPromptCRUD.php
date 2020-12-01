@@ -51,11 +51,11 @@ class SkippedManuscriptPromptCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param SkippedManuscriptPrompt &$instance
+	 * @param SkippedManuscriptPrompt $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setManuscriptPrompt( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT_PROMPT ) );
@@ -65,15 +65,16 @@ class SkippedManuscriptPromptCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param SkippedManuscriptPrompt $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_MANUSCRIPT_PROMPT ] = $instance->getManuscriptPrompt();
 		$array[ self::COLUMN_USER ] = $instance->getUser();
 		$array[ self::COLUMN_SKIPPED ] = $instance->getSkipped()->getTimestamp( TS_MW );
+		return $array;
 	}
 
 	/**

@@ -18,28 +18,27 @@ abstract class AbstractIntCRUD extends AbstractCRUD {
 	 * Given a persistent domain object instance with at least identity set,
 	 * creates representation in database to correspond to the data set in the domain object.
 	 *
-	 * @param Persistent &$instance
+	 * @param Persistent $instance
 	 * @throws ExternalStoreException If instance identity is already set
 	 */
 	public function create(
-		Persistent &$instance
+		Persistent $instance
 	): void {
 		if ( $instance->getIdentity() ) {
 			throw new ExternalStoreException( 'Identity already set' );
 		}
-		$rows = [];
-		$this->serializeFields( $instance, $rows );
+		$rows = $this->serializeFields( $instance );
 		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
 		$dbw->insert( $this->getTable(), $rows );
 		$instance->setIdentity( $dbw->insertId() );
 	}
 
 	/**
-	 * @param Persistent &$instance
+	 * @param Persistent $instance
 	 * @param array $row
 	 */
 	protected function deserializeRowIdentity(
-		Persistent &$instance,
+		Persistent $instance,
 		$row
 	): void {
 		$instance->setIdentity( intval( $row[ $this->getIdentityColumn() ] ) );

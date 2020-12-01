@@ -51,11 +51,11 @@ class ManuscriptPromptCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param ManuscriptPrompt &$instance
+	 * @param ManuscriptPrompt $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setManuscript( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT ) );
@@ -65,15 +65,16 @@ class ManuscriptPromptCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param ManuscriptPrompt $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_MANUSCRIPT ] = $instance->getManuscript();
 		$array[ self::COLUMN_INDEX ] = $instance->getIndex();
 		$array[ self::COLUMN_CONTENT ] = $instance->getContent();
+		return $array;
 	}
 
 	/**

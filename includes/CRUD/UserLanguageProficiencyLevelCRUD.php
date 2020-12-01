@@ -51,11 +51,11 @@ class UserLanguageProficiencyLevelCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$instance
+	 * @param UserLanguageProficiencyLevel $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
@@ -65,15 +65,16 @@ class UserLanguageProficiencyLevelCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param UserLanguageProficiencyLevel $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_USER ] = $instance->getUser();
 		$array[ self::COLUMN_LANGUAGE ] = $instance->getLanguage();
 		$array[ self::COLUMN_PROFICIENCY_LEVEL ] = $instance->getProficiencyLevel();
+		return $array;
 	}
 
 	/**

@@ -55,11 +55,11 @@ class LanguageCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param Language &$instance Instance
+	 * @param Language $instance Instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setNativeName( $this->deserializeString( $row, self::COLUMN_NATIVE_NAME ) );
@@ -71,17 +71,18 @@ class LanguageCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param Language $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_NATIVE_NAME ] = $instance->getNativeName();
 		$array[ self::COLUMN_ISO639A1 ] = $instance->getIso639a1();
 		$array[ self::COLUMN_ISO639A2B ] = $instance->getIso639a2b();
 		$array[ self::COLUMN_ISO639A2T ] = $instance->getIso639a2t();
 		$array[ self::COLUMN_ISO639A3 ] = $instance->getIso639a3();
+		return $array;
 	}
 
 	/**

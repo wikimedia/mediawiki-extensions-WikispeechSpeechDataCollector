@@ -54,11 +54,11 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param UserDialect &$instance
+	 * @param UserDialect $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
@@ -70,16 +70,17 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param UserDialect $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_USER ] = $instance->getUser();
 		$array[ self::COLUMN_LANGUAGE ] = $instance->getLanguage();
 		$array[ self::COLUMN_SPOKEN_PROFICIENCY_LEVEL ] = $instance->getSpokenProficiencyLevel();
 		$array[ self::COLUMN_LOCATION ] = $instance->getLocation();
+		return $array;
 	}
 
 	/**

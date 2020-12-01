@@ -31,6 +31,7 @@ Update the version in extension.json.
 
 202Y-MM-DD
 
+* [T266004](https://phabricator.wikimedia.org/T266004) Remove use of &$byref from CRUD.
 * [T267111](https://phabricator.wikimedia.org/T267111) Extract reusable test data providers from CRUD-tests.
 * [T267109](https://phabricator.wikimedia.org/T267109) Correctly deserialize null values in CRUDs.
 * [T267112](https://phabricator.wikimedia.org/T257109) Introduce UUID helper class.

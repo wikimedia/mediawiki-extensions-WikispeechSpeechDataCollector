@@ -114,11 +114,11 @@ abstract class AbstractCRUD implements CRUD {
 	 * updates the domain object to correspond data retrieved from the database.
 	 *
 	 * @see read()
-	 * @param Persistent &$instance instance to be loaded. Identity must be set.
+	 * @param Persistent $instance Instance to be loaded. Identity must be set.
 	 * @return bool true if found, false if not found.
 	 */
 	public function load(
-		Persistent &$instance
+		Persistent $instance
 	): bool {
 		return $this->loadByConditions( [
 			$this->getIdentityColumn() => $instance->getIdentity()
@@ -134,8 +134,7 @@ abstract class AbstractCRUD implements CRUD {
 	public function update(
 		Persistent $instance
 	): void {
-		$set = [];
-		$this->serializeFields( $instance, $set );
+		$set = $this->serializeFields( $instance );
 		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
 		$dbw->update( $this->getTable(), $set, [
 			$this->getIdentityColumn() => $instance->getIdentity()
@@ -174,12 +173,12 @@ abstract class AbstractCRUD implements CRUD {
 	 * Picks up a single instance. Loads to existing object instance.
 	 *
 	 * @param array $conditions See {@link \IDatabase::select} conditions.
-	 * @param Persistent &$instance Instance to be populated with data.
+	 * @param Persistent $instance Instance to be populated with data.
 	 * @return bool true if found, false if not found.
 	 */
 	public function loadByConditions(
 		array $conditions,
-		Persistent &$instance
+		Persistent $instance
 	): bool {
 		$dbr = $this->dbLoadBalancer->getConnectionRef( DB_REPLICA );
 		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
@@ -226,20 +225,20 @@ abstract class AbstractCRUD implements CRUD {
 	/**
 	 * Reads all class fields except the identity field from the row.
 	 *
-	 * @param mixed &$instance An instance of the corresponding underlying Persistent subclass.
+	 * @param mixed $instance An instance of the corresponding underlying Persistent subclass.
 	 * @param array $row
 	 */
 	abstract protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void;
 
 	/**
-	 * @param Persistent &$instance
+	 * @param Persistent $instance
 	 * @param array $row
 	 */
 	abstract protected function deserializeRowIdentity(
-		Persistent &$instance,
+		Persistent $instance,
 		$row
 	): void;
 
@@ -250,12 +249,11 @@ abstract class AbstractCRUD implements CRUD {
 	 * Used to execute create- and update statements.
 	 *
 	 * @param mixed $instance An instance of the corresponding underlying Persistent subclass.
-	 * @param array &$array
+	 * @return array
 	 */
 	abstract protected function serializeFields(
-		$instance,
-		array &$array
-	): void;
+		$instance
+	): array;
 
 	/**
 	 * @param array $row

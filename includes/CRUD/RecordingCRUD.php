@@ -53,11 +53,11 @@ class RecordingCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param Recording &$instance
+	 * @param Recording $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
-		&$instance,
+		$instance,
 		array $row
 	): void {
 		$instance->setRecorded( $this->deserializeTimestamp( $row, self::COLUMN_RECORDED ) );
@@ -68,16 +68,17 @@ class RecordingCRUD extends AbstractUuidCRUD {
 
 	/**
 	 * @param Recording $instance
-	 * @param array &$array
+	 * @return array
 	 */
 	protected function serializeFields(
-		$instance,
-		array &$array
-	): void {
+		$instance
+	): array {
+		$array = [];
 		$array[ self::COLUMN_RECORDED ] = $instance->getRecorded()->getTimestamp( TS_MW );
 		$array[ self::COLUMN_VOICE_OF ] = $instance->getVoiceOf();
 		$array[ self::COLUMN_SPOKEN_DIALECT ] = $instance->getSpokenDialect();
 		$array[ self::COLUMN_MANUSCRIPT_PROMPT ] = $instance->getManuscriptPrompt();
+		return $array;
 	}
 
 	/**
