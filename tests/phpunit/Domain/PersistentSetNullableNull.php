@@ -25,11 +25,11 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 class PersistentSetNullableNull implements PersistentVisitor {
 
 	/**
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return null
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	) {
 		$language->setIso639a1( null );
 		$language->setIso639a2b( null );
@@ -39,11 +39,11 @@ class PersistentSetNullableNull implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return null
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	) {
 		$manuscript->setDomain( null );
 		$manuscript->setDisabled( null );
@@ -51,84 +51,84 @@ class PersistentSetNullableNull implements PersistentVisitor {
 	}
 
 	/**
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return null
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	) {
 		$manuscriptDomain->setParent( null );
 		return null;
 	}
 
 	/**
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return null
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	) {
 		return null;
 	}
 
 	/**
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return null
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	) {
 		$recording->setSpokenDialect( null );
 		return null;
 	}
 
 	/**
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return null
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	) {
 		$recordingAnnotation->setValue( null );
 		return null;
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return null
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	) {
 		return null;
 	}
 
 	/**
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return null
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	) {
 		return null;
 	}
 
 	/**
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return null
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
 		return null;
 	}
 
 	/**
-	 * @param User &$user
+	 * @param User $user
 	 * @return null
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	) {
 		$user->setMediaWikiUser( null );
 		$user->setYearBorn( null );
@@ -136,21 +136,21 @@ class PersistentSetNullableNull implements PersistentVisitor {
 	}
 
 	/**
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return null
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	) {
 		return null;
 	}
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return null
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
 		return null;
 	}

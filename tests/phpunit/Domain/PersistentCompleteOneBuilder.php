@@ -34,11 +34,11 @@ use MWTimestamp;
 class PersistentCompleteOneBuilder implements PersistentVisitor {
 
 	/**
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return null
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	) {
 		$language->setNativeName( 'Svenska' );
 		$language->setIso639a1( 'sv' );
@@ -49,11 +49,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return null
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	) {
 		$manuscript->setLanguage( UUID::v4BytesFactory() );
 		$manuscript->setDomain( UUID::v4BytesFactory() );
@@ -64,11 +64,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return null
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	) {
 		$manuscriptDomain->setName( 'Name' );
 		$manuscriptDomain->setParent( UUID::v4BytesFactory() );
@@ -76,11 +76,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return null
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	) {
 		$manuscriptPrompt->setManuscript( UUID::v4BytesFactory() );
 		$manuscriptPrompt->setIndex( 1 );
@@ -89,11 +89,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return null
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	) {
 		$recording->setManuscriptPrompt( UUID::v4BytesFactory() );
 		$recording->setSpokenDialect( UUID::v4BytesFactory() );
@@ -103,11 +103,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return null
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	) {
 		$recordingAnnotation->setRecording( UUID::v4BytesFactory() );
 		$recordingAnnotation->setStart( 1 );
@@ -118,11 +118,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return null
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	) {
 		$recordingAnnotationStereotype->setDescription( 'A string' );
 		$recordingAnnotationStereotype->setValueClass( 'string' );
@@ -130,11 +130,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return null
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	) {
 		$recordingReview->setCreated( MWTimestamp::getInstance( 20200713145000 ) );
 		$recordingReview->setReviewer( UUID::v4BytesFactory() );
@@ -144,11 +144,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return null
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
 		$skippedManuscriptPrompt->setSkipped( MWTimestamp::getInstance( 20200713145000 ) );
 		$skippedManuscriptPrompt->setUser( UUID::v4BytesFactory() );
@@ -157,11 +157,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param User &$user
+	 * @param User $user
 	 * @return null
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	) {
 		$user->setYearBorn( 1911 );
 		$user->setMediaWikiUser( 123 );
@@ -169,11 +169,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return null
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	) {
 		$userDialect->setUser( UUID::v4BytesFactory() );
 		$userDialect->setLanguage( UUID::v4BytesFactory() );
@@ -185,11 +185,11 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return null
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
 		$languageProficiencyLevel->setUser( UUID::v4BytesFactory() );
 		$languageProficiencyLevel->setLanguage( UUID::v4BytesFactory() );

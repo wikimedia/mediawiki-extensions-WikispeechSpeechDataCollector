@@ -21,7 +21,7 @@ class RecordingAnnotationTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitRecordingAnnotation(
-				RecordingAnnotation &$recordingAnnotation
+				RecordingAnnotation $recordingAnnotation
 			): ?object {
 				return null;
 			}

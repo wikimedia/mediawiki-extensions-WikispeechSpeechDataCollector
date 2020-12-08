@@ -21,7 +21,7 @@ class UserTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitUser(
-				User &$user
+				User $user
 			): ?object {
 				return null;
 			}

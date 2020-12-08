@@ -21,7 +21,7 @@ class SkippedManuscriptPromptTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitSkippedManuscriptPrompt(
-				SkippedManuscriptPrompt &$skippedManuscriptPrompt
+				SkippedManuscriptPrompt $skippedManuscriptPrompt
 			): ?object {
 				return null;
 			}

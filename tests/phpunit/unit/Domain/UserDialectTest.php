@@ -20,7 +20,7 @@ class UserDialectTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitUserDialect(
-				UserDialect &$userDialect
+				UserDialect $userDialect
 			): ?object {
 				return null;
 			}

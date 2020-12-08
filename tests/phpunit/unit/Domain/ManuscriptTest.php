@@ -19,7 +19,7 @@ class ManuscriptTest extends AbstractPersistentTest {
 
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
-			public function visitManuscript( Manuscript &$manuscript ): ?object {
+			public function visitManuscript( Manuscript $manuscript ): ?object {
 				return null;
 			}
 		};

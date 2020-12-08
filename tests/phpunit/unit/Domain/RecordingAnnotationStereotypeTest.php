@@ -21,7 +21,7 @@ class RecordingAnnotationStereotypeTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitRecordingAnnotationStereotype(
-				RecordingAnnotationStereotype &$recordingAnnotationStereotype
+				RecordingAnnotationStereotype $recordingAnnotationStereotype
 			): ?object {
 				return null;
 			}

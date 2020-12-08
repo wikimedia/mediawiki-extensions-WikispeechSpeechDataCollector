@@ -20,7 +20,7 @@ class ManuscriptPromptTest extends AbstractPersistentTest {
 
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
-			public function visitManuscriptPrompt( ManuscriptPrompt &$manuscriptPrompt ): ?object {
+			public function visitManuscriptPrompt( ManuscriptPrompt $manuscriptPrompt ): ?object {
 				return null;
 			}
 		};

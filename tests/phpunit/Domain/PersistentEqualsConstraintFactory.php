@@ -38,132 +38,132 @@ class PersistentEqualsConstraintFactory implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return LanguageEqualsConstraint
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	): LanguageEqualsConstraint {
 		return new LanguageEqualsConstraint( $language );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return ManuscriptEqualsConstraint
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	): ManuscriptEqualsConstraint {
 		return new ManuscriptEqualsConstraint( $manuscript );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return ManuscriptDomainEqualsConstraint
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	): ManuscriptDomainEqualsConstraint {
 		return new ManuscriptDomainEqualsConstraint( $manuscriptDomain );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return ManuscriptPromptEqualsConstraint
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	): ManuscriptPromptEqualsConstraint {
 		return new ManuscriptPromptEqualsConstraint( $manuscriptPrompt );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return RecordingEqualsConstraint
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	): RecordingEqualsConstraint {
 		return new RecordingEqualsConstraint( $recording );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return RecordingAnnotationEqualsConstraint
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	): RecordingAnnotationEqualsConstraint {
 		return new RecordingAnnotationEqualsConstraint( $recordingAnnotation );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return RecordingAnnotationStereotypeEqualsConstraint
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	): RecordingAnnotationStereotypeEqualsConstraint {
 		return new RecordingAnnotationStereotypeEqualsConstraint( $recordingAnnotationStereotype );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return RecordingReviewEqualsConstraint
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	): RecordingReviewEqualsConstraint {
 		return new RecordingReviewEqualsConstraint( $recordingReview );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return SkippedManuscriptPromptEqualsConstraint
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): SkippedManuscriptPromptEqualsConstraint {
 		return new SkippedManuscriptPromptEqualsConstraint( $skippedManuscriptPrompt );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param User &$user
+	 * @param User $user
 	 * @return UserEqualsConstraint
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	): UserEqualsConstraint {
 		return new UserEqualsConstraint( $user );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return UserDialectEqualsConstraint
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	): UserDialectEqualsConstraint {
 		return new UserDialectEqualsConstraint( $userDialect );
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return UserLanguageProficiencyLevelEqualsConstraint
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): UserLanguageProficiencyLevelEqualsConstraint {
 		return new UserLanguageProficiencyLevelEqualsConstraint( $languageProficiencyLevel );
 	}
