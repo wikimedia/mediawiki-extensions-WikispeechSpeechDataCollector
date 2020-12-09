@@ -7,7 +7,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
 
 /**
- * Class UserTest
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect
  * @since 0.1.0
@@ -21,7 +20,7 @@ class UserDialectTest extends AbstractPersistentTest {
 		return new class extends PersistentVisitorAdapter {
 			public function visitUserDialect(
 				UserDialect $userDialect
-			): ?object {
+			) {
 				return null;
 			}
 		};

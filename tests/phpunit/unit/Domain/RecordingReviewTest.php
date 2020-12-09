@@ -7,7 +7,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 
 /**
- * Class RecordingReviewTest
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview
  * @since 0.1.0
@@ -22,7 +21,7 @@ class RecordingReviewTest extends AbstractPersistentTest {
 		return new class extends PersistentVisitorAdapter {
 			public function visitRecordingReview(
 				RecordingReview $recordingReview
-			): ?object {
+			) {
 				return null;
 			}
 		};

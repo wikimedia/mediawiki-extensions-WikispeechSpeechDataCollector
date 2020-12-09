@@ -7,7 +7,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
 
 /**
- * Class RecordingAnnotationTest
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation
  * @since 0.1.0
@@ -22,7 +21,7 @@ class RecordingAnnotationTest extends AbstractPersistentTest {
 		return new class extends PersistentVisitorAdapter {
 			public function visitRecordingAnnotation(
 				RecordingAnnotation $recordingAnnotation
-			): ?object {
+			) {
 				return null;
 			}
 		};
