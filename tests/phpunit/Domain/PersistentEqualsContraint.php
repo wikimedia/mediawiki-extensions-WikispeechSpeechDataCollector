@@ -173,6 +173,23 @@ abstract class PersistentEqualsContraint extends Constraint {
 	/**
 	 * @since 0.1.0
 	 * @param string $field
+	 * @param string|null $expected
+	 * @param string|null $actual
+	 */
+	protected function matchIsJsonSame(
+		string $field,
+		?string $expected,
+		?string $actual
+	) {
+		$matcher = new IsJsonSame( $expected );
+		if ( !$matcher->matches( $actual ) ) {
+			$this->failField( $field, $expected, $actual );
+		}
+	}
+
+	/**
+	 * @since 0.1.0
+	 * @param string $field
 	 * @param MWTimestamp|null $expected
 	 * @param MWTimestamp|null $actual
 	 */

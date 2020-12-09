@@ -2,9 +2,9 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain;
 
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
-use MediaWikiUnitTestCase;
 
 /**
  * Class UserTest
@@ -12,25 +12,19 @@ use MediaWikiUnitTestCase;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect
  * @since 0.1.0
  */
-class UserDialectTest extends MediaWikiUnitTestCase {
+class UserDialectTest extends AbstractPersistentTest {
+	protected function instanceFactory(): Persistent {
+		return new UserDialect();
+	}
 
-	/**
-	 * Asserts that the visitor accept function
-	 * invokes the correct function in the visitor implementation.
-	 */
-	public function testAcceptVisitor() {
-		// The abstract PersistentVisitorAdapter throws an exception on all invocations.
-		$visitor = new class extends PersistentVisitorAdapter {
+	protected function visitorTestFactory(): PersistentVisitorAdapter {
+		return new class extends PersistentVisitorAdapter {
 			public function visitUserDialect(
 				UserDialect &$userDialect
 			): ?object {
 				return null;
 			}
 		};
-		$instance = new UserDialect();
-		$instance->accept( $visitor );
-		// no exception should have been thrown
-		$this->assertTrue( true );
 	}
 
 }

@@ -36,6 +36,8 @@ class UserDialect implements Persistent {
 	private $spokenProficiencyLevel;
 
 	/**
+	 * GeoJSON as string value.
+	 *
 	 * Geometry that best fit the area that represents the spoken dialect.
 	 *
 	 * A German speaking Swedish with a broken accent
@@ -50,8 +52,7 @@ class UserDialect implements Persistent {
 	 * towards one way or the other, it might be best to pinpoint that area rather
 	 * than defining a geometry that spans the greater city area.
 	 *
-	 * @todo <p>How do we defined geometries here? GeoJson lib?
-	 * How do we enable GIS queries in the database?</p>
+	 * @todo How do we enable GIS queries in the database?
 	 * @var string|null
 	 */
 	private $location;
