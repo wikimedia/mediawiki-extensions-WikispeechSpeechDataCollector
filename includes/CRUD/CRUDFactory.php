@@ -2,6 +2,18 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\LanguageCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptDomainCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationStereotypeCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingReviewCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\SkippedManuscriptPromptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserDialectCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserLanguageProficiencyLevelCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Language;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Manuscript;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;

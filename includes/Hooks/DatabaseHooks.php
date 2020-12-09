@@ -10,18 +10,18 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Hooks;
 
 use DatabaseUpdater;
 use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\LanguageCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\ManuscriptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\ManuscriptDomainCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\ManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingAnnotationCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingAnnotationStereotypeCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\RecordingReviewCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\SkippedManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\UserCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\UserDialectCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\UserLanguageProficiencyLevelCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\LanguageCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptDomainCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationStereotypeCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingReviewCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\SkippedManuscriptPromptCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserDialectCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserLanguageProficiencyLevelCRUD;
 
 /**
  * Class WikispeechSpeechDataCollectorHooks

@@ -1,11 +1,11 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD\Rdbms;
 
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;

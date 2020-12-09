@@ -1,9 +1,9 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD\Rdbms;
 
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\UserDialectCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserDialectCRUD;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -12,7 +12,7 @@ use Wikimedia\Rdbms\ILoadBalancer;
  *
  * @since 0.1.0
  * @group Database
- * @covers \MediaWiki\WikispeechSpeechDataCollector\CRUD\UserDialectCRUD
+ * @covers \MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserDialectCRUD
  */
 class UserDialectCRUDTest extends AbstractCRUDTest {
 	protected function crudFactory(

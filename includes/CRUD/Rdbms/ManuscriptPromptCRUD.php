@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;

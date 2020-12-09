@@ -1,7 +1,8 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWTimestamp;
