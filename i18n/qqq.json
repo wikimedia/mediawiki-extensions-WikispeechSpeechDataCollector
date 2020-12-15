@@ -18,5 +18,13 @@
 	"right-wikispeech-sdc-speech-recording": "{{doc-right|wikispeech-sdc-speech-recording}}",
 	"action-wikispeech-sdc-speech-recording": "{{doc-action|wikispeech-sdc-speech-recording}}",
 	"right-wikispeech-sdc-speech-recording-talk": "{{doc-right|wikispeech-sdc-speech-recording-talk}}",
-	"action-wikispeech-sdc-speech-recording-talk": "{{doc-action|wikispeech-sdc-speech-recording-talk}}"
+	"action-wikispeech-sdc-speech-recording-talk": "{{doc-action|wikispeech-sdc-speech-recording-talk}}",
+	"apihelp-wikispeech-sdc-crud-summary": "{{doc-apihelp-summary|wikispeech-sdc}}",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "{{doc-apierror}}",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "{{doc-apierror}}",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "{{doc-apierror}}",
+	"apierror-wikispeech-sdc-crud-serialize-response": "{{doc-apierror}}",
+	"apihelp-wikispeech-sdc-crud-example-1": "{{doc-apihelp-example|wikispeech-sdc}}",
+	"apihelp-wikispeech-sdc-crud-example-2": "{{doc-apihelp-example|wikispeech-sdc}}",
+	"apihelp-wikispeech-sdc-crud-example-3": "{{doc-apihelp-example|wikispeech-sdc}}"
 }

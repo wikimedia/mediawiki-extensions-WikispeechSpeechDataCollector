@@ -8,6 +8,8 @@ use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUDContext;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUDFactory;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractRdbmsCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction\CRUDTransactionExecutor;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction\CRUDTransactionRequest;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
@@ -153,4 +155,61 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 		$clud->delete( $deletedInstance );
 		$this->assertFalse( $clud->load( $deletedInstance ) );
 	}
+
+	/**
+	 * @todo This is part of an internal development API. It should be removed before deployment.
+	 * @throws \MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction\CRUDTransactionException
+	 */
+	public function testCRUDTransactionExecutor() {
+		$executor = new CRUDTransactionExecutor( $this->getCRUDContext() );
+		$crud = $this->newCRUDInstance( $this->getCRUDContext() );
+
+		// create initial
+
+		$instance = $crud->instanceFactory();
+		$instance->accept( new PersistentCompleteOneBuilder() );
+		$this->assertNull( $instance->getIdentity() );
+
+		// initial instance
+
+		$request = new CRUDTransactionRequest();
+		$request->setCreate( [ $instance ] );
+		$response = $executor->execute( $request );
+		$this->assertCount( 1, $response->getCreated() );
+		$instance = $response->getCreated()[0];
+		$this->assertNotNull( $instance->getIdentity() );
+
+		$request = new CRUDTransactionRequest();
+		$request->setRead( [ $instance ] );
+		$response = $executor->execute( $request );
+		$this->assertCount( 1, $response->getRead() );
+		$readInstance = $response->getRead()[0];
+		$this->logger->debug( 'Instance @ transaction read#1 is ' . $readInstance );
+		$this->assertThat( $instance,
+			$readInstance->accept( new PersistentEqualsConstraintFactory() ) );
+
+		// update instance fields
+
+		$readInstance->accept( new PersistentCompleteTwoBuilder() );
+		$request = new CRUDTransactionRequest();
+		$request->setUpdate( [ $readInstance ] );
+
+		$response = $executor->execute( $request );
+		$this->assertCount( 1, $response->getUpdated() );
+		$updatedInstance = $response->getUpdated()[0];
+		$this->logger->debug( 'Instance @ transaction read#2 is ' . $updatedInstance );
+		$this->assertThat( $readInstance,
+			$updatedInstance->accept( new PersistentEqualsConstraintFactory() ) );
+
+		// delete instance
+
+		$request = new CRUDTransactionRequest();
+		$request->setDelete( [ $instance ] );
+		$response = $executor->execute( $request );
+		$this->assertCount( 1, $response->getDeleted() );
+		$deletedInstance = $response->getDeleted()[0];
+		$this->logger->debug( 'Instance @ transaction read#3 is ' . $deletedInstance );
+		$this->assertThat( $updatedInstance, $deletedInstance->accept( new PersistentEqualsConstraintFactory() ) );
+	}
+
 }

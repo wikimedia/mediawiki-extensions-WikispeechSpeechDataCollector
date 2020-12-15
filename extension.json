@@ -66,6 +66,15 @@
 	"ConfigRegistry": {
 		"wikispeech-sdc": "GlobalVarConfig::newInstance"
 	},
+	"APIModules": {
+		"wikispeech-sdc-crud": {
+			"class": "\\MediaWiki\\WikispeechSpeechDataCollector\\Api\\ApiCRUD",
+			"services": [
+				"DBLoadBalancer",
+				"RevisionStore"
+			]
+		}
+	},
 	"AvailableRights": [
 		"wikispeech-sdc-record",
 		"wikispeech-sdc-speech-recording"

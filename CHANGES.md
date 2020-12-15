@@ -31,6 +31,7 @@ Update the version in extension.json.
 
 202Y-MM-DD
 
+* [T267116](https://phabricator.wikimedia.org/T267116) Introduce ApiCRUD, a generic API for accessing persistent objects.
 * [T272023](https://phabricator.wikimedia.org/T272023) Introduce Multi Content Revision CRUD and RecordingAnnotations.
 * [T273608](https://phabricator.wikimedia.org/T273608) Add speech recording file wikipage identity to Recording.
 * [T273448](https://phabricator.wikimedia.org/T273448) Introduce CRUDContext to support multiple persistency layers.
