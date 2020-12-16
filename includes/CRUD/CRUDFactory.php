@@ -43,121 +43,121 @@ class CRUDFactory implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return LanguageCRUD
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	): LanguageCRUD {
 		return new LanguageCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return ManuscriptCRUD
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	): ManuscriptCRUD {
 		return new ManuscriptCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return ManuscriptDomainCRUD
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	): ManuscriptDomainCRUD {
 		return new ManuscriptDomainCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return ManuscriptPromptCRUD
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	): ManuscriptPromptCRUD {
 		return new ManuscriptPromptCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return RecordingCRUD
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	): RecordingCRUD {
 		return new RecordingCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return RecordingAnnotationCRUD
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	): RecordingAnnotationCRUD {
 		return new RecordingAnnotationCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return RecordingAnnotationStereotypeCRUD
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	): RecordingAnnotationStereotypeCRUD {
 		return new RecordingAnnotationStereotypeCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return RecordingReviewCRUD
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	): RecordingReviewCRUD {
 		return new RecordingReviewCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return SkippedManuscriptPromptCRUD
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): SkippedManuscriptPromptCRUD {
 		return new SkippedManuscriptPromptCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param User &$user
+	 * @param User $user
 	 * @return UserCRUD
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	): UserCRUD {
 		return new UserCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return UserDialectCRUD
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	): UserDialectCRUD {
 		return new UserDialectCRUD( $this->dbLoadBalancer );
 	}
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return UserLanguageProficiencyLevelCRUD
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): UserLanguageProficiencyLevelCRUD {
 		return new UserLanguageProficiencyLevelCRUD( $this->dbLoadBalancer );
 	}

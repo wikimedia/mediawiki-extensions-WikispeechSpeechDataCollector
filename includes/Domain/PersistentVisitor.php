@@ -11,98 +11,98 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  */
 interface PersistentVisitor {
 	/**
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return mixed|null
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	);
 
 	/**
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return mixed|null
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	);
 
 	/**
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return mixed|null
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	);
 
 	/**
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return mixed|null
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	);
 
 	/**
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return mixed|null
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	);
 
 	/**
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return mixed|null
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	);
 
 	/**
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return mixed|null
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	);
 
 	/**
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return mixed|null
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	);
 
 	/**
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return mixed|null
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	);
 
 	/**
-	 * @param User &$user
+	 * @param User $user
 	 * @return mixed|null
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	);
 
 	/**
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return mixed|null
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	);
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return mixed|null
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	);
 }

@@ -43,11 +43,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return Language|null
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	): ?Language {
 		if ( $this->array === null ) {
 			return null;
@@ -62,11 +62,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return Manuscript|null
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	): ?Manuscript {
 		if ( $this->array === null ) {
 			return null;
@@ -81,11 +81,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return ManuscriptDomain|null
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	): ?ManuscriptDomain {
 		if ( $this->array === null ) {
 			return null;
@@ -97,11 +97,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return ManuscriptPrompt|null
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	): ?ManuscriptPrompt {
 		if ( $this->array === null ) {
 			return null;
@@ -114,11 +114,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return Recording|null
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	): ?Recording {
 		if ( $this->array === null ) {
 			return null;
@@ -132,11 +132,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return RecordingAnnotation|null
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	): ?RecordingAnnotation {
 		if ( $this->array === null ) {
 			return null;
@@ -151,11 +151,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return RecordingAnnotationStereotype|null
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	): ?RecordingAnnotationStereotype {
 		if ( $this->array === null ) {
 			return null;
@@ -167,11 +167,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return RecordingReview|null
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	): ?RecordingReview {
 		if ( $this->array === null ) {
 			return null;
@@ -185,11 +185,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return SkippedManuscriptPrompt|null
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): ?SkippedManuscriptPrompt {
 		if ( $this->array === null ) {
 			return null;
@@ -203,11 +203,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param User &$user
+	 * @param User $user
 	 * @return User|null
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	): ?User {
 		if ( $this->array === null ) {
 			return null;
@@ -219,11 +219,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return UserDialect|null
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	): ?UserDialect {
 		if ( $this->array === null ) {
 			return null;
@@ -237,11 +237,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	}
 
 	/**
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return UserLanguageProficiencyLevel|null
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): ?UserLanguageProficiencyLevel {
 		if ( $this->array === null ) {
 			return null;

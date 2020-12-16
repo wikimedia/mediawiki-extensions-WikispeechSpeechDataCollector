@@ -41,130 +41,130 @@ class PersistentIsInstanceOfSame implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return bool
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	): bool {
 		return $this->other instanceof Language;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return bool
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	): bool {
 		return $this->other instanceof Manuscript;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return bool
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	): bool {
 		return $this->other instanceof ManuscriptDomain;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return bool
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	): bool {
 		return $this->other instanceof ManuscriptPrompt;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return bool
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	): bool {
 		return $this->other instanceof Recording;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return bool
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	): bool {
 		return $this->other instanceof RecordingAnnotation;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return bool
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	): bool {
 		return $this->other instanceof RecordingAnnotationStereotype;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return bool
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	): bool {
 		return $this->other instanceof RecordingReview;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return bool
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): bool {
 		return $this->other instanceof SkippedManuscriptPrompt;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param User &$user
+	 * @param User $user
 	 * @return bool
 	 */
-	public function visitUser( User &$user ): bool {
+	public function visitUser( User $user ): bool {
 		return $this->other instanceof User;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return bool
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	): bool {
 		return $this->other instanceof UserDialect;
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return bool
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): bool {
 		return $this->other instanceof UserLanguageProficiencyLevel;
 	}

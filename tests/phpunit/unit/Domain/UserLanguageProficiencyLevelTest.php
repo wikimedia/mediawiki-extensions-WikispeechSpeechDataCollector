@@ -21,7 +21,7 @@ class UserLanguageProficiencyLevelTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitUserLanguageProficiencyLevel(
-				UserLanguageProficiencyLevel &$userLanguageProficiencyLevel
+				UserLanguageProficiencyLevel $userLanguageProficiencyLevel
 			): ?object {
 				return null;
 			}

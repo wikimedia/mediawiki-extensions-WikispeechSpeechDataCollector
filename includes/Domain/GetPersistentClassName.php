@@ -13,132 +13,132 @@ class GetPersistentClassName implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param Language &$language
+	 * @param Language $language
 	 * @return string
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	) {
 		return 'Language';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Manuscript &$manuscript
+	 * @param Manuscript $manuscript
 	 * @return string
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	) {
 		return 'Manuscript';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptDomain &$manuscriptDomain
+	 * @param ManuscriptDomain $manuscriptDomain
 	 * @return string
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	) {
 		return 'ManuscriptDomain';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param ManuscriptPrompt &$manuscriptPrompt
+	 * @param ManuscriptPrompt $manuscriptPrompt
 	 * @return string
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	) {
 		return 'ManuscriptPrompt';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param Recording &$recording
+	 * @param Recording $recording
 	 * @return string
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	) {
 		return 'Recording';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation &$recordingAnnotation
+	 * @param RecordingAnnotation $recordingAnnotation
 	 * @return string
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	) {
 		return 'RecordingAnnotation';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype &$recordingAnnotationStereotype
+	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
 	 * @return string
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	) {
 		return 'RecordingAnnotationStereotype';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingReview &$recordingReview
+	 * @param RecordingReview $recordingReview
 	 * @return string
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	) {
 		return 'RecordingReview';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param SkippedManuscriptPrompt &$skippedManuscriptPrompt
+	 * @param SkippedManuscriptPrompt $skippedManuscriptPrompt
 	 * @return string
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
 		return 'SkippedManuscriptPrompt';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param User &$user
+	 * @param User $user
 	 * @return string
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	) {
 		return 'User';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserDialect &$userDialect
+	 * @param UserDialect $userDialect
 	 * @return string
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	) {
 		return 'UserDialect';
 	}
 
 	/**
 	 * @since 0.1.0
-	 * @param UserLanguageProficiencyLevel &$languageProficiencyLevel
+	 * @param UserLanguageProficiencyLevel $languageProficiencyLevel
 	 * @return string
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
 		return 'UserLanguageProficiencyLevel';
 	}

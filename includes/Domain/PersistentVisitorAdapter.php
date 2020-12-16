@@ -21,7 +21,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitLanguage(
-		Language &$language
+		Language $language
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -30,7 +30,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitManuscript(
-		Manuscript &$manuscript
+		Manuscript $manuscript
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -39,7 +39,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitManuscriptDomain(
-		ManuscriptDomain &$manuscriptDomain
+		ManuscriptDomain $manuscriptDomain
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -48,7 +48,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitManuscriptPrompt(
-		ManuscriptPrompt &$manuscriptPrompt
+		ManuscriptPrompt $manuscriptPrompt
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -57,7 +57,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitRecording(
-		Recording &$recording
+		Recording $recording
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -66,7 +66,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitRecordingAnnotation(
-		RecordingAnnotation &$recordingAnnotation
+		RecordingAnnotation $recordingAnnotation
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -75,7 +75,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype &$recordingAnnotationStereotype
+		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -84,7 +84,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitRecordingReview(
-		RecordingReview &$recordingReview
+		RecordingReview $recordingReview
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -93,7 +93,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitSkippedManuscriptPrompt(
-		SkippedManuscriptPrompt &$skippedManuscriptPrompt
+		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -102,7 +102,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitUser(
-		User &$user
+		User $user
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -111,7 +111,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitUserDialect(
-		UserDialect &$userDialect
+		UserDialect $userDialect
 	) {
 		throw new Exception( 'Not implemented' );
 	}
@@ -120,7 +120,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	 * @inheritDoc
 	 */
 	public function visitUserLanguageProficiencyLevel(
-		UserLanguageProficiencyLevel &$languageProficiencyLevel
+		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
 		throw new Exception( 'Not implemented' );
 	}

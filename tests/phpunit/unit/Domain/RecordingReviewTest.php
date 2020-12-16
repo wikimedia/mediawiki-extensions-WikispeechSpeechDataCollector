@@ -21,7 +21,7 @@ class RecordingReviewTest extends AbstractPersistentTest {
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
 			public function visitRecordingReview(
-				RecordingReview &$recordingReview
+				RecordingReview $recordingReview
 			): ?object {
 				return null;
 			}
