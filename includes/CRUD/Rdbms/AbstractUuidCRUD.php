@@ -1,18 +1,19 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
 use ExternalStoreException;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\UUID;
 
 /**
- * Class AbstractIntCRUD
+ * Class AbstractUuidCRUD
  * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  *
- * Expects that the identity is created during insert to table.
+ * Assigns a UUID as identity in local scope before insert to table.
  */
-abstract class AbstractIntCRUD extends AbstractCRUD {
+abstract class AbstractUuidCRUD extends AbstractCRUD {
 
 	/**
 	 * Given a persistent domain object instance with at least identity set,
@@ -27,10 +28,11 @@ abstract class AbstractIntCRUD extends AbstractCRUD {
 		if ( $instance->getIdentity() ) {
 			throw new ExternalStoreException( 'Identity already set' );
 		}
+		$instance->setIdentity( UUID::v4BytesFactory() );
 		$rows = $this->serializeFields( $instance );
+		$rows[ $this->getIdentityColumn() ] = $instance->getIdentity();
 		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
 		$dbw->insert( $this->getTable(), $rows );
-		$instance->setIdentity( $dbw->insertId() );
 	}
 
 	/**
@@ -41,11 +43,11 @@ abstract class AbstractIntCRUD extends AbstractCRUD {
 		Persistent $instance,
 		$row
 	): void {
-		$instance->setIdentity( intval( $row[ $this->getIdentityColumn() ] ) );
+		$instance->setIdentity( strval( $row[ $this->getIdentityColumn() ] ) );
 	}
 
 	/**
-	 * @param int $identity
+	 * @param string $identity
 	 * @return Persistent|null
 	 */
 	public function read(
@@ -55,11 +57,12 @@ abstract class AbstractIntCRUD extends AbstractCRUD {
 	}
 
 	/**
-	 * @param int $identity
+	 * @param string $identity
 	 */
 	public function delete(
 		$identity
 	): void {
 		parent::delete( $identity );
 	}
+
 }

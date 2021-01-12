@@ -1,19 +1,19 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 
 /**
- * Class RecordingCRUD
+ * Class SkippedManuscriptPromptCRUD
  * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  */
-class RecordingCRUD extends AbstractUuidCRUD {
+class SkippedManuscriptPromptCRUD extends AbstractUuidCRUD {
 
 	/** @var string Name of table in database. */
-	public const TABLE = self::TABLES_PREFIX . 'recording';
+	public const TABLE = self::TABLES_PREFIX . 'skipped_manuscript_prompt';
 
 	/**
 	 * @return string Name of database table representing this class.
@@ -22,7 +22,7 @@ class RecordingCRUD extends AbstractUuidCRUD {
 		return self::TABLE;
 	}
 
-	private const CLASS_COLUMNS_PREFIX = self::COLUMNS_PREFIX . 'r_';
+	private const CLASS_COLUMNS_PREFIX = self::COLUMNS_PREFIX . 'smp_';
 
 	/**
 	 * @return string COLUMNS_PREFIX . 'class prefix' . '_'
@@ -31,71 +31,67 @@ class RecordingCRUD extends AbstractUuidCRUD {
 		return self::CLASS_COLUMNS_PREFIX;
 	}
 
-	private const COLUMN_RECORDED = self::CLASS_COLUMNS_PREFIX . 'recorded';
-	private const COLUMN_VOICE_OF = self::CLASS_COLUMNS_PREFIX . 'voice_of';
-	private const COLUMN_SPOKEN_DIALECT = self::CLASS_COLUMNS_PREFIX . 'spoken_dialect';
 	private const COLUMN_MANUSCRIPT_PROMPT = self::CLASS_COLUMNS_PREFIX . 'manuscript_prompt';
+	private const COLUMN_USER = self::CLASS_COLUMNS_PREFIX . 'user';
+	private const COLUMN_SKIPPED = self::CLASS_COLUMNS_PREFIX . 'skipped';
 
 	/**
 	 * @return string[] Columns in table required to deserialize an instance, identity excluded.
 	 */
 	protected function getColumns(): array {
 		return [
-			self::COLUMN_RECORDED,
-			self::COLUMN_VOICE_OF,
-			self::COLUMN_SPOKEN_DIALECT,
-			self::COLUMN_MANUSCRIPT_PROMPT
+			self::COLUMN_MANUSCRIPT_PROMPT,
+			self::COLUMN_USER,
+			self::COLUMN_SKIPPED,
 		];
 	}
 
 	public function instanceFactory(): Persistent {
-		return new Recording();
+		return new SkippedManuscriptPrompt();
 	}
 
 	/**
-	 * @param Recording $instance
+	 * @param SkippedManuscriptPrompt $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
 		$instance,
 		array $row
 	): void {
-		$instance->setRecorded( $this->deserializeTimestamp( $row, self::COLUMN_RECORDED ) );
-		$instance->setVoiceOf( $this->deserializeUuid( $row, self::COLUMN_VOICE_OF ) );
-		$instance->setSpokenDialect( $this->deserializeUuid( $row, self::COLUMN_SPOKEN_DIALECT ) );
 		$instance->setManuscriptPrompt( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT_PROMPT ) );
+		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
+		$instance->setSkipped( $this->deserializeTimestamp( $row, self::COLUMN_SKIPPED ) );
 	}
 
 	/**
-	 * @param Recording $instance
+	 * @param SkippedManuscriptPrompt $instance
 	 * @return array
 	 */
 	protected function serializeFields(
 		$instance
 	): array {
 		$array = [];
-		$array[ self::COLUMN_RECORDED ] = $instance->getRecorded()->getTimestamp( TS_MW );
-		$array[ self::COLUMN_VOICE_OF ] = $instance->getVoiceOf();
-		$array[ self::COLUMN_SPOKEN_DIALECT ] = $instance->getSpokenDialect();
 		$array[ self::COLUMN_MANUSCRIPT_PROMPT ] = $instance->getManuscriptPrompt();
+		$array[ self::COLUMN_USER ] = $instance->getUser();
+		$array[ self::COLUMN_SKIPPED ] = $instance->getSkipped()->getTimestamp( TS_MW );
 		return $array;
 	}
 
 	/**
-	 * @param string $voiceOf
-	 * @return Recording[]|null
+	 * @param string $user
+	 * @return SkippedManuscriptPrompt[]|null
 	 */
-	public function listByVoiceOf(
-		string $voiceOf
+	public function listByUser(
+		string $user
 	): ?array {
 		return $this->listByConditions( [
-			self::COLUMN_VOICE_OF => $voiceOf
+			self::COLUMN_USER => $user
 		] );
 	}
 
 	/**
 	 * @param string $manuscriptPrompt
-	 * @return Recording[]|null
+	 * @return SkippedManuscriptPrompt[]|null
 	 */
 	public function listByManuscriptPrompt(
 		string $manuscriptPrompt
@@ -106,17 +102,18 @@ class RecordingCRUD extends AbstractUuidCRUD {
 	}
 
 	/**
-	 * @param string $voiceOf
+	 * @param string $user
 	 * @param string $manuscriptPrompt
-	 * @return Recording|null
+	 * @return SkippedManuscriptPrompt|null
 	 */
-	public function getByVoiceOfAndManuscriptPrompt(
-		string $voiceOf,
+	public function getByUserAndManuscriptPrompt(
+		string $user,
 		string $manuscriptPrompt
 	): ?Persistent {
 		return $this->getByConditions( [
-			self::COLUMN_VOICE_OF => $voiceOf,
-			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt,
+			self::COLUMN_USER => $user,
+			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt
 		] );
 	}
+
 }

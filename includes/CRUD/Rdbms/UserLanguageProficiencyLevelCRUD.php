@@ -1,19 +1,19 @@
 <?php
 
-namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
+namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 
 /**
- * Class UserDialectCRUD
+ * Class UserLanguageProficiencyLevelCRUD
  * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  */
-class UserDialectCRUD extends AbstractUuidCRUD {
+class UserLanguageProficiencyLevelCRUD extends AbstractUuidCRUD {
 
 	/** @var string Name of table in database. */
-	public const TABLE = self::TABLES_PREFIX . 'user_dialect';
+	public const TABLE = self::TABLES_PREFIX . 'user_language_proficiency_level';
 
 	/**
 	 * @return string Name of database table representing this class.
@@ -22,7 +22,7 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 		return self::TABLE;
 	}
 
-	private const CLASS_COLUMNS_PREFIX = self::COLUMNS_PREFIX . 'ud_';
+	private const CLASS_COLUMNS_PREFIX = self::COLUMNS_PREFIX . 'ulpl_';
 
 	/**
 	 * @return string COLUMNS_PREFIX . 'class prefix' . '_'
@@ -33,9 +33,7 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 
 	private const COLUMN_USER = self::CLASS_COLUMNS_PREFIX . 'user';
 	private const COLUMN_LANGUAGE = self::CLASS_COLUMNS_PREFIX . 'language';
-	private const COLUMN_SPOKEN_PROFICIENCY_LEVEL =
-		self::CLASS_COLUMNS_PREFIX . 'spoken_proficiency_level';
-	private const COLUMN_LOCATION = self::CLASS_COLUMNS_PREFIX . 'location';
+	private const COLUMN_PROFICIENCY_LEVEL = self::CLASS_COLUMNS_PREFIX . 'proficiency_level';
 
 	/**
 	 * @return string[] Columns in table required to deserialize an instance, identity excluded.
@@ -44,17 +42,16 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 		return [
 			self::COLUMN_USER,
 			self::COLUMN_LANGUAGE,
-			self::COLUMN_SPOKEN_PROFICIENCY_LEVEL,
-			self::COLUMN_LOCATION
+			self::COLUMN_PROFICIENCY_LEVEL,
 		];
 	}
 
 	public function instanceFactory(): Persistent {
-		return new UserDialect();
+		return new UserLanguageProficiencyLevel();
 	}
 
 	/**
-	 * @param UserDialect $instance
+	 * @param UserLanguageProficiencyLevel $instance
 	 * @param array $row
 	 */
 	protected function deserializeRow(
@@ -63,13 +60,11 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 	): void {
 		$instance->setUser( $this->deserializeUuid( $row, self::COLUMN_USER ) );
 		$instance->setLanguage( $this->deserializeUuid( $row, self::COLUMN_LANGUAGE ) );
-		$instance->setSpokenProficiencyLevel(
-			$this->deserializeInt( $row, self::COLUMN_SPOKEN_PROFICIENCY_LEVEL ) );
-		$instance->setLocation( $this->deserializeString( $row, self::COLUMN_LOCATION ) );
+		$instance->setProficiencyLevel( $this->deserializeInt( $row, self::COLUMN_PROFICIENCY_LEVEL ) );
 	}
 
 	/**
-	 * @param UserDialect $instance
+	 * @param UserLanguageProficiencyLevel $instance
 	 * @return array
 	 */
 	protected function serializeFields(
@@ -78,20 +73,34 @@ class UserDialectCRUD extends AbstractUuidCRUD {
 		$array = [];
 		$array[ self::COLUMN_USER ] = $instance->getUser();
 		$array[ self::COLUMN_LANGUAGE ] = $instance->getLanguage();
-		$array[ self::COLUMN_SPOKEN_PROFICIENCY_LEVEL ] = $instance->getSpokenProficiencyLevel();
-		$array[ self::COLUMN_LOCATION ] = $instance->getLocation();
+		$array[ self::COLUMN_PROFICIENCY_LEVEL ] = $instance->getProficiencyLevel();
 		return $array;
 	}
 
 	/**
 	 * @param string $user
-	 * @return UserDialect[]|null
+	 * @return UserLanguageProficiencyLevel[]|null
 	 */
 	public function listByUser(
 		string $user
 	): ?array {
 		return $this->listByConditions( [
 			self::COLUMN_USER => $user
+		] );
+	}
+
+	/**
+	 * @param string $user
+	 * @param string $language
+	 * @return UserLanguageProficiencyLevel|null
+	 */
+	public function getByUserAndLanguage(
+		string $user,
+		string $language
+	): ?Persistent {
+		return $this->getByConditions( [
+			self::COLUMN_USER => $user,
+			self::COLUMN_LANGUAGE => $language
 		] );
 	}
 }
