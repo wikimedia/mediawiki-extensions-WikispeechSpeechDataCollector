@@ -5,7 +5,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD\Rdbms;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractRdbmsCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
@@ -16,8 +16,7 @@ use Wikimedia\Rdbms\ILoadBalancer;
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * Class AbstractCRUDTest
- * @package MediaWiki\WikispeechSpeechDataCollector\Test\Integration\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\Test\Integration\CRUD\Rdbms
  *
  * @todo Add helpers for testing listing and getting object by indices.
  *
@@ -26,12 +25,12 @@ use Wikimedia\TestingAccessWrapper;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD
  * @covers \MediaWiki\WikispeechSpeechDataCollector\CRUD\CLUD
  */
-abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
+abstract class AbstractRdbmsCRUDTest extends MediaWikiIntegrationTestCase {
 
-	/** @var AbstractCRUD */
+	/** @var AbstractRdbmsCRUD */
 	private $crud;
 
-	/** @var TestingAccessWrapper|AbstractCRUD */
+	/** @var TestingAccessWrapper|AbstractRdbmsCRUD */
 	private $crudWrapper;
 
 	/** @var LoggerInterface */
@@ -158,10 +157,10 @@ abstract class AbstractCRUDTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @param ILoadBalancer $dbLoadBalancer
-	 * @return AbstractCRUD
+	 * @return AbstractRdbmsCRUD
 	 */
 	abstract protected function crudFactory(
 		ILoadBalancer $dbLoadBalancer
-	): AbstractCRUD;
+	): AbstractRdbmsCRUD;
 
 }

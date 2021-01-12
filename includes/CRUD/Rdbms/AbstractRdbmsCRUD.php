@@ -2,22 +2,21 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWTimestamp;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
- * Class AbstractCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  *
  * Database mapping and access for
  * instances of the corresponding underlying subclass of {@link Persistent}.
  *
  * @since 0.1.0
  */
-abstract class AbstractCRUD implements CRUD {
+abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 
 	/** @var string Prefix of all extension tables in database. */
 	protected const TABLES_PREFIX = 'wikispeech_sdc_';
@@ -84,30 +83,6 @@ abstract class AbstractCRUD implements CRUD {
 			$this->allColumns = $allColumns;
 		}
 		return $this->allColumns;
-	}
-
-	/**
-	 * Creates a new instance
-	 * of the corresponding underlying subclass of {@link Persistent}.
-	 *
-	 * @return Persistent
-	 */
-	abstract public function instanceFactory(): Persistent;
-
-	/**
-	 * Given an identity,
-	 * retrieves a persistent domain object from the database.
-	 *
-	 * @see load()
-	 * @param mixed $identity
-	 * @return Persistent|null
-	 */
-	public function read(
-		$identity
-	): ?object {
-		$instance = $this->instanceFactory();
-		$instance->setIdentity( $identity );
-		return $this->load( $instance ) ? $instance : null;
 	}
 
 	/**

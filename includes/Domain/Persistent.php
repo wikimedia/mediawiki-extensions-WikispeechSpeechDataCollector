@@ -13,7 +13,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * A persistent class is a pure data container.
  * Any per subclass business logic should be implemented
  * using the visitor pattern {@link PersistentVisitor}.
- * Database access uses a CRUD-pattern {@link AbstractCRUD}.
+ * Database access uses a CRUD-pattern {@link AbstractRdbmsCRUD}.
  */
 interface Persistent {
 

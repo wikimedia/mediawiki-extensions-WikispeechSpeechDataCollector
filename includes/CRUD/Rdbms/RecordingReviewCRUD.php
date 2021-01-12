@@ -6,11 +6,10 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 
 /**
- * Class RecordingReviewCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  * @since 0.1.0
  */
-class RecordingReviewCRUD extends AbstractUuidCRUD {
+class RecordingReviewCRUD extends AbstractUuidRdbmsCRUD {
 
 	/** @var string Name of table in database. */
 	public const TABLE = self::TABLES_PREFIX . 'recording_review';

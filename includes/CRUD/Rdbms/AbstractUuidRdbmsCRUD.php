@@ -7,13 +7,12 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\UUID;
 
 /**
- * Class AbstractUuidCRUD
  * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  *
  * Assigns a UUID as identity in local scope before insert to table.
  */
-abstract class AbstractUuidCRUD extends AbstractCRUD {
+abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 
 	/**
 	 * Given a persistent domain object instance with at least identity set,
