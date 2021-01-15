@@ -3,7 +3,6 @@ module.exports = function ( grunt ) {
 	var conf = grunt.file.readJSON( 'extension.json' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 
 	grunt.initConfig( {
@@ -14,11 +13,7 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.js',
 				'modules/**/*.js',
-				'tests/**/*.js'
-			]
-		},
-		jsonlint: {
-			all: [
+				'tests/**/*.js',
 				'*.json',
 				'**/*.json',
 				'!node_modules/**',
@@ -43,7 +38,6 @@ module.exports = function ( grunt ) {
 		'test',
 		[
 			'eslint',
-			'jsonlint',
 			'banana',
 			'stylelint'
 		]
