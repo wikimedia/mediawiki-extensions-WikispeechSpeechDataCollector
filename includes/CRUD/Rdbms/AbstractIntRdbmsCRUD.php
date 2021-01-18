@@ -6,13 +6,12 @@ use ExternalStoreException;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * Class AbstractIntCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  * @since 0.1.0
  *
- * Expects that the identity is created during insert to table.
+ * Expects that the integer identity is created during insert to table.
  */
-abstract class AbstractIntCRUD extends AbstractCRUD {
+abstract class AbstractIntRdbmsCRUD extends AbstractRdbmsCRUD {
 
 	/**
 	 * Given a persistent domain object instance with at least identity set,

@@ -6,11 +6,10 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 
 /**
- * Class UserLanguageProficiencyLevelCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  * @since 0.1.0
  */
-class UserLanguageProficiencyLevelCRUD extends AbstractUuidCRUD {
+class UserLanguageProficiencyLevelCRUD extends AbstractUuidRdbmsCRUD {
 
 	/** @var string Name of table in database. */
 	public const TABLE = self::TABLES_PREFIX . 'user_language_proficiency_level';

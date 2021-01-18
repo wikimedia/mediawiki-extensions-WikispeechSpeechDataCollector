@@ -6,11 +6,10 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
 
 /**
- * Class UserDialectCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  * @since 0.1.0
  */
-class UserDialectCRUD extends AbstractUuidCRUD {
+class UserDialectCRUD extends AbstractUuidRdbmsCRUD {
 
 	/** @var string Name of table in database. */
 	public const TABLE = self::TABLES_PREFIX . 'user_dialect';

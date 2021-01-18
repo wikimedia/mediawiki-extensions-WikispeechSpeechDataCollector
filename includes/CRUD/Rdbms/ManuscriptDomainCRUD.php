@@ -6,11 +6,10 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * Class ManuscriptDomainCRUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
  * @since 0.1.0
  */
-class ManuscriptDomainCRUD extends AbstractUuidCRUD {
+class ManuscriptDomainCRUD extends AbstractUuidRdbmsCRUD {
 
 	/** @var string Name of table in database. */
 	public const TABLE = self::TABLES_PREFIX . 'manuscript_domain';
