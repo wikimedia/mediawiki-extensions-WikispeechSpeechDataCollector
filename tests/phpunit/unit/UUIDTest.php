@@ -151,7 +151,6 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	 * @dataProvider provideTestAsHexWithoutDashes_isSame
 	 * @param string|null $expectedUuid
 	 * @param string|null $testedUuid
-	 * @param bool $expected
 	 */
 	public function testAsHexWithoutDashes_isSame( ?string $expectedUuid, ?string $testedUuid ) {
 		$this->assertSame(
