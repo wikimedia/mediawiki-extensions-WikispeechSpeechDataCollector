@@ -1,5 +1,5 @@
 {
-	"identity" : "UUID",
+	"identity": "UUID",
 	"recorded": "UTC timestamp",
 	"voiceOf": {
 		"identity": "User::identity",
