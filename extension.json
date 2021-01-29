@@ -38,11 +38,40 @@
 		"remoteExtPath": "WikispeechSpeechDataCollector/modules"
 	},
 	"ResourceModules": {
-		"ext.wikispeech-sdc.record-speech": {
+		"ext.wikispeech-sdc.specialRecordSpeech": {
+			"packageFiles": [
+				"ext.wikispeech-sdc.specialRecordSpeech.js",
+				"ext.wikispeech-sdc.recorder.js"
+			],
+			"dependencies": [
+				"oojs-ui-core",
+				"LinguaRecorder"
+			],
+			"messages": [
+				"wikispeech-sdc-status-ready",
+				"wikispeech-sdc-status-listening",
+				"wikispeech-sdc-status-recording"
+			]
+		},
+		"ext.wikispeech-sdc.specialRecordSpeech.styles": {
 			"styles": [
-				"ext.wikispeech-sdc.record-speech.css"
+				"ext.wikispeech-sdc.specialRecordSpeech.css"
+			]
+		},
+		"LinguaRecorder": {
+			"scripts": [
+				"lib/LinguaRecorder/src/LinguaRecorder.js",
+				"lib/LinguaRecorder/src/AudioRecord.js"
 			]
 		}
+	},
+	"QUnitTestModule": {
+		"localBasePath": ".",
+		"remoteExtPath": "WikispeechSpeechDataCollector",
+		"packageFiles": [
+			"tests/qunit/ext.wikispeech-sdc.recorder.test.js",
+			"modules/ext.wikispeech-sdc.recorder.js"
+		]
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "db",

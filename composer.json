@@ -17,8 +17,7 @@
 			"phpcbf"
 		],
 		"doc": [
-			"doxygen",
-			"jsduck"
+			"doxygen"
 		],
 		"phan": "phan -d . --long-progress-bar"
 	}

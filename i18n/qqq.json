@@ -12,7 +12,6 @@
 	"action-wikispeech-sdc-record": "{{doc-action|wikispeech-sdc-record}}",
 	"recordspeech": "Record speech special page titel.",
 	"wikispeech-sdc-record": "Label for button that starts recording on the Record special page.",
-	"wikispeech-sdc-play": "Label for button that plays recording on the Record special page.",
 	"wikispeech-sdc-save": "Label for button that saves recording on the Record special page.",
 	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page.\n{{identical|Skip}}",
 	"right-wikispeech-sdc-speech-recording": "{{doc-right|wikispeech-sdc-speech-recording}}",
@@ -26,5 +25,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "{{doc-apierror}}",
 	"apihelp-wikispeech-sdc-crud-example-1": "{{doc-apihelp-example|wikispeech-sdc}}",
 	"apihelp-wikispeech-sdc-crud-example-2": "{{doc-apihelp-example|wikispeech-sdc}}",
-	"apihelp-wikispeech-sdc-crud-example-3": "{{doc-apihelp-example|wikispeech-sdc}}"
+	"apihelp-wikispeech-sdc-crud-example-3": "{{doc-apihelp-example|wikispeech-sdc}}",
+	"wikispeech-sdc-status-starting": "Status message when the recorder is starting up and not yet ready to start recording.",
+	"wikispeech-sdc-status-ready": "Status message when the recorder is ready to start recording.",
+	"wikispeech-sdc-status-listening": "Status message when the recorder is waiting for user to start speaking.",
+	"wikispeech-sdc-status-recording": "Status message when the recorder is recording."
 }
