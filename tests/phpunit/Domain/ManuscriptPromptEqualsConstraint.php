@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class ManuscriptPromptEqualsConstraint extends PersistentEqualsContraint {
+class ManuscriptPromptEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

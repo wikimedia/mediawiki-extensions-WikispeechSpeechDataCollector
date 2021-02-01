@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class RecordingReviewEqualsConstraint extends PersistentEqualsContraint {
+class RecordingReviewEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0
