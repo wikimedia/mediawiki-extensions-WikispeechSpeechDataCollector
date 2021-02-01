@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class UserDialectEqualsConstraint extends PersistentEqualsContraint {
+class UserDialectEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

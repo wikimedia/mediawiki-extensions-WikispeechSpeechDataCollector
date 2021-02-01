@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class RecordingAnnotationEqualsConstraint extends PersistentEqualsContraint {
+class RecordingAnnotationEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

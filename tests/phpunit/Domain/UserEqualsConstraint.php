@@ -7,7 +7,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  */
-class UserEqualsConstraint extends PersistentEqualsContraint {
+class UserEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

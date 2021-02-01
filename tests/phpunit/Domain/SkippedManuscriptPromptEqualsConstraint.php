@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class SkippedManuscriptPromptEqualsConstraint extends PersistentEqualsContraint {
+class SkippedManuscriptPromptEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

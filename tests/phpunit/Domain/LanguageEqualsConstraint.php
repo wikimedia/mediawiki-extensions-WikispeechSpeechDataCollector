@@ -8,7 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Language;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-class LanguageEqualsConstraint extends PersistentEqualsContraint {
+class LanguageEqualsConstraint extends PersistentEqualsConstraint {
 
 	/**
 	 * @since 0.1.0

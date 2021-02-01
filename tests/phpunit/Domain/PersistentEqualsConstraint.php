@@ -14,7 +14,7 @@ use SebastianBergmann\Exporter\Exporter;
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
-abstract class PersistentEqualsContraint extends Constraint {
+abstract class PersistentEqualsConstraint extends Constraint {
 
 	/** @var Persistent */
 	private $expected;
