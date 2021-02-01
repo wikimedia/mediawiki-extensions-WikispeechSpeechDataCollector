@@ -36,7 +36,7 @@ interface CRUD {
 	 */
 	public function read(
 		$identity
-	): ?object;
+	): ?Persistent;
 
 	/**
 	 * Given a persistent domain object instance with at least identity set,
