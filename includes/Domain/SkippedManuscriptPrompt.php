@@ -10,8 +10,8 @@ use MWTimestamp;
  * Indication that a {@link User} skipped recording
  * a specific {@link ManuscriptPrompt}.
  *
- * @todo <p>Consider allowing a reason for skipping,
- * e.g. too complex pronunciation, foul language, etc.</p>
+ * @todo Consider allowing a reason for skipping,
+ *  e.g. too complex pronunciation, foul language, etc.
  *
  * In the future, this could easily be mined together in conjunction with
  * {@link UserLanguageProficiencyLevel::$proficiencyLevel}

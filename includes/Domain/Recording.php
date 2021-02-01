@@ -10,13 +10,12 @@ use MWTimestamp;
  * The audio representation of a {@link ManuscriptPrompt}
  * recorded by a given {@link User} in a given {@link UserDialect}.
  *
- * @todo <p> We could (should?) add indices in this object to avoid expensive
- * joining of tables and database end calculations:
- * * Age of user at recording (Recording->recorded - Recording->voiceOf->yearBorn)
- * * Recorded language (Recording->manuscriptPrompt->manuscript->language)
- * * etc
- * I.e. use denormalized information in the database, not database indices.
- * </p>
+ * @todo We could (should?) add indices in this object to avoid expensive
+ *  joining of tables and database end calculations:
+ *  * Age of user at recording (Recording->recorded - Recording->voiceOf->yearBorn)
+ *  * Recorded language (Recording->manuscriptPrompt->manuscript->language)
+ *  * etc
+ *  I.e. use denormalized information in the database, not database indices.
  *
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
