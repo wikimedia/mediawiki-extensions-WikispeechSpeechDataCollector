@@ -9,9 +9,9 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * An ordered part of text in a {@link Manuscript}. A {@link Recording} is
  * the audio representation of a manuscript prompt.
  *
- * @todo <p>Consider adding information about how difficult the content of
- * the prompt is to read, and try feeding new users with as simple text as
- * possible to not scare them away from this system.</p>
+ * @todo Consider adding information about how difficult the content of
+ *  the prompt is to read, and try feeding new users with as simple text as
+ *  possible to not scare them away from this system.
  *
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
