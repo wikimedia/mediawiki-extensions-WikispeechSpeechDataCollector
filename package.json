@@ -1,5 +1,5 @@
 {
-	"name": "wikispeech-speech-data-collector",
+	"name": "wikispeech-sdc",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
