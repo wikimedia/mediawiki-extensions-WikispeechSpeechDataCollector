@@ -51,7 +51,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 	 */
 	public function read(
 		$identity
-	): ?object {
+	): ?Persistent {
 		return parent::read( $identity );
 	}
 

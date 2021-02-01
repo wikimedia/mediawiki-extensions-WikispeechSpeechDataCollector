@@ -31,7 +31,7 @@ abstract class AbstractCRUD implements CRUD {
 	 */
 	public function read(
 		$identity
-	): ?object {
+	): ?Persistent {
 		$instance = $this->instanceFactory();
 		$instance->setIdentity( $identity );
 		return $this->load( $instance ) ? $instance : null;
