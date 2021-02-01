@@ -35,7 +35,7 @@ class ApiHooks
 	 * @param ConfigFactory $configFactory
 	 */
 	public function __construct( $configFactory ) {
-		$this->config = $configFactory->makeConfig( 'wikispeech-speech-data-collector' );
+		$this->config = $configFactory->makeConfig( 'wikispeech-sdc' );
 		$this->logger = LoggerFactory::getInstance( __CLASS__ );
 	}
 

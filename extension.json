@@ -7,8 +7,8 @@
 		"Karl Wettin"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:WikispeechSpeechDataCollector",
-	"namemsg": "wikispeech-speech-data-collector",
-	"descriptionmsg": "wikispeech-speech-data-collector-desc",
+	"namemsg": "wikispeech-sdc",
+	"descriptionmsg": "wikispeech-sdc-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"manifest_version": 2,
@@ -42,14 +42,14 @@
 		}
 	},
 	"ConfigRegistry": {
-		"wikispeech-speech-data-collector": "GlobalVarConfig::newInstance"
+		"wikispeech-sdc": "GlobalVarConfig::newInstance"
 	},
 	"AvailableRights": [
-		"wikispeech-speech-data-collector-record"
+		"wikispeech-sdc-record"
 	],
 	"GroupPermissions": {
 		"*": {
-			"wikispeech-speech-data-collector-record": true
+			"wikispeech-sdc-record": true
 		}
 	}
 }
