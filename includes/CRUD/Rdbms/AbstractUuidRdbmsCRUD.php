@@ -30,7 +30,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 		$instance->setIdentity( UUID::v4BytesFactory() );
 		$rows = $this->serializeFields( $instance );
 		$rows[ $this->getIdentityColumn() ] = $instance->getIdentity();
-		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
 		$dbw->insert( $this->getTable(), $rows );
 	}
 

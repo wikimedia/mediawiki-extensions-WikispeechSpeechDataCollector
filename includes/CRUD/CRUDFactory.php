@@ -27,7 +27,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
-use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
  * Class CRUDFactory
@@ -41,17 +40,17 @@ use Wikimedia\Rdbms\ILoadBalancer;
  */
 class CRUDFactory implements PersistentVisitor {
 
-	/** @var ILoadBalancer */
-	private $dbLoadBalancer;
+	/** @var CRUDContext */
+	private $context;
 
 	/**
-	 * CRUDFactory constructor.
-	 * @param ILoadBalancer $dbLoadBalancer
+	 * @param CRUDContext $context
+	 * @since 0.1.0
 	 */
 	public function __construct(
-		ILoadBalancer $dbLoadBalancer
+		CRUDContext $context
 	) {
-		$this->dbLoadBalancer = $dbLoadBalancer;
+		$this->context = $context;
 	}
 
 	/**
@@ -61,7 +60,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitLanguage(
 		Language $language
 	): LanguageCRUD {
-		return new LanguageCRUD( $this->dbLoadBalancer );
+		return new LanguageCRUD( $this->context );
 	}
 
 	/**
@@ -71,7 +70,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitManuscript(
 		Manuscript $manuscript
 	): ManuscriptCRUD {
-		return new ManuscriptCRUD( $this->dbLoadBalancer );
+		return new ManuscriptCRUD( $this->context );
 	}
 
 	/**
@@ -81,7 +80,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitManuscriptDomain(
 		ManuscriptDomain $manuscriptDomain
 	): ManuscriptDomainCRUD {
-		return new ManuscriptDomainCRUD( $this->dbLoadBalancer );
+		return new ManuscriptDomainCRUD( $this->context );
 	}
 
 	/**
@@ -91,7 +90,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitManuscriptPrompt(
 		ManuscriptPrompt $manuscriptPrompt
 	): ManuscriptPromptCRUD {
-		return new ManuscriptPromptCRUD( $this->dbLoadBalancer );
+		return new ManuscriptPromptCRUD( $this->context );
 	}
 
 	/**
@@ -101,7 +100,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitRecording(
 		Recording $recording
 	): RecordingCRUD {
-		return new RecordingCRUD( $this->dbLoadBalancer );
+		return new RecordingCRUD( $this->context );
 	}
 
 	/**
@@ -111,7 +110,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitRecordingAnnotation(
 		RecordingAnnotation $recordingAnnotation
 	): RecordingAnnotationCRUD {
-		return new RecordingAnnotationCRUD( $this->dbLoadBalancer );
+		return new RecordingAnnotationCRUD( $this->context );
 	}
 
 	/**
@@ -121,7 +120,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitRecordingAnnotationStereotype(
 		RecordingAnnotationStereotype $recordingAnnotationStereotype
 	): RecordingAnnotationStereotypeCRUD {
-		return new RecordingAnnotationStereotypeCRUD( $this->dbLoadBalancer );
+		return new RecordingAnnotationStereotypeCRUD( $this->context );
 	}
 
 	/**
@@ -131,7 +130,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitRecordingReview(
 		RecordingReview $recordingReview
 	): RecordingReviewCRUD {
-		return new RecordingReviewCRUD( $this->dbLoadBalancer );
+		return new RecordingReviewCRUD( $this->context );
 	}
 
 	/**
@@ -141,7 +140,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitSkippedManuscriptPrompt(
 		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): SkippedManuscriptPromptCRUD {
-		return new SkippedManuscriptPromptCRUD( $this->dbLoadBalancer );
+		return new SkippedManuscriptPromptCRUD( $this->context );
 	}
 
 	/**
@@ -151,7 +150,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitUser(
 		User $user
 	): UserCRUD {
-		return new UserCRUD( $this->dbLoadBalancer );
+		return new UserCRUD( $this->context );
 	}
 
 	/**
@@ -161,7 +160,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitUserDialect(
 		UserDialect $userDialect
 	): UserDialectCRUD {
-		return new UserDialectCRUD( $this->dbLoadBalancer );
+		return new UserDialectCRUD( $this->context );
 	}
 
 	/**
@@ -171,7 +170,7 @@ class CRUDFactory implements PersistentVisitor {
 	public function visitUserLanguageProficiencyLevel(
 		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): UserLanguageProficiencyLevelCRUD {
-		return new UserLanguageProficiencyLevelCRUD( $this->dbLoadBalancer );
+		return new UserLanguageProficiencyLevelCRUD( $this->context );
 	}
 
 }

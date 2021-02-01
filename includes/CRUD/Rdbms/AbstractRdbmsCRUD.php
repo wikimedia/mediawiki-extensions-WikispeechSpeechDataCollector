@@ -3,10 +3,10 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms;
 
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUDContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWTimestamp;
-use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms
@@ -32,17 +32,12 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	/** @var string Name of table column that holds the identity. */
 	private $identityColumn;
 
-	/** @var ILoadBalancer */
-	protected $dbLoadBalancer;
-
 	/**
-	 * AbstractCRUD constructor.
-	 * @param ILoadBalancer $dbLoadBalancer
+	 * @param CRUDContext $context
+	 * @since 0.1.0
 	 */
-	public function __construct(
-		ILoadBalancer $dbLoadBalancer
-	) {
-		$this->dbLoadBalancer = $dbLoadBalancer;
+	public function __construct( CRUDContext $context ) {
+		parent::__construct( $context );
 		$this->identityColumn = $this->getClassColumnsPrefix() . 'identity';
 	}
 
@@ -111,7 +106,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 		Persistent $instance
 	): void {
 		$set = $this->serializeFields( $instance );
-		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
 		$dbw->update( $this->getTable(), $set, [
 			$this->getIdentityColumn() => $instance->getIdentity()
 		] );
@@ -126,7 +121,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	public function delete(
 		$identity
 	): void {
-		$dbw = $this->dbLoadBalancer->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
 		$dbw->delete( $this->getTable(), [
 			$this->getIdentityColumn() => $identity
 		] );
@@ -156,7 +151,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 		array $conditions,
 		Persistent $instance
 	): bool {
-		$dbr = $this->dbLoadBalancer->getConnectionRef( DB_REPLICA );
+		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
 		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
 		try {
 			if ( !$res ) {
@@ -182,7 +177,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	public function listByConditions(
 		array $conditions
 	): ?array {
-		$dbr = $this->dbLoadBalancer->getConnectionRef( DB_REPLICA );
+		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
 		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
 		if ( !$res ) {
 			return null;

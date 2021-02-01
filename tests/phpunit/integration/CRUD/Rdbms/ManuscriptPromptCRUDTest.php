@@ -2,9 +2,9 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\CRUD\Rdbms;
 
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\AbstractRdbmsCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\AbstractCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\CRUDContext;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
-use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Test\Integration\CRUD\Rdbms
@@ -14,9 +14,9 @@ use Wikimedia\Rdbms\ILoadBalancer;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD
  */
 class ManuscriptPromptCRUDTest extends AbstractRdbmsCRUDTest {
-	protected function crudFactory(
-		ILoadBalancer $dbLoadBalancer
-	): AbstractRdbmsCRUD {
-		return new ManuscriptPromptCRUD( $dbLoadBalancer );
+	protected function newCRUDInstance(
+		CRUDContext $context
+	): AbstractCRUD {
+		return new ManuscriptPromptCRUD( $context );
 	}
 }

@@ -3,7 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
  * Class CLUD
@@ -23,11 +22,12 @@ class CLUD {
 	private $crudFactory;
 
 	/**
-	 * CLUD constructor.
-	 * @param ILoadBalancer $dbLoadBalancer
+	 * @param CRUDFactory $crudFactory
 	 */
-	public function __construct( $dbLoadBalancer ) {
-		$this->crudFactory = new CRUDFactory( $dbLoadBalancer );
+	public function __construct(
+		CRUDFactory $crudFactory
+	) {
+		$this->crudFactory = $crudFactory;
 	}
 
 	/**
