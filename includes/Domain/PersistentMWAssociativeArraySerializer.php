@@ -63,6 +63,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		$array['voiceOf'] = $this->serializeUUID( $recording->getVoiceOf() );
 		$array['spokenDialect'] = $this->serializeUUID( $recording->getSpokenDialect() );
 		$array['manuscriptPrompt'] = $this->serializeUUID( $recording->getManuscriptPrompt() );
+		$array['audioFileWikiPageIdentity'] = $recording->getAudioFileWikiPageIdentity();
 		return $array;
 	}
 

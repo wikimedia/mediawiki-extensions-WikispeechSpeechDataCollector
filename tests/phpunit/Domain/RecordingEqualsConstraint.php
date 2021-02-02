@@ -25,6 +25,8 @@ class RecordingEqualsConstraint extends PersistentEqualsConstraint {
 			$expected->getSpokenDialect(), $actual->getSpokenDialect() );
 		$this->matchIsSame( 'manuscriptPrompt',
 			$expected->getManuscriptPrompt(), $actual->getManuscriptPrompt() );
+		$this->matchIsSame( 'audioFileWikiPageIdentity',
+			$expected->getAudioFileWikiPageIdentity(), $actual->getAudioFileWikiPageIdentity() );
 	}
 
 }

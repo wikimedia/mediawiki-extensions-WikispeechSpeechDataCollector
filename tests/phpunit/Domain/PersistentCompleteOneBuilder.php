@@ -99,6 +99,7 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 		$recording->setSpokenDialect( UUID::v4BytesFactory() );
 		$recording->setVoiceOf( UUID::v4BytesFactory() );
 		$recording->setRecorded( MWTimestamp::getInstance( 20200713145000 ) );
+		$recording->setAudioFileWikiPageIdentity( 1 );
 		return null;
 	}
 

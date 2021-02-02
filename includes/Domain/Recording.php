@@ -45,6 +45,11 @@ class Recording implements Persistent {
 	 */
 	private $manuscriptPrompt;
 
+	/**
+	 * @var int|null
+	 */
+	private $audioFileWikiPageIdentity;
+
 	// visitor
 
 	/**
@@ -61,7 +66,8 @@ class Recording implements Persistent {
 			'recorded => "' . $this->getRecorded() . '", ' .
 			'voiceOf => "' . $this->getVoiceOf() . '", ' .
 			'spokenDialect => "' . $this->getSpokenDialect() . '", ' .
-			'manuscriptPrompt => "' . $this->getManuscriptPrompt() . '" ' .
+			'manuscriptPrompt => "' . $this->getManuscriptPrompt() . '", ' .
+			'audioFileWikiPageIdentity => "' . $this->getAudioFileWikiPageIdentity() . '" ' .
 			']';
 	}
 
@@ -146,4 +152,21 @@ class Recording implements Persistent {
 	public function setManuscriptPrompt( ?string $manuscriptPrompt ): void {
 		$this->manuscriptPrompt = $manuscriptPrompt;
 	}
+
+	/**
+	 * @see Recording::$audioFileWikiPageIdentity
+	 * @return int|null
+	 */
+	public function getAudioFileWikiPageIdentity(): ?int {
+		return $this->audioFileWikiPageIdentity;
+	}
+
+	/**
+	 * @see Recording::$audioFileWikiPageIdentity
+	 * @param int|null $audioFileWikiPageIdentity
+	 */
+	public function setAudioFileWikiPageIdentity( ?int $audioFileWikiPageIdentity ): void {
+		$this->audioFileWikiPageIdentity = $audioFileWikiPageIdentity;
+	}
+
 }

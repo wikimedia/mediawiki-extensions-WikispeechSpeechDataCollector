@@ -128,6 +128,7 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		$recording->setVoiceOf( $this->deserializeUUID( $this->get( 'voiceOf' ) ) );
 		$recording->setSpokenDialect( $this->deserializeUUID( $this->get( 'spokenDialect' ) ) );
 		$recording->setManuscriptPrompt( $this->deserializeUUID( $this->get( 'manuscriptPrompt' ) ) );
+		$recording->setAudioFileWikiPageIdentity( $this->get( 'audioFileWikiPageIdentity' ) );
 		return $recording;
 	}
 

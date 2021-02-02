@@ -31,6 +31,7 @@ Update the version in extension.json.
 
 202Y-MM-DD
 
+* [T273608](https://phabricator.wikimedia.org/T273608) Add speech recording file wikipage identity to Recording.
 * [T273448](https://phabricator.wikimedia.org/T273448) Introduce CRUDContext to support multiple persistency layers.
 * [T269335](https://phabricator.wikimedia.org/T269335) Create special page for recording
 * [T266004](https://phabricator.wikimedia.org/T266004) Remove use of &$byref from PersistentVisitor.

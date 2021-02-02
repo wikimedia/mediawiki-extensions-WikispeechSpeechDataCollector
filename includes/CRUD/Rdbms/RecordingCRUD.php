@@ -34,6 +34,8 @@ class RecordingCRUD extends AbstractUuidRdbmsCRUD {
 	private const COLUMN_VOICE_OF = self::CLASS_COLUMNS_PREFIX . 'voice_of';
 	private const COLUMN_SPOKEN_DIALECT = self::CLASS_COLUMNS_PREFIX . 'spoken_dialect';
 	private const COLUMN_MANUSCRIPT_PROMPT = self::CLASS_COLUMNS_PREFIX . 'manuscript_prompt';
+	private const COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY =
+		self::CLASS_COLUMNS_PREFIX . 'audio_file_wiki_page_identity';
 
 	/**
 	 * @return string[] Columns in table required to deserialize an instance, identity excluded.
@@ -43,7 +45,8 @@ class RecordingCRUD extends AbstractUuidRdbmsCRUD {
 			self::COLUMN_RECORDED,
 			self::COLUMN_VOICE_OF,
 			self::COLUMN_SPOKEN_DIALECT,
-			self::COLUMN_MANUSCRIPT_PROMPT
+			self::COLUMN_MANUSCRIPT_PROMPT,
+			self::COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY
 		];
 	}
 
@@ -63,6 +66,8 @@ class RecordingCRUD extends AbstractUuidRdbmsCRUD {
 		$instance->setVoiceOf( $this->deserializeUuid( $row, self::COLUMN_VOICE_OF ) );
 		$instance->setSpokenDialect( $this->deserializeUuid( $row, self::COLUMN_SPOKEN_DIALECT ) );
 		$instance->setManuscriptPrompt( $this->deserializeUuid( $row, self::COLUMN_MANUSCRIPT_PROMPT ) );
+		$instance->setAudioFileWikiPageIdentity(
+			$this->deserializeInt( $row, self::COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY ) );
 	}
 
 	/**
@@ -77,6 +82,7 @@ class RecordingCRUD extends AbstractUuidRdbmsCRUD {
 		$array[ self::COLUMN_VOICE_OF ] = $instance->getVoiceOf();
 		$array[ self::COLUMN_SPOKEN_DIALECT ] = $instance->getSpokenDialect();
 		$array[ self::COLUMN_MANUSCRIPT_PROMPT ] = $instance->getManuscriptPrompt();
+		$array[ self::COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY ] = $instance->getAudioFileWikiPageIdentity();
 		return $array;
 	}
 
