@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Wladek92"
+		]
+	},
+	"wikispeech-sdc": "Collecteur de données de parole de Wikispeech",
+	"wikispeech-sdc-desc": "Un outil pour enregistrer, relire et annoter les voix parlées.",
+	"right-wikispeech-sdc-record": "Enregistrer la voix",
+	"action-wikispeech-sdc-record": "Enregistrer la voix",
+	"recordspeech": "Enregistrer la conversation",
+	"wikispeech-sdc-record": "Enregistrer",
+	"wikispeech-sdc-play": "Jouer",
+	"wikispeech-sdc-save": "Enregistrer",
+	"wikispeech-sdc-skip": "Sauter"
+}

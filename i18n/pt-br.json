@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"wikispeech-sdc-desc": "Uma ferramenta para gravar, revisar e anotar vozes faladas.",
+	"right-wikispeech-sdc-record": "Gravar voz",
+	"action-wikispeech-sdc-record": "Gravar voz"
+}

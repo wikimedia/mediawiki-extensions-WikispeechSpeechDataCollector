@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"wikispeech-sdc": "Прибирач на говорни податоци од Викиговор",
+	"wikispeech-sdc-desc": "Алатка за снимање, преглед и прибележување на говор.",
+	"right-wikispeech-sdc-record": "Снимање на глас",
+	"action-wikispeech-sdc-record": "Снимање на глас",
+	"recordspeech": "Снимање на говор",
+	"wikispeech-sdc-record": "Снимај",
+	"wikispeech-sdc-play": "Пушти",
+	"wikispeech-sdc-save": "Зачувај",
+	"wikispeech-sdc-skip": "Прескокни"
+}
