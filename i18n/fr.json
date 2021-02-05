@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"Thibaut120094",
 			"Wladek92"
 		]
 	},
@@ -11,7 +12,7 @@
 	"action-wikispeech-sdc-record": "Enregistrer la voix",
 	"recordspeech": "Enregistrer la conversation",
 	"wikispeech-sdc-record": "Enregistrer",
-	"wikispeech-sdc-play": "Jouer",
+	"wikispeech-sdc-play": "Lecture",
 	"wikispeech-sdc-save": "Enregistrer",
 	"wikispeech-sdc-skip": "Sauter"
 }
