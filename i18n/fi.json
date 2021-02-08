@@ -4,6 +4,13 @@
 			"Nike"
 		]
 	},
+	"wikispeech-sdc": "Wikispeech-puhedatankeräilin",
+	"wikispeech-sdc-desc": "Työkalu puheen äänittämiseen, tarkistamiseen ja annotoimiseen",
 	"right-wikispeech-sdc-record": "Nauhoittaa ääntä",
-	"action-wikispeech-sdc-record": "nauhoittaa ääntä"
+	"action-wikispeech-sdc-record": "nauhoittaa ääntä",
+	"recordspeech": "Äänitä puhetta",
+	"wikispeech-sdc-record": "Äänitä",
+	"wikispeech-sdc-play": "Toista",
+	"wikispeech-sdc-save": "Tallenna",
+	"wikispeech-sdc-skip": "Ohita"
 }

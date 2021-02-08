@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Karl Wettin",
+			"Robby",
 			"Sebastian Berlin"
 		]
 	},
@@ -13,5 +14,5 @@
 	"wikispeech-sdc-record": "Label for button that starts recording on the Record special page.",
 	"wikispeech-sdc-play": "Label for button that plays recording on the Record special page.",
 	"wikispeech-sdc-save": "Label for button that saves recording on the Record special page.",
-	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page."
+	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page.\n{{identical|Skip}}"
 }
