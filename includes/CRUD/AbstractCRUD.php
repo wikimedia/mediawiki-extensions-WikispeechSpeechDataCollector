@@ -13,6 +13,25 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  */
 abstract class AbstractCRUD implements CRUD {
 
+	/** @var CRUDContext */
+	private $context;
+
+	/**
+	 * @param CRUDContext $context
+	 * @since 0.1.0
+	 */
+	public function __construct( CRUDContext $context ) {
+		$this->context = $context;
+	}
+
+	/**
+	 * @return CRUDContext
+	 * @since 0.1.0
+	 */
+	public function getContext(): CRUDContext {
+		return $this->context;
+	}
+
 	/**
 	 * Creates a new instance
 	 * of the corresponding underlying subclass of {@link Persistent}.
