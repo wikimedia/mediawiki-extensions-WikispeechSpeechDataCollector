@@ -30,7 +30,8 @@
 		"RecordSpeech": "MediaWiki\\WikispeechSpeechDataCollector\\Specials\\SpecialRecordSpeech"
 	},
 	"ExtensionMessagesFiles": {
-		"WikispeechSpeechDataCollectorAlias": "WikispeechSpeechDataCollector.alias.php"
+		"WikispeechSpeechDataCollectorAlias": "WikispeechSpeechDataCollector.alias.php",
+		"WikispeechSpeechDataCollectorNamespaces": "WikispeechSpeechDataCollector.namespaces.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
@@ -45,7 +46,8 @@
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "db",
-		"ApiBeforeMain": "api"
+		"ApiBeforeMain": "api",
+		"MediaWikiServices": "mcr"
 	},
 	"HookHandlers": {
 		"api": {
@@ -56,17 +58,35 @@
 		},
 		"db": {
 			"class": "MediaWiki\\WikispeechSpeechDataCollector\\Hooks\\DatabaseHooks"
+		},
+		"mcr": {
+			"class": "MediaWiki\\WikispeechSpeechDataCollector\\Hooks\\McrHooks"
 		}
 	},
 	"ConfigRegistry": {
 		"wikispeech-sdc": "GlobalVarConfig::newInstance"
 	},
 	"AvailableRights": [
-		"wikispeech-sdc-record"
+		"wikispeech-sdc-record",
+		"wikispeech-sdc-speech-recording"
 	],
 	"GroupPermissions": {
 		"*": {
-			"wikispeech-sdc-record": true
+			"wikispeech-sdc-record": true,
+			"wikispeech-sdc-speech-recording": true
 		}
-	}
+	},
+	"namespaces": [
+		{
+			"id": 5770,
+			"constant": "NS_SPEECH_RECORDING",
+			"name": "Speech_recording",
+			"protection": "wikispeech-sdc-speech-recording"
+		},
+		{
+			"id": 5771,
+			"constant": "NS_SPEECH_RECORDING_TALK",
+			"name": "Speech_recording_talk"
+		}
+	]
 }

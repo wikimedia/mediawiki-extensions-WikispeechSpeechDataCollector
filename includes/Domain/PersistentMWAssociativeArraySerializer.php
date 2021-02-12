@@ -106,26 +106,32 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		RecordingAnnotation $recordingAnnotation
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $recordingAnnotation->getIdentity() );
-		$array['recording'] = $this->serializeUUID( $recordingAnnotation->getRecording() );
 		$array['start'] = $recordingAnnotation->getStart();
 		$array['end'] = $recordingAnnotation->getEnd();
-		$array['stereotype'] = $this->serializeUUID( $recordingAnnotation->getStereotype() );
+		$array['stereotype'] = $recordingAnnotation->getStereotype();
 		$array['value'] = $recordingAnnotation->getValue();
 		return $array;
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return array
 	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $recordingAnnotationStereotype->getIdentity() );
-		$array['valueClass'] = $recordingAnnotationStereotype->getValueClass();
-		$array['description'] = $recordingAnnotationStereotype->getDescription();
+		$array['identity'] = $this->serializeUUID( $recordingAnnotations->getIdentity() );
+		$array['items'] = [];
+		if ( $recordingAnnotations->getItems() !== null &&
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
+			count( $recordingAnnotations->getItems() ) > 0
+		) {
+			foreach ( $recordingAnnotations->getItems() as $recordingAnnotation ) {
+				$array['items'][] = $this->visitRecordingAnnotation( $recordingAnnotation );
+			}
+		}
+
 		return $array;
 	}
 

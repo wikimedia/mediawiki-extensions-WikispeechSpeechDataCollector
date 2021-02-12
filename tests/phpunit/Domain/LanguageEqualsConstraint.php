@@ -3,6 +3,7 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Language;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
@@ -16,8 +17,8 @@ class LanguageEqualsConstraint extends PersistentEqualsConstraint {
 	 * @param Language $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsSame( 'nativeName', $expected->getNativeName(), $actual->getNativeName() );
 		$this->matchIsSame( 'iso639a1', $expected->getIso639a1(), $actual->getIso639a1() );

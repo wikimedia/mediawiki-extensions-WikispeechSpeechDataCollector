@@ -3,6 +3,7 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
@@ -16,8 +17,8 @@ class ManuscriptPromptEqualsConstraint extends PersistentEqualsConstraint {
 	 * @param ManuscriptPrompt $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsSame( 'index', $expected->getIndex(), $actual->getIndex() );
 		$this->matchIsSame( 'content', $expected->getContent(), $actual->getContent() );

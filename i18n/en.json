@@ -13,5 +13,9 @@
 	"wikispeech-sdc-record": "Record",
 	"wikispeech-sdc-play": "Play",
 	"wikispeech-sdc-save": "Save",
-	"wikispeech-sdc-skip": "Skip"
+	"wikispeech-sdc-skip": "Skip",
+	"right-wikispeech-sdc-speech-recording": "Edit speech recording",
+	"action-wikispeech-sdc-speech-recording": "Edit speech recording",
+	"right-wikispeech-sdc-speech-recording-talk": "Discuss speech recording",
+	"action-wikispeech-sdc-speech-recording-talk": "Discuss speech recording"
 }

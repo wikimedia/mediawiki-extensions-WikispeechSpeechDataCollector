@@ -63,17 +63,8 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	/**
 	 * @inheritDoc
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
-	) {
-		throw new Exception( 'Not implemented' );
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	) {
 		throw new Exception( 'Not implemented' );
 	}

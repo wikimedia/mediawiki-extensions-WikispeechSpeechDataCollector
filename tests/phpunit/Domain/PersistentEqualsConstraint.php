@@ -35,6 +35,14 @@ abstract class PersistentEqualsConstraint extends Constraint {
 
 	/**
 	 * @since 0.1.0
+	 * @return array
+	 */
+	protected function getFailedFields(): array {
+		return $this->failedFields;
+	}
+
+	/**
+	 * @since 0.1.0
 	 * @param Persistent $actual
 	 * @param string $description
 	 * @param bool|null $returnResult
@@ -92,8 +100,8 @@ abstract class PersistentEqualsConstraint extends Constraint {
 	 * @throws ExpectationFailedException if expected is not equal and $returnResult is false.
 	 */
 	abstract protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	);
 
 	/**
@@ -132,13 +140,13 @@ abstract class PersistentEqualsConstraint extends Constraint {
 			return $this->success;
 		}
 		if ( !$this->success ) {
+			$exporter = new Exporter();
 			$message = "$description \n";
 			foreach ( $this->failedFields as $failedField ) {
 				$message .= $failedField['field'] . ' does not match expected ' .
-					$failedField['expected'] . ', is ' .
-					$failedField['actual'] . "\n";
+					$exporter->export( $failedField['expected'] ) . ', is ' .
+					$exporter->export( $failedField['actual'] ) . "\n";
 			}
-			$exporter = new Exporter();
 			$message .= "\nin object\n" . $exporter->export( $this->expected );
 			$this->fail( $actual, $message );
 		}

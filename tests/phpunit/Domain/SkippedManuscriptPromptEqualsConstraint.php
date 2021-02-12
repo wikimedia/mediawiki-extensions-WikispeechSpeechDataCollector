@@ -2,6 +2,7 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 
 /**
@@ -16,8 +17,8 @@ class SkippedManuscriptPromptEqualsConstraint extends PersistentEqualsConstraint
 	 * @param SkippedManuscriptPrompt $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsTimestampSame( 'skipped', $expected->getSkipped(), $actual->getSkipped() );
 		$this->matchIsSame( 'user', $expected->getUser(), $actual->getUser() );

@@ -4,23 +4,23 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
- * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation
+ * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations
  * @since 0.1.0
  */
-class RecordingAnnotationTest extends AbstractPersistentTest {
+class RecordingAnnotationsTest extends AbstractPersistentTest {
 
 	protected function instanceFactory(): Persistent {
-		return new RecordingAnnotation();
+		return new RecordingAnnotations();
 	}
 
 	protected function visitorTestFactory(): PersistentVisitorAdapter {
 		return new class extends PersistentVisitorAdapter {
-			public function visitRecordingAnnotation(
-				RecordingAnnotation $recordingAnnotation
+			public function visitRecordingAnnotations(
+				RecordingAnnotations $recordingAnnotations
 			) {
 				return null;
 			}

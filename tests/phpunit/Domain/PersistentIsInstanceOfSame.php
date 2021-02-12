@@ -9,8 +9,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitor;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
@@ -96,24 +95,13 @@ class PersistentIsInstanceOfSame implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation $recordingAnnotation
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return bool
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	): bool {
-		return $this->other instanceof RecordingAnnotation;
-	}
-
-	/**
-	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return bool
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	): bool {
-		return $this->other instanceof RecordingAnnotationStereotype;
+		return $this->other instanceof RecordingAnnotations;
 	}
 
 	/**

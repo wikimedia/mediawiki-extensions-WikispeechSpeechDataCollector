@@ -2,6 +2,7 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 
 /**
@@ -16,8 +17,8 @@ class RecordingReviewEqualsConstraint extends PersistentEqualsConstraint {
 	 * @param RecordingReview $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsTimestampSame( 'created', $expected->getCreated(), $actual->getCreated() );
 		$this->matchIsSame( 'value', $expected->getValue(), $actual->getValue() );

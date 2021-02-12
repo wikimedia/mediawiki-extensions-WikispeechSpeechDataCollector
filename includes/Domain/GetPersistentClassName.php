@@ -68,24 +68,13 @@ class GetPersistentClassName implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation $recordingAnnotation
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return string
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	) {
-		return 'RecordingAnnotation';
-	}
-
-	/**
-	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return string
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	) {
-		return 'RecordingAnnotationStereotype';
+		return 'RecordingAnnotations';
 	}
 
 	/**

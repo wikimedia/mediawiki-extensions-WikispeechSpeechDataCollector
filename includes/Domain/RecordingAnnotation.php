@@ -9,15 +9,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
-class RecordingAnnotation implements Persistent {
-	/** @var string|null 128 bits UUID */
-	private $identity;
-
-	/**
-	 * @var string|null 128 bits UUID
-	 * @see Recording::$identity
-	 */
-	private $recording;
+class RecordingAnnotation {
 
 	/** @var int|null Start position in milliseconds of recorded audio. */
 	private $start;
@@ -26,34 +18,17 @@ class RecordingAnnotation implements Persistent {
 	private $end;
 
 	/**
-	 * @var string|null 128 bits UUID
-	 * @see RecordingAnnotationStereotype::$identity
+	 * @var string|null What sort of values this is, e.g. "White noise level"
 	 */
 	private $stereotype;
 
 	/**
-	 * Weak dynamically typed.
-	 * Currently stored as a string. It's up to the user to cast it to the right type.
-	 * @todo In the future, join in the value class and cast it on deserialization.
-	 * @see RecordingAnnotationStereotype::$valueClass
-	 * @var string|null
+	 * @var mixed The value associated with the stereotype. E.g. "-9dBm".
 	 */
 	private $value;
 
-	// visitor
-
-	/**
-	 * @param PersistentVisitor $visitor
-	 * @return mixed|null
-	 */
-	public function accept( PersistentVisitor $visitor ) {
-		return $visitor->visitRecordingAnnotation( $this );
-	}
-
 	public function __toString(): string {
 		return '[ ' .
-			'identity => "' . $this->getIdentity() . '", ' .
-			'recording => "' . $this->getRecording() . '", ' .
 			'start => "' . $this->getStart() . '", ' .
 			'end => "' . $this->getEnd() . '", ' .
 			'stereotype => "' . $this->getStereotype() . '", ' .
@@ -62,38 +37,6 @@ class RecordingAnnotation implements Persistent {
 	}
 
 	// getters and setters
-
-	/**
-	 * @see RecordingAnnotation::$identity
-	 * @return string|null
-	 */
-	public function getIdentity(): ?string {
-		return $this->identity;
-	}
-
-	/**
-	 * @see RecordingAnnotation::$identity
-	 * @param string|null $identity
-	 */
-	public function setIdentity( $identity ): void {
-		$this->identity = $identity;
-	}
-
-	/**
-	 * @see RecordingAnnotation::$recording
-	 * @return string|null
-	 */
-	public function getRecording(): ?string {
-		return $this->recording;
-	}
-
-	/**
-	 * @see RecordingAnnotation::$recording
-	 * @param string|null $recording
-	 */
-	public function setRecording( ?string $recording ): void {
-		$this->recording = $recording;
-	}
 
 	/**
 	 * @see RecordingAnnotation::$start
@@ -145,17 +88,17 @@ class RecordingAnnotation implements Persistent {
 
 	/**
 	 * @see RecordingAnnotation::$value
-	 * @return string|null
+	 * @return mixed
 	 */
-	public function getValue(): ?string {
+	public function getValue() {
 		return $this->value;
 	}
 
 	/**
 	 * @see RecordingAnnotation::$value
-	 * @param string|null $value
+	 * @param mixed $value
 	 */
-	public function setValue( ?string $value ): void {
+	public function setValue( $value ): void {
 		$this->value = $value;
 	}
 }
