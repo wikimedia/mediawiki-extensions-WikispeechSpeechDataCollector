@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hanna Tardos"
+		]
+	},
+	"wikispeech-sdc-play": "Lejátszás",
+	"wikispeech-sdc-save": "Mentés",
+	"wikispeech-sdc-skip": "Kihagy"
+}
