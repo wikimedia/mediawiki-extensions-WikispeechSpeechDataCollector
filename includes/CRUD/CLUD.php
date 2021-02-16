@@ -15,7 +15,7 @@ class CLUD {
 
 	/**
 	 * @var CRUDFactory Reused instance to save a couple of clock ticks.
-	 * @note Consider a flyweight pattern to reuse CRUDs returned by CRUDFactory.
+	 * @note Consider implementing a flyweight pattern to reuse CRUDs returned by CRUDFactory.
 	 *  That should probably be implemented as a reusable decorated CRUDFactory
 	 *  rather than implemented directly in this class.
 	 */

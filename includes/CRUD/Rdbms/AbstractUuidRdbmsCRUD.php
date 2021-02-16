@@ -20,6 +20,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 	 *
 	 * @param Persistent $instance
 	 * @throws ExternalStoreException If instance identity is already set
+	 * @since 0.1.0
 	 */
 	public function create(
 		Persistent $instance
@@ -37,6 +38,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 	/**
 	 * @param Persistent $instance
 	 * @param array $row
+	 * @since 0.1.0
 	 */
 	protected function deserializeRowIdentity(
 		Persistent $instance,
@@ -48,6 +50,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 	/**
 	 * @param string $identity
 	 * @return Persistent|null
+	 * @since 0.1.0
 	 */
 	public function read(
 		$identity
@@ -57,6 +60,7 @@ abstract class AbstractUuidRdbmsCRUD extends AbstractRdbmsCRUD {
 
 	/**
 	 * @param string $identity
+	 * @since 0.1.0
 	 */
 	public function delete(
 		$identity

@@ -48,6 +48,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * this method and all uses of it to a strategy pattern or something.
 	 *
 	 * @return string
+	 * @since 0.1.0
 	 */
 	public function getIdentityColumn(): string {
 		return $this->identityColumn;
@@ -55,21 +56,25 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 
 	/**
 	 * @return string Name of database table representing this class.
+	 * @since 0.1.0
 	 */
 	abstract protected function getTable(): string;
 
 	/**
 	 * @return string[] Columns in table required to deserialize an instance, identity excluded.
+	 * @since 0.1.0
 	 */
 	abstract protected function getColumns(): array;
 
 	/**
 	 * @var string[] Columns in table required to deserialize an instance, identity included.
+	 * @since 0.1.0
 	 */
 	private $allColumns;
 
 	/**
 	 * @return array|string[] Columns in table required to deserialize an instance, identity included
+	 * @since 0.1.0
 	 */
 	protected function getAllColumns(): array {
 		if ( !$this->allColumns ) {
@@ -87,6 +92,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @see read()
 	 * @param Persistent $instance Instance to be loaded. Identity must be set.
 	 * @return bool true if found, false if not found.
+	 * @since 0.1.0
 	 */
 	public function load(
 		Persistent $instance
@@ -101,6 +107,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * updates the database to correspond to the data set in the domain object.
 	 *
 	 * @param Persistent $instance
+	 * @since 0.1.0
 	 */
 	public function update(
 		Persistent $instance
@@ -117,6 +124,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * removes the corresponding persistent domain object from the database.
 	 *
 	 * @param mixed $identity
+	 * @since 0.1.0
 	 */
 	public function delete(
 		$identity
@@ -132,6 +140,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 *
 	 * @param array $conditions See {@link \IDatabase::select} conditions.
 	 * @return Persistent|null
+	 * @since 0.1.0
 	 */
 	public function getByConditions(
 		array $conditions
@@ -146,6 +155,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @param array $conditions See {@link \IDatabase::select} conditions.
 	 * @param Persistent $instance Instance to be populated with data.
 	 * @return bool true if found, false if not found.
+	 * @since 0.1.0
 	 */
 	public function loadByConditions(
 		array $conditions,
@@ -173,6 +183,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	/**
 	 * @param array $conditions
 	 * @return Persistent[]|null
+	 * @since 0.1.0
 	 */
 	public function listByConditions(
 		array $conditions
@@ -198,6 +209,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 *
 	 * @param mixed $instance An instance of the corresponding underlying Persistent subclass.
 	 * @param array $row
+	 * @since 0.1.0
 	 */
 	abstract protected function deserializeRow(
 		$instance,
@@ -207,6 +219,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	/**
 	 * @param Persistent $instance
 	 * @param array $row
+	 * @since 0.1.0
 	 */
 	abstract protected function deserializeRowIdentity(
 		Persistent $instance,
@@ -221,6 +234,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 *
 	 * @param mixed $instance An instance of the corresponding underlying Persistent subclass.
 	 * @return array
+	 * @since 0.1.0
 	 */
 	abstract protected function serializeFields(
 		$instance
@@ -230,6 +244,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @param array $row
 	 * @param string $columnName
 	 * @return string|null
+	 * @since 0.1.0
 	 */
 	protected function deserializeString( array $row, string $columnName ): ?string {
 		if ( !array_key_exists( $columnName, $row ) ) {
@@ -242,6 +257,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @param array $row
 	 * @param string $columnName
 	 * @return int|null
+	 * @since 0.1.0
 	 */
 	protected function deserializeInt( array $row, string $columnName ): ?int {
 		if ( !array_key_exists( $columnName, $row ) ) {
@@ -254,6 +270,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @param array $row
 	 * @param string $columnName
 	 * @return string|null
+	 * @since 0.1.0
 	 */
 	protected function deserializeUuid( array $row, string $columnName ): ?string {
 		if ( !array_key_exists( $columnName, $row ) ) {
@@ -266,6 +283,7 @@ abstract class AbstractRdbmsCRUD extends AbstractCRUD {
 	 * @param array $row
 	 * @param string $columnName
 	 * @return MWTimestamp|null
+	 * @since 0.1.0
 	 */
 	protected function deserializeTimestamp( array $row, string $columnName ): ?MWTimestamp {
 		if ( !array_key_exists( $columnName, $row ) ) {

@@ -37,6 +37,7 @@ abstract class AbstractCRUD implements CRUD {
 	 * of the corresponding underlying subclass of {@link Persistent}.
 	 *
 	 * @return Persistent
+	 * @since 0.1.0
 	 */
 	abstract public function instanceFactory(): Persistent;
 
@@ -47,6 +48,7 @@ abstract class AbstractCRUD implements CRUD {
 	 * @see load()
 	 * @param mixed $identity
 	 * @return Persistent|null
+	 * @since 0.1.0
 	 */
 	public function read(
 		$identity

@@ -17,6 +17,7 @@ class UUID {
 	 *
 	 * @see UUID::v4HexFactory()
 	 * @return string
+	 * @since 0.1.0
 	 */
 	public static function v4BytesFactory() {
 		return self::hexToBytes( self::v4HexFactory() );
@@ -41,6 +42,7 @@ class UUID {
 	 *
 	 * @param bool $addDashes If true then '-' is added after byte 4, 6, 8 and 10.
 	 * @return string
+	 * @since 0.1.0
 	 */
 	public static function v4HexFactory( bool $addDashes = false ) {
 		return implode( $addDashes ? '-' : '', [
@@ -56,6 +58,7 @@ class UUID {
 	 * @param string|null $input A valid UUID as bytes or in hex form, or null.
 	 * @return string|null
 	 * @throws InvalidArgumentException If not null nor a valid UUID.
+	 * @since 0.1.0
 	 */
 	public static function asBytes( ?string $input ): ?string {
 		if ( $input === null ) {
@@ -73,6 +76,7 @@ class UUID {
 	 * @param bool $addDashes If true then '-' is added after byte 4, 6, 8 and 10.
 	 * @return string|null
 	 * @throws InvalidArgumentException If not null nor a valid UUID.
+	 * @since 0.1.0
 	 */
 	public static function asHex( ?string $input, bool $addDashes = false ): ?string {
 		if ( $input === null ) {
@@ -89,6 +93,7 @@ class UUID {
 	 * @param string $input
 	 * @param bool $addDashes If true then '-' is added after byte 4, 6, 8 and 10.
 	 * @return string
+	 * @since 0.1.0
 	 */
 	private static function bytesToHex( string $input, bool $addDashes = false ): string {
 		$hex = bin2hex( $input );
@@ -106,6 +111,7 @@ class UUID {
 	 * @param string $input
 	 * @param bool $addDashes If true then '-' is added after byte 4, 6, 8 and 10.
 	 * @return string
+	 * @since 0.1.0
 	 */
 	private static function hexToHex( string $input, bool $addDashes = false ): string {
 		return self::bytesToHex( self::hexToBytes( $input ), $addDashes );
@@ -114,6 +120,7 @@ class UUID {
 	/**
 	 * @param string $input
 	 * @return string
+	 * @since 0.1.0
 	 */
 	private static function hexToBytes( string $input ): string {
 		$numberOfBytes = strlen( $input );
@@ -133,6 +140,7 @@ class UUID {
 	/**
 	 * @param string $input
 	 * @return bool True if input is a valid raw 16 byte UUID V4.
+	 * @since 0.1.0
 	 */
 	public static function isBytes( string $input ): bool {
 		return strlen( $input ) === 16
@@ -142,6 +150,7 @@ class UUID {
 	/**
 	 * @param string $input
 	 * @return bool True if input is a valid hex formatted UUID V4 with or without dashes.
+	 * @since 0.1.0
 	 */
 	public static function isHex( string $input ): bool {
 		return preg_match(
