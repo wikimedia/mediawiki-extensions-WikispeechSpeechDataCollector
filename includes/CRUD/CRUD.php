@@ -19,8 +19,8 @@ interface CRUD {
 	 * Given a persistent domain object instance with at least identity set,
 	 * creates representation in database to correspond to the data set in the domain object.
 	 *
-	 * @since 0.1.0
 	 * @param Persistent $instance Instance to be inserted to the persistent layer.
+	 * @since 0.1.0
 	 */
 	public function create(
 		Persistent $instance
@@ -33,6 +33,7 @@ interface CRUD {
 	 * @see load()
 	 * @param mixed $identity
 	 * @return Persistent|null
+	 * @since 0.1.0
 	 */
 	public function read(
 		$identity
@@ -45,6 +46,7 @@ interface CRUD {
 	 * @see read()
 	 * @param Persistent $instance Instance to be loaded. Identity must be set.
 	 * @return bool true if found, false if not found.
+	 * @since 0.1.0
 	 */
 	public function load(
 		Persistent $instance
@@ -55,6 +57,7 @@ interface CRUD {
 	 * updates the database to correspond to the data set in the domain object.
 	 *
 	 * @param Persistent $instance
+	 * @since 0.1.0
 	 */
 	public function update(
 		Persistent $instance
@@ -65,6 +68,7 @@ interface CRUD {
 	 * removes the corresponding persistent domain object from the database.
 	 *
 	 * @param mixed $identity
+	 * @since 0.1.0
 	 */
 	public function delete(
 		$identity
