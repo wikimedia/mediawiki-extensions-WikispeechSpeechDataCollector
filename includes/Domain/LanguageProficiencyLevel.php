@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class LanguageProficiencyLevel
- *
  * How well a user pronounce a specific dialect {@link UserDialect} of a language,
  * or how well a user understands a language {@link UserLanguageProficiencyLevel}
  * in written or spoken form.

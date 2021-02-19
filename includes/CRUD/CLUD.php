@@ -5,10 +5,8 @@ namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * Class CLUD
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
- *
  * Convenience class used to create, load, update and delete any {@link Persistent} instance.
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  */
 class CLUD {

@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class Language
- *
  * All languages in the world does not exist in all ISO639-codes. Thus in order
  * to really keep track of them we need to keep track of all ISO639-codes.
  * However, ISO639-codes are meant to be compositely unique. So for instance a

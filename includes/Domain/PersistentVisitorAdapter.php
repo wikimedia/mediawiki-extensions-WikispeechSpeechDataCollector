@@ -5,14 +5,12 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 use Exception;
 
 /**
- * Class PersistentVisitorAdapter
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
- *
  * An adapter pattern with no actual implementations on top of the persistent visitor.
  * For use with those implementations that only add support for some of the persistent subclasses.
  *
  * Throws an exception on any non overridden invocation.
  *
+ * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 abstract class PersistentVisitorAdapter implements PersistentVisitor {

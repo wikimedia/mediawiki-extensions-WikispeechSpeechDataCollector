@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class User
- *
  * An augmentation of the MediaWiki {@link \User}. Allows for easily adding new
  * information that make sense in this extension but might not be accepted in
  * the MediaWiki core. Also, by keeping track of users with our own identity

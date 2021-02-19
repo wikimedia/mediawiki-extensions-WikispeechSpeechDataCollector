@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class RecordingAnnotation
- *
  * Metadata describing a part between a start and an endpoint
  * of the audio in a {@link Recording}.
  *

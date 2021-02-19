@@ -5,8 +5,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 use MWTimestamp;
 
 /**
- * Class Recording
- *
  * The audio representation of a {@link ManuscriptPrompt}
  * recorded by a given {@link User} in a given {@link UserDialect}.
  *

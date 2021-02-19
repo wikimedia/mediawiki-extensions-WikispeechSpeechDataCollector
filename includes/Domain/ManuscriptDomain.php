@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class ManuscriptDomain
- *
  * A hierarchical grouping feature for manuscripts.
  *
  * @todo Consider if it makes more sense to use tags or such to group manuscripts.

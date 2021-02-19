@@ -3,7 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class ManuscriptPrompt
  * Immutable (once there is at least one recording pointing at the instance).
  *
  * An ordered part of text in a {@link Manuscript}. A {@link Recording} is

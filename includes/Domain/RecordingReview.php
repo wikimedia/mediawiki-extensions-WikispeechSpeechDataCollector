@@ -5,8 +5,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 use MWTimestamp;
 
 /**
- * Class RecordingReview
- *
  * Whether or not a {@link Recording} is good according to a specific {@link User}.
  *
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain

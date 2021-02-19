@@ -29,13 +29,11 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 
 /**
- * Class CRUDFactory
- * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
- *
  * A {@link PersistentVisitor}
  * that return the corresponding {@link CRUD}
  * that represents the given {@link Persistent}.
  *
+ * @package MediaWiki\WikispeechSpeechDataCollector\CRUD
  * @since 0.1.0
  */
 class CRUDFactory implements PersistentVisitor {

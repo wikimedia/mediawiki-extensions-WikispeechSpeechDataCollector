@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class UserDialect
- *
  * How well a {@link User} speaks a specific dialect of a {@link Language}
  * and the geographic area that best describes the accent or dialect.
  *

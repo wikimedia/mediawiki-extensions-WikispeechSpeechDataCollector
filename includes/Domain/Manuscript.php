@@ -5,8 +5,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 use MWTimestamp;
 
 /**
- * Class Manuscript
- *
  * A manuscript is a complete text which is required to be completely recorded
  * in order to produce a voice synthesizer. Manuscripts are broken down in
  * smaller parts, {@link ManuscriptPrompt}, ordered segments with a lexical flow,

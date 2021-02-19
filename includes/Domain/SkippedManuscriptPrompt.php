@@ -5,8 +5,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 use MWTimestamp;
 
 /**
- * Class SkippedManuscriptPrompt
- *
  * Indication that a {@link User} skipped recording
  * a specific {@link ManuscriptPrompt}.
  *

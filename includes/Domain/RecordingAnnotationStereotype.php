@@ -3,8 +3,6 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
- * Class RecordingAnnotationStereotype
- *
  * Information in both machine- and human readable form
  * on how to interpret the value of a {@link RecordingAnnotation}.
  *
