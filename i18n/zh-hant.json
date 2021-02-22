@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"wikispeech-sdc": "Wikispeech 語音資料收集器",
+	"wikispeech-sdc-desc": "用來錄製、審閱和註釋語音的工具。",
+	"right-wikispeech-sdc-record": "錄製聲音",
+	"action-wikispeech-sdc-record": "錄製聲音",
+	"recordspeech": "錄製發言",
+	"wikispeech-sdc-record": "錄音",
+	"wikispeech-sdc-play": "播放",
+	"wikispeech-sdc-save": "儲存",
+	"wikispeech-sdc-skip": "跳過"
+}
