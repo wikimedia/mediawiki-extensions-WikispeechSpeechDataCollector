@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class UserLanguageProficiencyLevel.
 -- For details on fields, see UserLanguageProficiencyLevel.php
--- For details on mapping, see UserLanguageProficiencyLevelCRUD.php
+-- For details on mapping, see UserLanguageProficiencyLevelCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_user_language_proficiency_level(
     wssdculpl_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdculpl_user varbinary(32) NOT NULL default '',

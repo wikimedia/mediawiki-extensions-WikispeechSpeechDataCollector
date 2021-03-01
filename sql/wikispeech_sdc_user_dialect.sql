@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class UserDialect.
 -- For details on fields, see UserDialect.php
--- For details on mapping, see UserDialectCRUD.php
+-- For details on mapping, see UserDialectCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_user_dialect(
     wssdcud_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcud_user varbinary(32) NOT NULL default '',

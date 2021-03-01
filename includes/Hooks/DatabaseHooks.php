@@ -10,16 +10,16 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Hooks;
 
 use DatabaseUpdater;
 use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\LanguageCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptDomainCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingReviewCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\SkippedManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserDialectCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\UserLanguageProficiencyLevelCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\LanguageCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\ManuscriptCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\ManuscriptDomainCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\ManuscriptPromptCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\RecordingCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\RecordingReviewCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\SkippedManuscriptPromptCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserDialectCrud;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserLanguageProficiencyLevelCrud;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Hooks
@@ -35,16 +35,16 @@ class DatabaseHooks
 	 * @param DatabaseUpdater $updater
 	 */
 	public function onLoadExtensionSchemaUpdates( $updater ) {
-		$this->addCRUDExtensionTable( $updater, LanguageCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, ManuscriptCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, ManuscriptDomainCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, ManuscriptPromptCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, RecordingCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, RecordingReviewCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, SkippedManuscriptPromptCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, UserCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, UserDialectCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, UserLanguageProficiencyLevelCRUD::TABLE );
+		$this->addCrudExtensionTable( $updater, LanguageCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, ManuscriptCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, ManuscriptDomainCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, ManuscriptPromptCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, RecordingCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, RecordingReviewCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, SkippedManuscriptPromptCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, UserCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, UserDialectCrud::TABLE );
+		$this->addCrudExtensionTable( $updater, UserLanguageProficiencyLevelCrud::TABLE );
 	}
 
 	/**
@@ -54,7 +54,7 @@ class DatabaseHooks
 	 * @param DatabaseUpdater $updater
 	 * @param string $tableName
 	 */
-	private function addCRUDExtensionTable(
+	private function addCrudExtensionTable(
 		DatabaseUpdater $updater,
 		string $tableName
 	) {

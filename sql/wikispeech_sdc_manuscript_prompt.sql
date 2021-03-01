@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class ManuscriptPrompt.
 -- For details on fields, see ManuscriptPrompt.php
--- For details on mapping, see ManuscriptPromptCRUD.php
+-- For details on mapping, see ManuscriptPromptCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_manuscript_prompt(
     wssdcmp_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcmp_manuscript varbinary(32) NOT NULL default '',

@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class User.
 -- For details on fields, see User.php
--- For details on mapping, see UserCRUD.php
+-- For details on mapping, see UserCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_user(
     wssdcu_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcu_mediawiki_user int unsigned,

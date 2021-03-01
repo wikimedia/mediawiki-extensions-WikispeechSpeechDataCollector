@@ -68,7 +68,7 @@
 	},
 	"APIModules": {
 		"wikispeech-sdc-crud": {
-			"class": "\\MediaWiki\\WikispeechSpeechDataCollector\\Api\\ApiCRUD",
+			"class": "\\MediaWiki\\WikispeechSpeechDataCollector\\Api\\ApiCrud",
 			"services": [
 				"DBLoadBalancer",
 				"RevisionStore"

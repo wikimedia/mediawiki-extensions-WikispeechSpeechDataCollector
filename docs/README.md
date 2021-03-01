@@ -14,7 +14,7 @@ We thus use acronyms for this throughout the project.
 
 ## Namespaces
 
-* MediaWiki\WikispeechSpeechDataCollector\CRUD
+* MediaWiki\WikispeechSpeechDataCollector\Crud
 * MediaWiki\WikispeechSpeechDataCollector\Domain
 
 ## Domain
@@ -44,7 +44,7 @@ Create, Read, Update, Delete.
 Handles serialization and deserialization of domain objects.
 
 ```php
-$crud = new UserCRUD();
+$crud = new UserCrud();
 $user = $crud->read( 'uuid' );
 
 $user = new User();
@@ -62,7 +62,7 @@ A convenience class for handling persistent instances no matter what
 subclass of Persistent they are.
 
 ```php
-$clud = new CLUD();
+$clud = new Clud();
 $user = new User();
 $user->setIdentity( 'uuid' );
 $clud->load( $user );

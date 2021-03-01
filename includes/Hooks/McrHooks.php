@@ -11,7 +11,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Hooks;
 use MediaWiki\Hook\MediaWikiServicesHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRoleRegistry;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Mcr\RecordingAnnotationsCRUD;
+use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud;
 
 /**
  * Registers multi content revision slot roles,
@@ -31,7 +31,7 @@ class McrHooks implements MediaWikiServicesHook {
 			'SlotRoleRegistry',
 			function ( SlotRoleRegistry $registry ) {
 				$registry->defineRoleWithModel(
-					RecordingAnnotationsCRUD::SLOT_ROLE,
+					RecordingAnnotationsCrud::SLOT_ROLE,
 					CONTENT_MODEL_JSON
 				);
 			}

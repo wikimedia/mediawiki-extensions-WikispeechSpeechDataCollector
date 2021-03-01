@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class RecordingReview.
 -- For details on fields, see RecordingReview.php
--- For details on mapping, see RecordingReviewCRUD.php
+-- For details on mapping, see RecordingReviewCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_recording_review(
     wssdcrr_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcrr_created varbinary(14) NOT NULL default '',

@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class SkippedManuscriptPrompt.
 -- For details on fields, see SkippedManuscriptPrompt.php
--- For details on mapping, see SkippedManuscriptPromptCRUD.php
+-- For details on mapping, see SkippedManuscriptPromptCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_skipped_manuscript_prompt(
     wssdcsmp_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcsmp_user varbinary(32) NOT NULL default '',

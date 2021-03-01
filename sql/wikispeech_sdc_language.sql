@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class Language.
 -- For details on fields, see Language.php
--- For details on mapping, see LanguageCRUD.php
+-- For details on mapping, see LanguageCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_language(
     wssdcl_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcl_native_name varchar(64) NOT NULL default '',

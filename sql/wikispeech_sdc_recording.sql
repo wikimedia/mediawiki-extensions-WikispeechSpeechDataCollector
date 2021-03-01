@@ -1,6 +1,6 @@
 -- This is the relational database mapping of class Recording.
 -- For details on fields, see Recording.php
--- For details on mapping, see RecordingCRUD.php
+-- For details on mapping, see RecordingCrud.php
 CREATE TABLE IF NOT EXISTS /*_*/wikispeech_sdc_recording(
     wssdcr_identity varbinary(32) NOT NULL PRIMARY KEY,
     wssdcr_recorded varbinary(14) NOT NULL default '',
