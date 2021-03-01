@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use Hamcrest\Core\IsSame;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
 use PHPUnit\Framework\Constraint\Constraint;

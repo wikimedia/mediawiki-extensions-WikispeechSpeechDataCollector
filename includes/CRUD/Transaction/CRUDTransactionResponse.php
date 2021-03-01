@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**

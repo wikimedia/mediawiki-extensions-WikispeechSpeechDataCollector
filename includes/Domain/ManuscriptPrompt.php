@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * Immutable (once there is at least one recording pointing at the instance).
  *
  * An ordered part of text in a {@link Manuscript}. A {@link Recording} is

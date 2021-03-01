@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use MediaWiki\Revision\RevisionStore;
 use MWException;
 use User as MWUser;

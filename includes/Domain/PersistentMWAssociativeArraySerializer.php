@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use FormatJson;
 use MediaWiki\WikispeechSpeechDataCollector\UUID;
 use MWException;

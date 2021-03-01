@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * A list of {@link RecordingAnnotation} associated with a {@link Recording}.
  *
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain

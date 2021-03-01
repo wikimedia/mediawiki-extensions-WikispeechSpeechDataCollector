@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * How well a user pronounce a specific dialect {@link UserDialect} of a language,
  * or how well a user understands a language {@link UserLanguageProficiencyLevel}
  * in written or spoken form.

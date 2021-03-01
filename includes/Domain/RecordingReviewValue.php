@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * What a {@link User} thought about the {@link Recording} of another user.
  * Stored in a {@link RecordingReview}.
  *

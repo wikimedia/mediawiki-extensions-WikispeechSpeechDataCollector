@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * Returns class name string <b>without</b> namespace qualifier.
  *
  * @see get_class() Returns class name string <b>with</b> namespace qualifier.

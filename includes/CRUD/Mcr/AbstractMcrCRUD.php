@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD\Mcr;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use CommentStoreComment;
 use ExternalStoreException;
 use InvalidArgumentException;

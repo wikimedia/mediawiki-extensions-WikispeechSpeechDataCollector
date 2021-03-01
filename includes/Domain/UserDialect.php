@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * How well a {@link User} speaks a specific dialect of a {@link Language}
  * and the geographic area that best describes the accent or dialect.
  *
