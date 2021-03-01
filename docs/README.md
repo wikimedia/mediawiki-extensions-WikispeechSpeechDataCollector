@@ -9,6 +9,8 @@ We thus use acronyms for this throughout the project.
 * Database columns: `wssdc`
 * extension.json configuration keys: `WikispeechSdc`
 * Modules: `wikispeech-sdc`
+* Multi Content Revision slot roles: `ws_sdc_`
+  * All names are lower case underscore separated, e.g. `ws_sdc_recording_annotations`.
 
 ## Namespaces
 

@@ -142,29 +142,42 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$recordingAnnotation->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
-		$recordingAnnotation->setRecording( $this->deserializeUUID( $this->get( 'recording' ) ) );
 		$recordingAnnotation->setStart( $this->get( 'start' ) );
 		$recordingAnnotation->setEnd( $this->get( 'end' ) );
-		$recordingAnnotation->setStereotype( $this->deserializeUUID( $this->get( 'stereotype' ) ) );
+		$recordingAnnotation->setStereotype( $this->get( 'stereotype' ) );
 		$recordingAnnotation->setValue( $this->get( 'value' ) );
 		return $recordingAnnotation;
 	}
 
 	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return RecordingAnnotationStereotype|null
+	 * @param RecordingAnnotations $recordingAnnotations
+	 * @return RecordingAnnotations|null
+	 * @throws MWException In case of annotations list contains null entries.
 	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	): ?RecordingAnnotationStereotype {
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
+	): ?RecordingAnnotations {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$recordingAnnotationStereotype->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
-		$recordingAnnotationStereotype->setValueClass( $this->get( 'valueClass' ) );
-		$recordingAnnotationStereotype->setDescription( $this->get( 'description' ) );
-		return $recordingAnnotationStereotype;
+		$recordingAnnotations->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$serializedItems = $this->get( 'items' );
+		if ( $serializedItems === null || count( $serializedItems ) === 0 ) {
+			$recordingAnnotations->setItems( null );
+		} else {
+			$items = [];
+			foreach ( $serializedItems as $serializedItem ) {
+				$recordingAnnotation = new RecordingAnnotation();
+				$this->array = $serializedItem;
+				$recordingAnnotation = $this->visitRecordingAnnotation( $recordingAnnotation );
+				if ( $recordingAnnotation === null ) {
+					throw new MWException( 'Unexpected null entry in list of annotations.' );
+				}
+				$items[] = $recordingAnnotation;
+			}
+			$recordingAnnotations->setItems( $items );
+		}
+		return $recordingAnnotations;
 	}
 
 	/**

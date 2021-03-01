@@ -2,6 +2,7 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 
 /**
@@ -16,8 +17,8 @@ class UserLanguageProficiencyLevelEqualsConstraint extends PersistentEqualsConst
 	 * @param UserLanguageProficiencyLevel $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsSame( 'user', $expected->getUser(), $actual->getUser() );
 		$this->matchIsSame( 'language', $expected->getLanguage(), $actual->getLanguage() );

@@ -10,7 +10,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitor;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReviewValue;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
@@ -104,29 +104,18 @@ class PersistentCompleteOneBuilder implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotation $recordingAnnotation
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return null
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	) {
-		$recordingAnnotation->setRecording( UUID::v4BytesFactory() );
+		$recordingAnnotation = new RecordingAnnotation();
 		$recordingAnnotation->setStart( 1 );
 		$recordingAnnotation->setEnd( 2 );
-		$recordingAnnotation->setStereotype( UUID::v4BytesFactory() );
+		$recordingAnnotation->setStereotype( 'Stereotype A' );
 		$recordingAnnotation->setValue( 'Value' );
-		return null;
-	}
-
-	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return null
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	) {
-		$recordingAnnotationStereotype->setDescription( 'A string' );
-		$recordingAnnotationStereotype->setValueClass( 'string' );
+		$recordingAnnotations->setItems( [ $recordingAnnotation ] );
 		return null;
 	}
 

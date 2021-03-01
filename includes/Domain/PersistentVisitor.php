@@ -51,19 +51,11 @@ interface PersistentVisitor {
 	);
 
 	/**
-	 * @param RecordingAnnotation $recordingAnnotation
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return mixed|null
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
-	);
-
-	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return mixed|null
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	);
 
 	/**

@@ -14,5 +14,9 @@
 	"wikispeech-sdc-record": "Label for button that starts recording on the Record special page.",
 	"wikispeech-sdc-play": "Label for button that plays recording on the Record special page.",
 	"wikispeech-sdc-save": "Label for button that saves recording on the Record special page.",
-	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page.\n{{identical|Skip}}"
+	"wikispeech-sdc-skip": "Label for button that skips and discards recording on the Record special page.\n{{identical|Skip}}",
+	"right-wikispeech-sdc-speech-recording": "{{doc-right|wikispeech-sdc-speech-recording}}",
+	"action-wikispeech-sdc-speech-recording": "{{doc-action|wikispeech-sdc-speech-recording}}",
+	"right-wikispeech-sdc-speech-recording-talk": "{{doc-right|wikispeech-sdc-speech-recording-talk}}",
+	"action-wikispeech-sdc-speech-recording-talk": "{{doc-action|wikispeech-sdc-speech-recording-talk}}"
 }

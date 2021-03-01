@@ -8,8 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitor;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
@@ -93,24 +92,13 @@ class PersistentEqualsConstraintFactory implements PersistentVisitor {
 
 	/**
 	 * @since 0.1.0
-	 * @param RecordingAnnotation $recordingAnnotation
-	 * @return RecordingAnnotationEqualsConstraint
+	 * @param RecordingAnnotations $recordingAnnotations
+	 * @return RecordingAnnotationsEqualsConstraint
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
-	): RecordingAnnotationEqualsConstraint {
-		return new RecordingAnnotationEqualsConstraint( $recordingAnnotation );
-	}
-
-	/**
-	 * @since 0.1.0
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return RecordingAnnotationStereotypeEqualsConstraint
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	): RecordingAnnotationStereotypeEqualsConstraint {
-		return new RecordingAnnotationStereotypeEqualsConstraint( $recordingAnnotationStereotype );
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
+	): RecordingAnnotationsEqualsConstraint {
+		return new RecordingAnnotationsEqualsConstraint( $recordingAnnotations );
 	}
 
 	/**

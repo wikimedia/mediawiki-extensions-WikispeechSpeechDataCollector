@@ -2,12 +2,11 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\CRUD;
 
+use MediaWiki\WikispeechSpeechDataCollector\CRUD\Mcr\RecordingAnnotationsCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\LanguageCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptDomainCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationStereotypeCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingReviewCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\SkippedManuscriptPromptCRUD;
@@ -20,8 +19,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitor;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
@@ -102,23 +100,13 @@ class CRUDFactory implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotation $recordingAnnotation
-	 * @return RecordingAnnotationCRUD
+	 * @param RecordingAnnotations $recordingAnnotations
+	 * @return RecordingAnnotationsCRUD
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
-	): RecordingAnnotationCRUD {
-		return new RecordingAnnotationCRUD( $this->context );
-	}
-
-	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return RecordingAnnotationStereotypeCRUD
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	): RecordingAnnotationStereotypeCRUD {
-		return new RecordingAnnotationStereotypeCRUD( $this->context );
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
+	): RecordingAnnotationsCRUD {
+		return new RecordingAnnotationsCRUD( $this->context );
 	}
 
 	/**

@@ -3,6 +3,8 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain;
 
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonDeserializer;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonSerializer;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociateArrayDeserializer;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociativeArraySerializer;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
@@ -18,6 +20,8 @@ use MediaWikiUnitTestCase;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociateArrayDeserializer
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociativeArraySerializer
+ * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonDeserializer
+ * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonSerializer
  * @since 0.1.0
  */
 abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
@@ -63,13 +67,45 @@ abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
 			$instance->accept( $builder );
 		}
 
-		$array = $instance->accept( new PersistentMWAssociativeArraySerializer() );
+		$serialized = $instance->accept( new PersistentMWAssociativeArraySerializer() );
 
-		$this->assertNotNull( $array );
-		$this->assertNotFalse( $array );
+		$this->assertNotNull( $serialized );
+		$this->assertNotFalse( $serialized );
 
 		$deserialized = $this->instanceFactory();
-		$deserialized = $deserialized->accept( new PersistentMWAssociateArrayDeserializer( $array ) );
+		$deserialized = $deserialized->accept(
+			new PersistentMWAssociateArrayDeserializer( $serialized ) );
+
+		$this->assertNotNull( $deserialized );
+
+		$this->assertThat( $deserialized, $instance->accept( new PersistentEqualsConstraintFactory() ) );
+	}
+
+	/**
+	 * Creates an instance and fills it with test data,
+	 * serialize and deserialize to a new instance.
+	 * Compares that the contained values are equal.
+	 *
+	 * @dataProvider provideTestSerializationPersistentBuilders
+	 * @param array $builders Instances of PersistentVisitor that will modify content of Persistent.
+	 */
+	public function testJsonSerialization_serializedAndDeserializedInstanceEqualOriginalInstance(
+		array $builders
+	) {
+		$instance = $this->instanceFactory();
+		$instance->setIdentity( UUID::v4BytesFactory() );
+
+		foreach ( $builders as $builder ) {
+			$instance->accept( $builder );
+		}
+
+		$serialized = $instance->accept( new PersistentJsonSerializer() );
+
+		$this->assertNotNull( $serialized );
+		$this->assertNotFalse( $serialized );
+
+		$deserialized = $this->instanceFactory();
+		$deserialized = $deserialized->accept( new PersistentJsonDeserializer( $serialized ) );
 
 		$this->assertNotNull( $deserialized );
 

@@ -14,8 +14,6 @@ use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\LanguageCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptDomainCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\ManuscriptPromptCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationCRUD;
-use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingAnnotationStereotypeCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\RecordingReviewCRUD;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Rdbms\SkippedManuscriptPromptCRUD;
@@ -41,8 +39,6 @@ class DatabaseHooks
 		$this->addCRUDExtensionTable( $updater, ManuscriptCRUD::TABLE );
 		$this->addCRUDExtensionTable( $updater, ManuscriptDomainCRUD::TABLE );
 		$this->addCRUDExtensionTable( $updater, ManuscriptPromptCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, RecordingAnnotationCRUD::TABLE );
-		$this->addCRUDExtensionTable( $updater, RecordingAnnotationStereotypeCRUD::TABLE );
 		$this->addCRUDExtensionTable( $updater, RecordingCRUD::TABLE );
 		$this->addCRUDExtensionTable( $updater, RecordingReviewCRUD::TABLE );
 		$this->addCRUDExtensionTable( $updater, SkippedManuscriptPromptCRUD::TABLE );

@@ -124,4 +124,16 @@ class RecordingCRUD extends AbstractUuidRdbmsCRUD {
 			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt,
 		] );
 	}
+
+	/**
+	 * @param int $audioFileWikiPageIdentity
+	 * @return Recording|null
+	 */
+	public function getByAudioFileWikiPageIdentity(
+		int $audioFileWikiPageIdentity
+	): ?Persistent {
+		return $this->getByConditions( [
+			self::COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY => $audioFileWikiPageIdentity
+		] );
+	}
 }

@@ -8,8 +8,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitor;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotation;
-use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotationStereotype;
+use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
@@ -83,23 +82,13 @@ class PersistentSetNullableNull implements PersistentVisitor {
 	}
 
 	/**
-	 * @param RecordingAnnotation $recordingAnnotation
+	 * @param RecordingAnnotations $recordingAnnotations
 	 * @return null
 	 */
-	public function visitRecordingAnnotation(
-		RecordingAnnotation $recordingAnnotation
+	public function visitRecordingAnnotations(
+		RecordingAnnotations $recordingAnnotations
 	) {
-		$recordingAnnotation->setValue( null );
-		return null;
-	}
-
-	/**
-	 * @param RecordingAnnotationStereotype $recordingAnnotationStereotype
-	 * @return null
-	 */
-	public function visitRecordingAnnotationStereotype(
-		RecordingAnnotationStereotype $recordingAnnotationStereotype
-	) {
+		$recordingAnnotations->setItems( null );
 		return null;
 	}
 

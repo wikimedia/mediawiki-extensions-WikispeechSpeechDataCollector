@@ -2,6 +2,7 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 
 /**
@@ -15,8 +16,8 @@ class UserEqualsConstraint extends PersistentEqualsConstraint {
 	 * @param User $actual
 	 */
 	protected function evaluateNonIdentityFields(
-		$expected,
-		$actual
+		Persistent $expected,
+		Persistent $actual
 	) {
 		$this->matchIsSame( 'mediaWikiUser', $expected->getMediaWikiUser(), $actual->getMediaWikiUser() );
 		$this->matchIsSame( 'yearBorn', $expected->getYearBorn(), $actual->getYearBorn() );
