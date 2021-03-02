@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\CRUD\Transaction;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction\CRUDTransactionMWAssociativeArrayMarshaller;
 use MediaWiki\WikispeechSpeechDataCollector\CRUD\Transaction\CRUDTransactionResponse;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociateArrayDeserializer;

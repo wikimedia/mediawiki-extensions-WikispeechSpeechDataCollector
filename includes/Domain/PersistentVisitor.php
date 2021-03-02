@@ -3,6 +3,12 @@
 namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
+/**
  * Interface PersistentVisitor
  * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  *

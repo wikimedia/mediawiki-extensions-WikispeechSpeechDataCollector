@@ -5,6 +5,7 @@
  *
  * @file
  * @ingroup Extensions
+ * @license GPL-2.0-or-later
  */
 
 $specialPageAliases = [];

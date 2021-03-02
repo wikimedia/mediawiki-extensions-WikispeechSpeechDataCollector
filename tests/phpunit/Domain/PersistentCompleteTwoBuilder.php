@@ -2,6 +2,12 @@
 
 namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Domain;
 
+/**
+ * @file
+ * @ingroup Extensions
+ * @license GPL-2.0-or-later
+ */
+
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Language;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\LanguageProficiencyLevel;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Manuscript;
