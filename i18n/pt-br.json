@@ -13,5 +13,6 @@
 	"wikispeech-sdc-record": "Gravar",
 	"wikispeech-sdc-play": "Reproduzir",
 	"wikispeech-sdc-save": "Salvar",
-	"wikispeech-sdc-skip": "Pular"
+	"wikispeech-sdc-skip": "Pular",
+	"action-wikispeech-sdc-speech-recording": "Editar gravação de fala"
 }
