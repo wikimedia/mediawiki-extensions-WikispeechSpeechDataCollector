@@ -12,5 +12,12 @@
 	"wikispeech-sdc-record": "Kayıt",
 	"wikispeech-sdc-play": "Oynat",
 	"wikispeech-sdc-save": "Kaydet",
-	"wikispeech-sdc-skip": "Atla"
+	"wikispeech-sdc-skip": "Atla",
+	"right-wikispeech-sdc-speech-recording": "Konuşma kaydını düzenle",
+	"action-wikispeech-sdc-speech-recording": "konuşma kaydını düzenlemeye",
+	"right-wikispeech-sdc-speech-recording-talk": "Konuşma kaydını tartış",
+	"action-wikispeech-sdc-speech-recording-talk": "konuşma kaydını tartışmaya",
+	"apihelp-wikispeech-sdc-crud-example-1": "Yeni bir tek Kullanıcı isteği oluştur.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Tek bir Kullanıcı isteği oku.",
+	"apihelp-wikispeech-sdc-crud-example-3": "Tek bir Kullanıcı isteği sil."
 }
