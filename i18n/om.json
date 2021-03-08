@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahrada2016"
+			"Ahrada2016",
+			"Maammee"
 		]
 	},
-	"right-wikispeech-sdc-speech-recording": "Waraabbii dubbachuu gulaali",
-	"action-wikispeech-sdc-speech-recording": "Waraabbii dubbachuu gulaali",
-	"right-wikispeech-sdc-speech-recording-talk": "Waraabbii dubbachuu marii'adhaa.",
-	"apihelp-wikispeech-sdc-crud-example-1": "Eeggataa fayyadamaa qeenxee haaraa uumi.",
-	"apihelp-wikispeech-sdc-crud-example-2": "Eeggataa fayyadamaa qeenxee dubbisi.",
+	"right-wikispeech-sdc-speech-recording": "Waraabbii haasaa gulaali",
+	"action-wikispeech-sdc-speech-recording": "Waraabbii haasaa gulaali",
+	"right-wikispeech-sdc-speech-recording-talk": "Waraabbii haasaa marii'adhaa",
+	"apihelp-wikispeech-sdc-crud-example-1": "Gaaffii fayyadamaa qeenxee haaraa uumi.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Gaaffii fayyadamaa qeenxee dubbisi.",
 	"apihelp-wikispeech-sdc-crud-example-3": "Eeggataa fayyadamaa qeenxee balleessi."
 }
