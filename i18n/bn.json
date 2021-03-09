@@ -9,6 +9,8 @@
 	"wikispeech-sdc-save": "সংরক্ষণ করুন",
 	"wikispeech-sdc-skip": "এড়িয়ে যান",
 	"right-wikispeech-sdc-speech-recording": "কথা রেকর্ডিং সম্পাদনা করা",
+	"action-wikispeech-sdc-speech-recording": "কথা রেকর্ডিং সম্পাদনা করা",
+	"right-wikispeech-sdc-speech-recording-talk": "কথা রেকর্ড নিয়ে আলোচনা করার",
 	"action-wikispeech-sdc-speech-recording-talk": "কথা রেকর্ড করা নিয়ে আলোচনা করার",
 	"apihelp-wikispeech-sdc-crud-example-2": "একক ব্যবহারকারীর অনুরোধ পড়া।"
 }
