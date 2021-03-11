@@ -10,7 +10,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud;
 
 use MediaWiki\Revision\RevisionStore;
 use MWException;
-use User as MWUser;
+use User as MwUser;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 /**
@@ -32,7 +32,7 @@ class CrudContext {
 
 	/**
 	 * @see AbstractMcrCrud
-	 * @var MWUser|null
+	 * @var MwUser|null
 	 */
 	private $mediawikiUser;
 
@@ -44,13 +44,13 @@ class CrudContext {
 
 	/**
 	 * @param ILoadBalancer|null $dbLoadBalancer
-	 * @param MWUser|null $mediawikiUser
+	 * @param MwUser|null $mediawikiUser
 	 * @param RevisionStore|null $revisionStore
 	 * @since 0.1.0
 	 */
 	public function __construct(
 		?ILoadBalancer $dbLoadBalancer,
-		?MWUser $mediawikiUser,
+		?MwUser $mediawikiUser,
 		?RevisionStore $revisionStore
 	) {
 		$this->dbLoadBalancer = $dbLoadBalancer;
@@ -71,11 +71,11 @@ class CrudContext {
 	}
 
 	/**
-	 * @return MWUser
+	 * @return MwUser
 	 * @throws MWException If user not available in context.
 	 * @since 0.1.0
 	 */
-	public function getMediawikiUser(): MWUser {
+	public function getMediawikiUser(): MwUser {
 		if ( $this->mediawikiUser === null ) {
 			throw new MWException( 'User not available in context!' );
 		}
