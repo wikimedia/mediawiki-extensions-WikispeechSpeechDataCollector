@@ -11,7 +11,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\AbstractCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWTimestamp;
 
 /**
@@ -282,7 +282,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		if ( !array_key_exists( $columnName, $row ) ) {
 			return null;
 		}
-		return $row[$columnName] !== null ? UUID::asBytes( strval( $row[$columnName] ) ) : null;
+		return $row[$columnName] !== null ? Uuid::asBytes( strval( $row[$columnName] ) ) : null;
 	}
 
 	/**

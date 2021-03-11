@@ -23,7 +23,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWTimestamp;
 
 /**
@@ -61,8 +61,8 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 	public function visitManuscript(
 		Manuscript $manuscript
 	) {
-		$manuscript->setLanguage( UUID::v4BytesFactory() );
-		$manuscript->setDomain( UUID::v4BytesFactory() );
+		$manuscript->setLanguage( Uuid::v4BytesFactory() );
+		$manuscript->setDomain( Uuid::v4BytesFactory() );
 		$manuscript->setDisabled( MWTimestamp::getInstance( 20200713145000 ) );
 		$manuscript->setName( 'Updated manuscript name' );
 		$manuscript->setCreated( MWTimestamp::getInstance( 20200712145000 ) );
@@ -77,7 +77,7 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 		ManuscriptDomain $manuscriptDomain
 	) {
 		$manuscriptDomain->setName( 'Updated name' );
-		$manuscriptDomain->setParent( UUID::v4BytesFactory() );
+		$manuscriptDomain->setParent( Uuid::v4BytesFactory() );
 		return null;
 	}
 
@@ -88,7 +88,7 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 	public function visitManuscriptPrompt(
 		ManuscriptPrompt $manuscriptPrompt
 	) {
-		$manuscriptPrompt->setManuscript( UUID::v4BytesFactory() );
+		$manuscriptPrompt->setManuscript( Uuid::v4BytesFactory() );
 		$manuscriptPrompt->setIndex( 2 );
 		$manuscriptPrompt->setContent( 'Updated content' );
 		return null;
@@ -101,9 +101,9 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 	public function visitRecording(
 		Recording $recording
 	) {
-		$recording->setManuscriptPrompt( UUID::v4BytesFactory() );
-		$recording->setSpokenDialect( UUID::v4BytesFactory() );
-		$recording->setVoiceOf( UUID::v4BytesFactory() );
+		$recording->setManuscriptPrompt( Uuid::v4BytesFactory() );
+		$recording->setSpokenDialect( Uuid::v4BytesFactory() );
+		$recording->setVoiceOf( Uuid::v4BytesFactory() );
 		$recording->setRecorded( MWTimestamp::getInstance( 20200714145000 ) );
 		$recording->setAudioFileWikiPageIdentity( 2 );
 		return null;
@@ -133,8 +133,8 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 		RecordingReview $recordingReview
 	) {
 		$recordingReview->setCreated( MWTimestamp::getInstance( 20200714145000 ) );
-		$recordingReview->setReviewer( UUID::v4BytesFactory() );
-		$recordingReview->setRecording( UUID::v4BytesFactory() );
+		$recordingReview->setReviewer( Uuid::v4BytesFactory() );
+		$recordingReview->setRecording( Uuid::v4BytesFactory() );
 		$recordingReview->setValue( RecordingReviewValue::THUMB_DOWN );
 		return null;
 	}
@@ -147,8 +147,8 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
 		$skippedManuscriptPrompt->setSkipped( MWTimestamp::getInstance( 20200714145000 ) );
-		$skippedManuscriptPrompt->setUser( UUID::v4BytesFactory() );
-		$skippedManuscriptPrompt->setManuscriptPrompt( UUID::v4BytesFactory() );
+		$skippedManuscriptPrompt->setUser( Uuid::v4BytesFactory() );
+		$skippedManuscriptPrompt->setManuscriptPrompt( Uuid::v4BytesFactory() );
 		return null;
 	}
 
@@ -171,8 +171,8 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 	public function visitUserDialect(
 		UserDialect $userDialect
 	) {
-		$userDialect->setUser( UUID::v4BytesFactory() );
-		$userDialect->setLanguage( UUID::v4BytesFactory() );
+		$userDialect->setUser( Uuid::v4BytesFactory() );
+		$userDialect->setLanguage( Uuid::v4BytesFactory() );
 		$userDialect->setSpokenProficiencyLevel( LanguageProficiencyLevel::BASIC );
 		$userDialect->setLocation(
 			'{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [59.9, 10.7] } }'
@@ -187,8 +187,8 @@ class PersistentCompleteTwoBuilder implements PersistentVisitor {
 	public function visitUserLanguageProficiencyLevel(
 		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
-		$languageProficiencyLevel->setUser( UUID::v4BytesFactory() );
-		$languageProficiencyLevel->setLanguage( UUID::v4BytesFactory() );
+		$languageProficiencyLevel->setUser( Uuid::v4BytesFactory() );
+		$languageProficiencyLevel->setLanguage( Uuid::v4BytesFactory() );
 		$languageProficiencyLevel->setProficiencyLevel( LanguageProficiencyLevel::NEAR_NATIVE );
 		return null;
 	}

@@ -12,7 +12,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\GetPersistentClassName;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociateArrayDeserializer;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociativeArraySerializer;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWException;
 
 /**
@@ -63,7 +63,7 @@ class CrudTransactionMWAssociativeArrayMarshaller implements CrudTransactionMars
 				foreach ( $identities as $identity ) {
 					/** @var Persistent $instance */
 					$instance = new $absolutePersistentClass();
-					$instance->setIdentity( UUID::asBytes( $identity ) );
+					$instance->setIdentity( Uuid::asBytes( $identity ) );
 					$request->addRead( $instance );
 				}
 			}
@@ -97,7 +97,7 @@ class CrudTransactionMWAssociativeArrayMarshaller implements CrudTransactionMars
 				foreach ( $identities as $identity ) {
 					/** @var Persistent $instance */
 					$instance = new $absolutePersistentClass();
-					$instance->setIdentity( UUID::asBytes( $identity ) );
+					$instance->setIdentity( Uuid::asBytes( $identity ) );
 					$request->addDelete( $instance );
 				}
 			}
@@ -181,7 +181,7 @@ class CrudTransactionMWAssociativeArrayMarshaller implements CrudTransactionMars
 				foreach ( $deletedByClass as $class => $instances ) {
 					$array['deleted'][$class] = [];
 					foreach ( $instances as /** @var Persistent */ $instance ) {
-						array_push( $array['deleted'][$class], UUID::asHex( $instance->getIdentity(), true ) );
+						array_push( $array['deleted'][$class], Uuid::asHex( $instance->getIdentity(), true ) );
 					}
 				}
 			}

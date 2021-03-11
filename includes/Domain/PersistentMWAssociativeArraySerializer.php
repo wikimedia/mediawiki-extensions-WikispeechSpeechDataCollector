@@ -9,7 +9,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  */
 
 use FormatJson;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWException;
 use MWTimestamp;
 
@@ -32,12 +32,12 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		Manuscript $manuscript
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $manuscript->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $manuscript->getIdentity() );
 		$array['name'] = $manuscript->getName();
 		$array['created'] = $this->serializeTimestamp( $manuscript->getCreated() );
 		$array['disabled'] = $this->serializeTimestamp( $manuscript->getDisabled() );
-		$array['language'] = $this->serializeUUID( $manuscript->getLanguage() );
-		$array['domain'] = $this->serializeUUID( $manuscript->getDomain() );
+		$array['language'] = $this->serializeUuid( $manuscript->getLanguage() );
+		$array['domain'] = $this->serializeUuid( $manuscript->getDomain() );
 		return $array;
 	}
 
@@ -49,8 +49,8 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		ManuscriptPrompt $manuscriptPrompt
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $manuscriptPrompt->getIdentity() );
-		$array['manuscript'] = $this->serializeUUID( $manuscriptPrompt->getManuscript() );
+		$array['identity'] = $this->serializeUuid( $manuscriptPrompt->getIdentity() );
+		$array['manuscript'] = $this->serializeUuid( $manuscriptPrompt->getManuscript() );
 		$array['index'] = $manuscriptPrompt->getIndex();
 		$array['content'] = $manuscriptPrompt->getContent();
 		return $array;
@@ -64,11 +64,11 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		Recording $recording
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $recording->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $recording->getIdentity() );
 		$array['recorded'] = $this->serializeTimestamp( $recording->getRecorded() );
-		$array['voiceOf'] = $this->serializeUUID( $recording->getVoiceOf() );
-		$array['spokenDialect'] = $this->serializeUUID( $recording->getSpokenDialect() );
-		$array['manuscriptPrompt'] = $this->serializeUUID( $recording->getManuscriptPrompt() );
+		$array['voiceOf'] = $this->serializeUuid( $recording->getVoiceOf() );
+		$array['spokenDialect'] = $this->serializeUuid( $recording->getSpokenDialect() );
+		$array['manuscriptPrompt'] = $this->serializeUuid( $recording->getManuscriptPrompt() );
 		$array['audioFileWikiPageIdentity'] = $recording->getAudioFileWikiPageIdentity();
 		return $array;
 	}
@@ -81,7 +81,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		Language $language
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $language->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $language->getIdentity() );
 		$array['nativeName'] = $language->getNativeName();
 		$array['iso639a1'] = $language->getIso639a1();
 		$array['iso639a2b'] = $language->getIso639a2b();
@@ -98,9 +98,9 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		ManuscriptDomain $manuscriptDomain
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $manuscriptDomain->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $manuscriptDomain->getIdentity() );
 		$array['name'] = $manuscriptDomain->getName();
-		$array['parent'] = $this->serializeUUID( $manuscriptDomain->getParent() );
+		$array['parent'] = $this->serializeUuid( $manuscriptDomain->getParent() );
 		return $array;
 	}
 
@@ -127,7 +127,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		RecordingAnnotations $recordingAnnotations
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $recordingAnnotations->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $recordingAnnotations->getIdentity() );
 		$array['items'] = [];
 		if ( $recordingAnnotations->getItems() !== null &&
 			// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal
@@ -149,11 +149,11 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		RecordingReview $recordingReview
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $recordingReview->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $recordingReview->getIdentity() );
 		$array['created'] = $this->serializeTimestamp( $recordingReview->getCreated() );
 		$array['value'] = $recordingReview->getValue();
-		$array['reviewer'] = $this->serializeUUID( $recordingReview->getReviewer() );
-		$array['recording'] = $this->serializeUUID( $recordingReview->getRecording() );
+		$array['reviewer'] = $this->serializeUuid( $recordingReview->getReviewer() );
+		$array['recording'] = $this->serializeUuid( $recordingReview->getRecording() );
 		return $array;
 	}
 
@@ -165,10 +165,10 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $skippedManuscriptPrompt->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $skippedManuscriptPrompt->getIdentity() );
 		$array['manuscriptPrompt'] =
-			$this->serializeUUID( $skippedManuscriptPrompt->getManuscriptPrompt() );
-		$array['user'] = $this->serializeUUID( $skippedManuscriptPrompt->getUser() );
+			$this->serializeUuid( $skippedManuscriptPrompt->getManuscriptPrompt() );
+		$array['user'] = $this->serializeUuid( $skippedManuscriptPrompt->getUser() );
 		$array['skipped'] =	$this->serializeTimestamp( $skippedManuscriptPrompt->getSkipped() );
 		return $array;
 	}
@@ -181,7 +181,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		User $user
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $user->getIdentity() );
+		$array['identity'] = $this->serializeUuid( $user->getIdentity() );
 		$array['mediaWikiUser'] = $user->getMediaWikiUser();
 		$array['yearBorn'] = $user->getYearBorn();
 		return $array;
@@ -195,9 +195,9 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		UserDialect $userDialect
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $userDialect->getIdentity() );
-		$array['user'] = $this->serializeUUID( $userDialect->getUser() );
-		$array['language'] = $this->serializeUUID( $userDialect->getLanguage() );
+		$array['identity'] = $this->serializeUuid( $userDialect->getIdentity() );
+		$array['user'] = $this->serializeUuid( $userDialect->getUser() );
+		$array['language'] = $this->serializeUuid( $userDialect->getLanguage() );
 		$array['spokenProficiencyLevel'] = $userDialect->getSpokenProficiencyLevel();
 		$array['location'] = $this->serializeJSON( $userDialect->getLocation() );
 		return $array;
@@ -211,9 +211,9 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		UserLanguageProficiencyLevel $languageProficiencyLevel
 	): array {
 		$array = [];
-		$array['identity'] = $this->serializeUUID( $languageProficiencyLevel->getIdentity() );
-		$array['user'] = $this->serializeUUID( $languageProficiencyLevel->getUser() );
-		$array['language'] = $this->serializeUUID( $languageProficiencyLevel->getLanguage() );
+		$array['identity'] = $this->serializeUuid( $languageProficiencyLevel->getIdentity() );
+		$array['user'] = $this->serializeUuid( $languageProficiencyLevel->getUser() );
+		$array['language'] = $this->serializeUuid( $languageProficiencyLevel->getLanguage() );
 		$array['proficiencyLevel'] = $languageProficiencyLevel->getProficiencyLevel();
 		return $array;
 	}
@@ -232,10 +232,10 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 	 * @param string|null $value
 	 * @return string|null Hex encoded UUID with dash separation.
 	 */
-	private function serializeUUID(
+	private function serializeUuid(
 		?string $value
 	): ?string {
-		return UUID::asHex( $value, true );
+		return Uuid::asHex( $value, true );
 	}
 
 	/**

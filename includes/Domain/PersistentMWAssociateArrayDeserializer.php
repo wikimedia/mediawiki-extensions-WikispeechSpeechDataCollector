@@ -9,7 +9,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  */
 
 use FormatJson;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWException;
 use MWTimestamp;
 use Wikimedia\Timestamp\TimestampException;
@@ -58,7 +58,7 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$language->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$language->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$language->setNativeName( $this->get( 'nativeName' ) );
 		$language->setIso639a1( $this->get( 'iso639a1' ) );
 		$language->setIso639a2b( $this->get( 'iso639a2b' ) );
@@ -77,12 +77,12 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$manuscript->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$manuscript->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$manuscript->setName( $this->get( 'name' ) );
 		$manuscript->setCreated( $this->deserializeTimestamp( $this->get( 'created' ) ) );
 		$manuscript->setDisabled( $this->deserializeTimestamp( $this->get( 'disabled' ) ) );
-		$manuscript->setLanguage( $this->deserializeUUID( $this->get( 'language' ) ) );
-		$manuscript->setDomain( $this->deserializeUUID( $this->get( 'domain' ) ) );
+		$manuscript->setLanguage( $this->deserializeUuid( $this->get( 'language' ) ) );
+		$manuscript->setDomain( $this->deserializeUuid( $this->get( 'domain' ) ) );
 		return $manuscript;
 	}
 
@@ -96,9 +96,9 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$manuscriptDomain->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$manuscriptDomain->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$manuscriptDomain->setName( $this->get( 'name' ) );
-		$manuscriptDomain->setParent( $this->deserializeUUID( $this->get( 'parent' ) ) );
+		$manuscriptDomain->setParent( $this->deserializeUuid( $this->get( 'parent' ) ) );
 		return $manuscriptDomain;
 	}
 
@@ -112,8 +112,8 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$manuscriptPrompt->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
-		$manuscriptPrompt->setManuscript( $this->deserializeUUID( $this->get( 'manuscript' ) ) );
+		$manuscriptPrompt->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
+		$manuscriptPrompt->setManuscript( $this->deserializeUuid( $this->get( 'manuscript' ) ) );
 		$manuscriptPrompt->setIndex( $this->get( 'index' ) );
 		$manuscriptPrompt->setContent( $this->get( 'content' ) );
 		return $manuscriptPrompt;
@@ -129,11 +129,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$recording->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$recording->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$recording->setRecorded( $this->deserializeTimestamp( $this->get( 'recorded' ) ) );
-		$recording->setVoiceOf( $this->deserializeUUID( $this->get( 'voiceOf' ) ) );
-		$recording->setSpokenDialect( $this->deserializeUUID( $this->get( 'spokenDialect' ) ) );
-		$recording->setManuscriptPrompt( $this->deserializeUUID( $this->get( 'manuscriptPrompt' ) ) );
+		$recording->setVoiceOf( $this->deserializeUuid( $this->get( 'voiceOf' ) ) );
+		$recording->setSpokenDialect( $this->deserializeUuid( $this->get( 'spokenDialect' ) ) );
+		$recording->setManuscriptPrompt( $this->deserializeUuid( $this->get( 'manuscriptPrompt' ) ) );
 		$recording->setAudioFileWikiPageIdentity( $this->get( 'audioFileWikiPageIdentity' ) );
 		return $recording;
 	}
@@ -166,7 +166,7 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$recordingAnnotations->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$recordingAnnotations->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$serializedItems = $this->get( 'items' );
 		if ( $serializedItems === null || count( $serializedItems ) === 0 ) {
 			$recordingAnnotations->setItems( null );
@@ -196,11 +196,11 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$recordingReview->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$recordingReview->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$recordingReview->setCreated( $this->deserializeTimestamp( $this->get( 'created' ) ) );
 		$recordingReview->setValue( $this->get( 'value' ) );
-		$recordingReview->setReviewer( $this->deserializeUUID( $this->get( 'reviewer' ) ) );
-		$recordingReview->setRecording( $this->deserializeUUID( $this->get( 'recording' ) ) );
+		$recordingReview->setReviewer( $this->deserializeUuid( $this->get( 'reviewer' ) ) );
+		$recordingReview->setRecording( $this->deserializeUuid( $this->get( 'recording' ) ) );
 		return $recordingReview;
 	}
 
@@ -214,10 +214,10 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$skippedManuscriptPrompt->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
+		$skippedManuscriptPrompt->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
 		$skippedManuscriptPrompt->setManuscriptPrompt(
-			$this->deserializeUUID( $this->get( 'manuscriptPrompt' ) ) );
-		$skippedManuscriptPrompt->setUser( $this->deserializeUUID( $this->get( 'user' ) ) );
+			$this->deserializeUuid( $this->get( 'manuscriptPrompt' ) ) );
+		$skippedManuscriptPrompt->setUser( $this->deserializeUuid( $this->get( 'user' ) ) );
 		$skippedManuscriptPrompt->setSkipped( $this->deserializeTimestamp( $this->get( 'skipped' ) ) );
 		return $skippedManuscriptPrompt;
 	}
@@ -232,7 +232,7 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$user->setIdentity( $this->deserializeUUID( $this->array[ 'identity' ] ) );
+		$user->setIdentity( $this->deserializeUuid( $this->array[ 'identity' ] ) );
 		$user->setMediaWikiUser( $this->get( 'mediaWikiUser' ) );
 		$user->setYearBorn( $this->get( 'yearBorn' ) );
 		return $user;
@@ -248,9 +248,9 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$userDialect->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
-		$userDialect->setUser( $this->deserializeUUID( $this->get( 'user' ) ) );
-		$userDialect->setLanguage( $this->deserializeUUID( $this->get( 'language' ) ) );
+		$userDialect->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
+		$userDialect->setUser( $this->deserializeUuid( $this->get( 'user' ) ) );
+		$userDialect->setLanguage( $this->deserializeUuid( $this->get( 'language' ) ) );
 		$userDialect->setSpokenProficiencyLevel( $this->get( 'spokenProficiencyLevel' ) );
 		$userDialect->setLocation( $this->deserializeJsonObject( $this->get( 'location' ) ) );
 		return $userDialect;
@@ -266,9 +266,9 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 		if ( $this->array === null ) {
 			return null;
 		}
-		$languageProficiencyLevel->setIdentity( $this->deserializeUUID( $this->get( 'identity' ) ) );
-		$languageProficiencyLevel->setUser( $this->deserializeUUID( $this->get( 'user' ) ) );
-		$languageProficiencyLevel->setLanguage( $this->deserializeUUID( $this->get( 'language' ) ) );
+		$languageProficiencyLevel->setIdentity( $this->deserializeUuid( $this->get( 'identity' ) ) );
+		$languageProficiencyLevel->setUser( $this->deserializeUuid( $this->get( 'user' ) ) );
+		$languageProficiencyLevel->setLanguage( $this->deserializeUuid( $this->get( 'language' ) ) );
 		$languageProficiencyLevel->setProficiencyLevel( $this->get( 'proficiencyLevel' ) );
 		return $languageProficiencyLevel;
 	}
@@ -277,13 +277,13 @@ class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {
 	 * @param string|null $value
 	 * @return string|null
 	 */
-	private function deserializeUUID(
+	private function deserializeUuid(
 		?string $value
 	): ?string {
 		if ( $value === null ) {
 			return null;
 		}
-		return UUID::asBytes( $value );
+		return Uuid::asBytes( $value );
 	}
 
 	/**

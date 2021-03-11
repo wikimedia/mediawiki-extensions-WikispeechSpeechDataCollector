@@ -9,15 +9,15 @@ namespace MediaWiki\Wikispeech\Tests\Unit;
  */
 
 use InvalidArgumentException;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit
- * @covers \MediaWiki\WikispeechSpeechDataCollector\UUID
+ * @covers \MediaWiki\WikispeechSpeechDataCollector\Uuid
  * @since 0.1.0
  */
-class UUIDTest extends MediaWikiUnitTestCase {
+class UuidTest extends MediaWikiUnitTestCase {
 
 	//
 	// isBytes and isHex
@@ -30,15 +30,15 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testIsHex_isHex(
 		string $uuid
 	) {
-		$this->assertTrue( UUID::isHex( $uuid ) );
+		$this->assertTrue( Uuid::isHex( $uuid ) );
 	}
 
 	public function provideTestIsHex_isHex() {
 		return [
 			'validHexWithoutDashes_isHex' => [ '20354d7ae4fe47af8ff6187bca92f3f9' ],
 			'validHexWithDashes_isHex' => [ '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ],
-			'generatedWithoutDashes_isHex' => [ UUID::v4HexFactory() ],
-			'generatedWithDashes_isHex' => [ UUID::v4HexFactory( true ) ],
+			'generatedWithoutDashes_isHex' => [ Uuid::v4HexFactory() ],
+			'generatedWithDashes_isHex' => [ Uuid::v4HexFactory( true ) ],
 		];
 	}
 
@@ -49,7 +49,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testIsHex_isNotHex(
 		string $uuid
 	) {
-		$this->assertFalse( UUID::isHex( $uuid ) );
+		$this->assertFalse( Uuid::isHex( $uuid ) );
 	}
 
 	public function provideTestIsHex_isNotHex() {
@@ -59,7 +59,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 			'validHexNotUuidTooManyBytes_isNotHex' => [ 'cafe01020304050607080910111213141516' ],
 			'invalidHexNotUuid_isNotHex' => [ 'räksmörgås' ],
 			'validBinaryUuid_isNotHex' => [ hex2bin( '20354d7ae4fe47af8ff6187bca92f3f9' ) ],
-			'validBinaryNotUUID_isNotHex' => [ hex2bin( '1234567890123456' ) ],
+			'validBinaryNotUuid_isNotHex' => [ hex2bin( '1234567890123456' ) ],
 			'validHexUuidV3_isNotHex' => [ 'a5764857-ae35-34dc-8f25-a9c9e73aa898' ],
 			'validHexUuidV5_isNotHex' => [ 'b79cb3ba-745e-5d9a-8903-4a02327a7e09' ]
 		];
@@ -72,13 +72,13 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testIsBytes_isBytes(
 		string $uuid
 	) {
-		$this->assertTrue( UUID::isBytes( $uuid ) );
+		$this->assertTrue( Uuid::isBytes( $uuid ) );
 	}
 
 	public function provideTestIsBytes_isBytes() {
 		return [
 			'validBinaryUuid_isBytes' => [ hex2bin( '20354d7ae4fe47af8ff6187bca92f3f9' ) ],
-			'generated_isBytes' => [ UUID::v4BytesFactory() ]
+			'generated_isBytes' => [ Uuid::v4BytesFactory() ]
 		];
 	}
 
@@ -89,7 +89,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testIsBytes_isNotBytes(
 		string $uuid
 	) {
-		$this->assertFalse( UUID::isBytes( $uuid ) );
+		$this->assertFalse( Uuid::isBytes( $uuid ) );
 	}
 
 	public function provideTestIsBytes_isNotBytes() {
@@ -117,7 +117,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testAsBytes_isSame( ?string $expectedUuid, ?string $testedUuid ) {
 		$this->assertSame(
 			$expectedUuid,
-			UUID::asBytes( $testedUuid )
+			Uuid::asBytes( $testedUuid )
 		);
 	}
 
@@ -139,7 +139,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testAsHexWithDashes_isSame( ?string $expectedUuid, ?string $testedUuid ) {
 		$this->assertSame(
 			$expectedUuid,
-			UUID::asHex( $testedUuid, true )
+			Uuid::asHex( $testedUuid, true )
 		);
 	}
 
@@ -161,7 +161,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	public function testAsHexWithoutDashes_isSame( ?string $expectedUuid, ?string $testedUuid ) {
 		$this->assertSame(
 			$expectedUuid,
-			UUID::asHex( $testedUuid, false )
+			Uuid::asHex( $testedUuid, false )
 		);
 	}
 
@@ -181,7 +181,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	 */
 	public function testAsBytes_invalid( ?string $testedUuid ) {
 		$this->expectException( InvalidArgumentException::class );
-		UUID::asBytes( $testedUuid );
+		Uuid::asBytes( $testedUuid );
 	}
 
 	/**
@@ -190,7 +190,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	 */
 	public function testAsHexWithDashes_invalid( ?string $testedUuid ) {
 		$this->expectException( InvalidArgumentException::class );
-		UUID::asHex( $testedUuid, true );
+		Uuid::asHex( $testedUuid, true );
 	}
 
 	/**
@@ -199,7 +199,7 @@ class UUIDTest extends MediaWikiUnitTestCase {
 	 */
 	public function testAsHexWithoutDashes_invalid( ?string $testedUuid ) {
 		$this->expectException( InvalidArgumentException::class );
-		UUID::asHex( $testedUuid, false );
+		Uuid::asHex( $testedUuid, false );
 	}
 
 	public function provideTestAsHexAsBytes_invalid(): array {

@@ -10,7 +10,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms;
 
 use ExternalStoreException;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 
 /**
  * @package MediaWiki\WikispeechSpeechDataCollector\Crud
@@ -34,7 +34,7 @@ abstract class AbstractUuidRdbmsCrud extends AbstractRdbmsCrud {
 		if ( $instance->getIdentity() ) {
 			throw new ExternalStoreException( 'Identity already set' );
 		}
-		$instance->setIdentity( UUID::v4BytesFactory() );
+		$instance->setIdentity( Uuid::v4BytesFactory() );
 		$rows = $this->serializeFields( $instance );
 		$rows[ $this->getIdentityColumn() ] = $instance->getIdentity();
 		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );

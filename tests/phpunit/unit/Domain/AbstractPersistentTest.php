@@ -18,7 +18,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBu
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteTwoBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentSetNullableNull;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
@@ -67,7 +67,7 @@ abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
 		array $builders
 	) {
 		$instance = $this->instanceFactory();
-		$instance->setIdentity( UUID::v4BytesFactory() );
+		$instance->setIdentity( Uuid::v4BytesFactory() );
 
 		foreach ( $builders as $builder ) {
 			$instance->accept( $builder );
@@ -99,7 +99,7 @@ abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
 		array $builders
 	) {
 		$instance = $this->instanceFactory();
-		$instance->setIdentity( UUID::v4BytesFactory() );
+		$instance->setIdentity( Uuid::v4BytesFactory() );
 
 		foreach ( $builders as $builder ) {
 			$instance->accept( $builder );

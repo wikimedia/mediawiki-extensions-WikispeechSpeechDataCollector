@@ -13,7 +13,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Crud\DecoratedAbstractCrud;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWException;
 
 /**
@@ -81,7 +81,7 @@ class RecordingAnnotationsMcrCrudTest extends AbstractMcrCrudTest {
 				if ( $instance->getIdentity() !== null ) {
 					throw new MWException( 'Identity is already set!' );
 				}
-				$instance->setIdentity( UUID::v4BytesFactory() );
+				$instance->setIdentity( Uuid::v4BytesFactory() );
 				parent::create( $instance );
 			}
 		};
