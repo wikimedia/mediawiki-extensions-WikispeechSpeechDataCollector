@@ -11,7 +11,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr;
 use JsonContent;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use Title;
 use WikiPage;
 
@@ -31,7 +31,7 @@ class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStra
 	): WikiPage {
 		// @todo When bumping MW core version to 1.36, use TitleFactory from context.
 		$title = Title::newFromText(
-			UUID::asHex( $identity ),
+			Uuid::asHex( $identity ),
 			NS_SPEECH_RECORDING
 		);
 		// @todo When bumping MW core version up to 1.36, use WikiPageFactory from context.
@@ -46,7 +46,7 @@ class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStra
 		$identity
 	): JsonContent {
 		// @todo JsonContent is not @newable. See https://phabricator.wikimedia.org/T275578
-		return new JsonContent( '"' . UUID::asHex( $identity ) . '"' );
+		return new JsonContent( '"' . Uuid::asHex( $identity ) . '"' );
 	}
 
 	/**
@@ -56,7 +56,7 @@ class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStra
 	public function identityFactory(
 		Persistent $instance
 	): void {
-		$instance->setIdentity( UUID::v4BytesFactory() );
+		$instance->setIdentity( Uuid::v4BytesFactory() );
 	}
 
 }

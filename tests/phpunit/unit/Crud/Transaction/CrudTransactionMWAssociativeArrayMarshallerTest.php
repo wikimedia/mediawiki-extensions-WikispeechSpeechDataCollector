@@ -15,7 +15,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociativeArrayS
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentCompleteOneBuilder;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Domain\PersistentEqualsConstraintFactory;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
@@ -32,14 +32,14 @@ class CrudTransactionMWAssociativeArrayMarshallerTest extends MediaWikiUnitTestC
 		$createUser->accept( new PersistentCompleteOneBuilder() );
 
 		$readUser = new User();
-		$readUser->setIdentity( UUID::v4BytesFactory() );
+		$readUser->setIdentity( Uuid::v4BytesFactory() );
 
 		$updateUser = new User();
-		$updateUser->setIdentity( UUID::v4BytesFactory() );
+		$updateUser->setIdentity( Uuid::v4BytesFactory() );
 		$updateUser->accept( new PersistentCompleteOneBuilder() );
 
 		$deleteUser = new User();
-		$deleteUser->setIdentity( UUID::v4BytesFactory() );
+		$deleteUser->setIdentity( Uuid::v4BytesFactory() );
 
 		$array = [
 			'reference' => 'reference',
@@ -51,7 +51,7 @@ class CrudTransactionMWAssociativeArrayMarshallerTest extends MediaWikiUnitTestC
 			],
 			'read' => [
 				'User' => [
-						UUID::asHex( $readUser->getIdentity() )
+						Uuid::asHex( $readUser->getIdentity() )
 				]
 			],
 			'update' => [
@@ -62,7 +62,7 @@ class CrudTransactionMWAssociativeArrayMarshallerTest extends MediaWikiUnitTestC
 			],
 			'delete' => [
 				'User' => [
-					UUID::asHex( $deleteUser->getIdentity() )
+					Uuid::asHex( $deleteUser->getIdentity() )
 				]
 			]
 		];
@@ -103,19 +103,19 @@ class CrudTransactionMWAssociativeArrayMarshallerTest extends MediaWikiUnitTestC
 
 	public function testSerializeResponse_singleUsers_equalsOriginalResponse() {
 		$createdUser = new User();
-		$createdUser->setIdentity( UUID::v4BytesFactory() );
+		$createdUser->setIdentity( Uuid::v4BytesFactory() );
 		$createdUser->accept( new PersistentCompleteOneBuilder() );
 
 		$readUser = new User();
-		$readUser->setIdentity( UUID::v4BytesFactory() );
+		$readUser->setIdentity( Uuid::v4BytesFactory() );
 		$readUser->accept( new PersistentCompleteOneBuilder() );
 
 		$updatedUser = new User();
-		$updatedUser->setIdentity( UUID::v4BytesFactory() );
+		$updatedUser->setIdentity( Uuid::v4BytesFactory() );
 		$updatedUser->accept( new PersistentCompleteOneBuilder() );
 
 		$deletedUser = new User();
-		$deletedUser->setIdentity( UUID::v4BytesFactory() );
+		$deletedUser->setIdentity( Uuid::v4BytesFactory() );
 		$deletedUser->accept( new PersistentCompleteOneBuilder() );
 
 		$response = new CrudTransactionResponse();
@@ -168,8 +168,8 @@ class CrudTransactionMWAssociativeArrayMarshallerTest extends MediaWikiUnitTestC
 		$this->assertCount( 1, $array['deleted'] );
 		$this->assertCount( 1, $array['deleted']['User'] );
 		$this->assertSame(
-			UUID::asBytes( $deletedUser->getIdentity() ),
-			UUID::asBytes( $array['deleted']['User'][0] )
+			Uuid::asBytes( $deletedUser->getIdentity() ),
+			Uuid::asBytes( $array['deleted']['User'][0] )
 		);
 	}
 

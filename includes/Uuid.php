@@ -16,13 +16,13 @@ use InvalidArgumentException;
  * @package MediaWiki\WikispeechSpeechDataCollector
  * @since 0.1.0
  */
-class UUID {
+class Uuid {
 
 	/**
 	 * V4, pseudo-random UUID.
 	 *
-	 * @see UUID::v4HexFactory()
 	 * @return string
+	 * @see Uuid::v4HexFactory()
 	 * @since 0.1.0
 	 */
 	public static function v4BytesFactory() {

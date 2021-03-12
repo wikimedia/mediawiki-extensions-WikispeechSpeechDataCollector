@@ -11,7 +11,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentSet;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
-use MediaWiki\WikispeechSpeechDataCollector\UUID;
+use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
@@ -23,7 +23,7 @@ class PersistentSetTest extends MediaWikiUnitTestCase {
 
 	public function testAdd_singleRecordingInstanceAddedTwice_isOnlyAddedOnce() {
 		$recording = new Recording();
-		$recording->setIdentity( UUID::v4BytesFactory() );
+		$recording->setIdentity( Uuid::v4BytesFactory() );
 
 		$set = new PersistentSet();
 		$this->assertTrue( $set->add( $recording ) );
@@ -32,7 +32,7 @@ class PersistentSetTest extends MediaWikiUnitTestCase {
 
 	public function testContains_singleRecording_match() {
 		$recording = new Recording();
-		$recording->setIdentity( UUID::v4BytesFactory() );
+		$recording->setIdentity( Uuid::v4BytesFactory() );
 
 		$set = new PersistentSet();
 		$this->assertFalse( $set->contains( $recording ) );
@@ -42,13 +42,13 @@ class PersistentSetTest extends MediaWikiUnitTestCase {
 
 	public function testToArray_multipleClassInstances_containsAll() {
 		$recording = new Recording();
-		$recording->setIdentity( UUID::v4BytesFactory() );
+		$recording->setIdentity( Uuid::v4BytesFactory() );
 
 		$user1 = new User();
-		$user1->setIdentity( UUID::v4BytesFactory() );
+		$user1->setIdentity( Uuid::v4BytesFactory() );
 
 		$user2 = new User();
-		$user2->setIdentity( UUID::v4BytesFactory() );
+		$user2->setIdentity( Uuid::v4BytesFactory() );
 
 		$set = new PersistentSet();
 		$set->add( $recording );
@@ -64,13 +64,13 @@ class PersistentSetTest extends MediaWikiUnitTestCase {
 
 	public function testCount_multipleClassInstances_match() {
 		$recording = new Recording();
-		$recording->setIdentity( UUID::v4BytesFactory() );
+		$recording->setIdentity( Uuid::v4BytesFactory() );
 
 		$user1 = new User();
-		$user1->setIdentity( UUID::v4BytesFactory() );
+		$user1->setIdentity( Uuid::v4BytesFactory() );
 
 		$user2 = new User();
-		$user2->setIdentity( UUID::v4BytesFactory() );
+		$user2->setIdentity( Uuid::v4BytesFactory() );
 
 		$set = new PersistentSet();
 		$set->add( $recording );
@@ -83,10 +83,10 @@ class PersistentSetTest extends MediaWikiUnitTestCase {
 
 	public function testCount_singleClass_match() {
 		$user1 = new User();
-		$user1->setIdentity( UUID::v4BytesFactory() );
+		$user1->setIdentity( Uuid::v4BytesFactory() );
 
 		$user2 = new User();
-		$user2->setIdentity( UUID::v4BytesFactory() );
+		$user2->setIdentity( Uuid::v4BytesFactory() );
 
 		$set = new PersistentSet();
 		$set->add( $user1 );
