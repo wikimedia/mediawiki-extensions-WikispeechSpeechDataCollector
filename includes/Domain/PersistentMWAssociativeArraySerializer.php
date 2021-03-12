@@ -199,7 +199,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 		$array['user'] = $this->serializeUuid( $userDialect->getUser() );
 		$array['language'] = $this->serializeUuid( $userDialect->getLanguage() );
 		$array['spokenProficiencyLevel'] = $userDialect->getSpokenProficiencyLevel();
-		$array['location'] = $this->serializeJSON( $userDialect->getLocation() );
+		$array['location'] = $this->serializeJson( $userDialect->getLocation() );
 		return $array;
 	}
 
@@ -243,7 +243,7 @@ class PersistentMWAssociativeArraySerializer implements PersistentVisitor {
 	 * @return mixed
 	 * @throws MWException
 	 */
-	private function serializeJSON(
+	private function serializeJson(
 		?string $value
 	) {
 		if ( $value === null ) {
