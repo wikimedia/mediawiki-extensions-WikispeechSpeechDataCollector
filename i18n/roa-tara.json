@@ -12,5 +12,17 @@
 	"wikispeech-sdc-record": "Reggìstre",
 	"wikispeech-sdc-play": "Reproduce",
 	"wikispeech-sdc-save": "Reggìstre",
-	"wikispeech-sdc-skip": "Zumbe"
+	"wikispeech-sdc-skip": "Zumbe",
+	"right-wikispeech-sdc-speech-recording": "Cange 'a reggistrazione vocale",
+	"action-wikispeech-sdc-speech-recording": "Cange 'a reggistrazione vocale",
+	"right-wikispeech-sdc-speech-recording-talk": "Discute 'a reggistrazione vocale",
+	"action-wikispeech-sdc-speech-recording-talk": "Discute 'a reggistrazione vocale",
+	"apihelp-wikispeech-sdc-crud-summary": "API de accesse a le oggette de dominie persistende generiche.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Errore de deserializzazione d'a transazione JSON.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Errore de deserializzazione d'a transazione.",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "Errore de esecuzione d'a transazione.",
+	"apierror-wikispeech-sdc-crud-serialize-response": "Errore de serializzazione d'a resposte.",
+	"apihelp-wikispeech-sdc-crud-example-1": "Ccreje 'na richieste de singole Utende nuève.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Lìgge 'na richieste de singole Utende.",
+	"apihelp-wikispeech-sdc-crud-example-3": "Scangìlle 'na richieste de singole Utende."
 }
