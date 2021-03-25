@@ -24,7 +24,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  * that depends on an existing Recording in order to be created.
  *
  * @see AbstractCompositePartMcrCrud
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
  * @since 0.1.0
  */
 abstract class AbstractCompositeOwnerMcrCrud extends AbstractMcrCrud {

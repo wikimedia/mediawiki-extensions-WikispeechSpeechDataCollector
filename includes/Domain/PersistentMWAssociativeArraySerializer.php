@@ -19,7 +19,6 @@ use MWTimestamp;
  *
  * $array = $persistent->accept( new PersistentMWAssociateArraySerializer() );
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class PersistentMWAssociativeArraySerializer implements PersistentVisitor {

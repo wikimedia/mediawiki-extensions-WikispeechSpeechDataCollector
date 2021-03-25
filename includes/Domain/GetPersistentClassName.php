@@ -12,7 +12,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * Returns class name string <b>without</b> namespace qualifier.
  *
  * @see get_class() Returns class name string <b>with</b> namespace qualifier.
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class GetPersistentClassName implements PersistentVisitor {

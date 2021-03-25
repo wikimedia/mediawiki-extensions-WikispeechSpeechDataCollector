@@ -16,7 +16,6 @@ use Wikimedia\Rdbms\ILoadBalancer;
 /**
  * Information required to access underlying data stores used by the various CRUD implementations.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  * @since 0.1.0
  */
 class CrudContext {

@@ -17,7 +17,6 @@ use PHPUnit\Framework\ExpectationFailedException;
 use SebastianBergmann\Exporter\Exporter;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 abstract class PersistentEqualsConstraint extends Constraint {

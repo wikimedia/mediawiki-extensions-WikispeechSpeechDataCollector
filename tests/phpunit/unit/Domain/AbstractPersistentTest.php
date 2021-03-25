@@ -22,7 +22,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociateArrayDeserializer
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentMWAssociativeArraySerializer

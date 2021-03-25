@@ -26,7 +26,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
  * Visitor functions returns true if the instance passed to constructor
  * is an instance of the same class as visited.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 class PersistentIsInstanceOfSame implements PersistentVisitor {

@@ -36,7 +36,6 @@ use Wikimedia\Rdbms\ILoadBalancer;
  * without having to make too many changes in the client code.
  *
  * @see CrudTransactionExecutor
- * @package MediaWiki\WikispeechSpeechDataCollector\Api
  * @since 0.1.0
  */
 class ApiCrud extends ApiBase {

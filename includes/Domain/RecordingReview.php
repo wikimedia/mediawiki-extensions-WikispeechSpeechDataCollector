@@ -13,7 +13,6 @@ use MWTimestamp;
 /**
  * Whether or not a {@link Recording} is good according to a specific {@link User}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class RecordingReview implements Persistent {

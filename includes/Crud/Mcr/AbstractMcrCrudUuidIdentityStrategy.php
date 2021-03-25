@@ -17,7 +17,6 @@ use WikiPage;
 
 /**
  * Backs a {@link Persistent} with UUID identity.
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
  */
 class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStrategy {
 

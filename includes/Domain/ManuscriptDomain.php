@@ -13,7 +13,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  *
  * @todo Consider if it makes more sense to use tags or such to group manuscripts.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class ManuscriptDomain implements Persistent {

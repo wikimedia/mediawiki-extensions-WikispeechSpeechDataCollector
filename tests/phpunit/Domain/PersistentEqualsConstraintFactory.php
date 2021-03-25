@@ -36,7 +36,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
  * );
  * </code>
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests
  * @since 0.1.0
  */
 class PersistentEqualsConstraintFactory implements PersistentVisitor {

@@ -14,7 +14,6 @@ use MWException;
 /**
  * Loads a persistent instance from a JSON string representation.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class PersistentJsonDeserializer implements PersistentVisitor {

@@ -16,7 +16,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * thus be enough to keep a list of 639-codes per language rather than keeping
  * track of specific codes per 639-grouping.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class Language implements Persistent {

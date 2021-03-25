@@ -18,7 +18,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  *  the prompt is to read, and try feeding new users with as simple text as
  *  possible to not scare them away from this system.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class ManuscriptPrompt implements Persistent {

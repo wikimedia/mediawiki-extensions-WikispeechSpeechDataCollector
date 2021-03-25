@@ -17,7 +17,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  * either to creation, to be read, to be updated or to be deleted
  * via {@link CrudTransactionExecutor}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction
  * @since 0.1.0
  */
 class CrudTransactionRequest {

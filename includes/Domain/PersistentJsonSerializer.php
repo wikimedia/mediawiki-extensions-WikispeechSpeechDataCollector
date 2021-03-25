@@ -14,7 +14,6 @@ use MWException;
 /**
  * Returns a JSON string representing the Persistent instance.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class PersistentJsonSerializer implements PersistentVisitor {

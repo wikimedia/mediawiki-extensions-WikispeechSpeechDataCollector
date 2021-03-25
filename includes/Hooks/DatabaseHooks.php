@@ -22,7 +22,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserDialectCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserLanguageProficiencyLevelCrud;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Hooks
  * @since 0.1.0
  */
 class DatabaseHooks

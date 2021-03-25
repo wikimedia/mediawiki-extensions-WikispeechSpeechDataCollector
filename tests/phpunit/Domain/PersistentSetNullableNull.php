@@ -24,7 +24,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 /**
  * Sets all nullable values to null in the visited instance.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 class PersistentSetNullableNull implements PersistentVisitor {

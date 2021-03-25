@@ -16,8 +16,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudT
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Test\Integration\Crud\Rdbms
- *
  * @todo Add helpers for testing listing and getting object by indices.
  *
  * @since 0.1.0

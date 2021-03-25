@@ -12,7 +12,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms
  * @since 0.1.0
  */
 class RecordingReviewCrud extends AbstractUuidRdbmsCrud {

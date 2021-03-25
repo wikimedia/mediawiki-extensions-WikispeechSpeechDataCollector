@@ -15,8 +15,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWTimestamp;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms
- *
  * Database mapping and access for
  * instances of the corresponding underlying subclass of {@link Persistent}.
  *

@@ -16,7 +16,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * tables. This allows us to export data from this system and while keeping
  * users completely anonymous.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class User implements Persistent {

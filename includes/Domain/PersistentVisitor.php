@@ -10,7 +10,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
  * Interface PersistentVisitor
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  *
  * https://en.wikipedia.org/wiki/Visitor_pattern
  * @since 0.1.0

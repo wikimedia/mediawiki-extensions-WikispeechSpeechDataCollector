@@ -12,7 +12,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * Metadata describing a part between a start and an endpoint
  * of the audio in a {@link Recording}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class RecordingAnnotation {

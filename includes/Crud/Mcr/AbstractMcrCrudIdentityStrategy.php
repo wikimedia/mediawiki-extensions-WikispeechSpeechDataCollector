@@ -14,7 +14,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use WikiPage;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
  * @version 0.1.8
  */
 interface AbstractMcrCrudIdentityStrategy {

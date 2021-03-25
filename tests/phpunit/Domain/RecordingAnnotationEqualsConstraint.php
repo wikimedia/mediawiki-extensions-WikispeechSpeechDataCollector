@@ -19,7 +19,6 @@ use SebastianBergmann\Exporter\Exporter;
  * to new abstract class DomainClassEqualsConstraint
  * https://phabricator.wikimedia.org/T274826
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 class RecordingAnnotationEqualsConstraint extends Constraint {

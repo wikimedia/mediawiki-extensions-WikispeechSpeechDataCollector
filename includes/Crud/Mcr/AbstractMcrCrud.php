@@ -19,8 +19,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
- *
  * Multi Content Revision mapping and access for
  * instances of the corresponding underlying subclass of {@link Persistent}.
  *

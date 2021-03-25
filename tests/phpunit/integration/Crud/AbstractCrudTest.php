@@ -24,7 +24,6 @@ use MediaWikiIntegrationTestCase;
 use Psr\Log\LoggerInterface;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\AbstractCrud
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Clud
  * @since 0.1.0

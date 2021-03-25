@@ -10,7 +10,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 
 /**
  * Interface Persistent
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  *
  * A persistent class represents a domain object

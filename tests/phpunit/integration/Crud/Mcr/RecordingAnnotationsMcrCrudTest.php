@@ -17,7 +17,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MWException;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\Mcr
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud
  * @since 0.1.0
  */

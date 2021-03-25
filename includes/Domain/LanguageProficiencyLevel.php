@@ -16,7 +16,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * Based on Babel levels.
  * https://www.mediawiki.org/wiki/Extension:Babel
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class LanguageProficiencyLevel {

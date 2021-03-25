@@ -12,7 +12,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
  * Convenience class used to create, load, update and delete any {@link Persistent} instance.
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  * @since 0.1.0
  */
 class Clud {

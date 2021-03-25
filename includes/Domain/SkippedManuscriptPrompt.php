@@ -27,7 +27,6 @@ use MWTimestamp;
  * could also be used to guess hard to read sentences in prompts that has
  * never been exposed to users.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class SkippedManuscriptPrompt implements Persistent {

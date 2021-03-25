@@ -30,7 +30,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  * Recording and RecordingAnnotation.
  *
  * @see AbstractCompositeOwnerMcrCrud
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
  * @since 0.1.0
  */
 abstract class AbstractCompositePartMcrCrud extends AbstractMcrCrud {

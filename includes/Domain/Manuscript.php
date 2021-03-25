@@ -16,7 +16,6 @@ use MWTimestamp;
  * smaller parts, {@link ManuscriptPrompt}, ordered segments with a lexical flow,
  * large enough for a single recording.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class Manuscript implements Persistent {

@@ -23,7 +23,6 @@ use Wikimedia\Timestamp\TimestampException;
  *
  * $persistent = $persistent->accept( new PersistentMWAssociateArrayDeserializer( $array ) );
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class PersistentMWAssociateArrayDeserializer implements PersistentVisitor {

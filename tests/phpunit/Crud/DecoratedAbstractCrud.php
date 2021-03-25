@@ -14,7 +14,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
  * Decorator pattern implementation for {@link AbstractCrud}.
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Crud
  * @since 0.1.0
  */
 class DecoratedAbstractCrud extends AbstractCrud {

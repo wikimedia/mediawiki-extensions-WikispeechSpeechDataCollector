@@ -16,7 +16,6 @@ use MediaWiki\Logger\LoggerFactory;
 use Psr\Log\LoggerInterface;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Hooks
  * @since 0.1.0
  */
 class ApiHooks

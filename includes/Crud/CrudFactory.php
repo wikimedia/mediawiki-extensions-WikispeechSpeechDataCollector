@@ -37,7 +37,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
  * that return the corresponding {@link Crud}
  * that represents the given {@link Persistent}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  * @since 0.1.0
  */
 class CrudFactory implements PersistentVisitor {

@@ -13,7 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Uuid
  * @since 0.1.0
  */

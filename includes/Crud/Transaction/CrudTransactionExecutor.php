@@ -27,7 +27,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\PersistentRootGraphLoader;
  * Consider single object (atomic) calls in case you are uncertain
  * about the validity of the object you pass to the executor.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction
  * @since 0.1.0
  */
 class CrudTransactionExecutor {

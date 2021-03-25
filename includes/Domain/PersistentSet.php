@@ -14,7 +14,6 @@ use Countable;
  * A collection of unique {@link Persistent} instances.
  * Instances are unique per class and identity.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class PersistentSet implements Countable {

@@ -11,8 +11,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
- *
  * Abstract access for instances of the corresponding underlying subclass of {@link Persistent}.
  *
  * @since 0.1.0

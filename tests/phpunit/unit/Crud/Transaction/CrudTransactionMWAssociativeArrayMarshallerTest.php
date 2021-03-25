@@ -20,7 +20,6 @@ use MediaWikiUnitTestCase;
 
 /**
  * @todo This is part of an internal development API. It should be removed before deployment.
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Crud\Transaction
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction\CrudTransactionMWAssociativeArrayMarshaller
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction\CrudTransactionResponse
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction\CrudTransactionRequest

@@ -15,7 +15,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\AbstractMcrCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudTest;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\Mcr
  * @since 0.1.0
  */
 abstract class AbstractMcrCrudTest extends AbstractCrudTest {

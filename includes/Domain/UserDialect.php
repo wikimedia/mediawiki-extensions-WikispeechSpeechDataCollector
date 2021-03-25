@@ -12,7 +12,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * How well a {@link User} speaks a specific dialect of a {@link Language}
  * and the geographic area that best describes the accent or dialect.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class UserDialect implements Persistent {

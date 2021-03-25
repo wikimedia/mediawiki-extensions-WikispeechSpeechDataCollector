@@ -16,7 +16,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
  * A collection of {@link Persistent} objects that have either
  * been created, read, update or deleted via {@link CrudTransactionExecutor}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction
  * @since 0.1.0
  */
 class CrudTransactionResponse {

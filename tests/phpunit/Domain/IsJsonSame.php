@@ -20,7 +20,6 @@ use RuntimeException;
  *
  * The class is meant to be used by implementations of PHPUnit constraints for executing assertions.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests
  * @since 0.1.0
  */
 class IsJsonSame extends BaseMatcher {

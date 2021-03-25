@@ -11,7 +11,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
 /**
  * A list of {@link RecordingAnnotation} associated with a {@link Recording}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class RecordingAnnotations implements Persistent {

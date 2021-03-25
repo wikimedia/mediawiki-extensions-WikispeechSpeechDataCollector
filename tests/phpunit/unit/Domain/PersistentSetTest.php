@@ -15,7 +15,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 use MediaWikiUnitTestCase;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentSet
  * @since 0.1.0
  */

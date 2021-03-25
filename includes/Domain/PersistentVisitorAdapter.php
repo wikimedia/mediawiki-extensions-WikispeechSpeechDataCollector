@@ -16,7 +16,6 @@ use Exception;
  *
  * Throws an exception on any non overridden invocation.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 abstract class PersistentVisitorAdapter implements PersistentVisitor {

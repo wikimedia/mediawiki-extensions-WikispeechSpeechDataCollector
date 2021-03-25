@@ -12,7 +12,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 class UserLanguageProficiencyLevelEqualsConstraint extends PersistentEqualsConstraint {

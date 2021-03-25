@@ -13,7 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud;
 use MediaWikiIntegrationTestCase;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Hooks\McrHooks
  * @since 0.1.0
  */

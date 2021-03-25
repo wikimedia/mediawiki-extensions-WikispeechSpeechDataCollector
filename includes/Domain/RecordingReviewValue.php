@@ -12,7 +12,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * What a {@link User} thought about the {@link Recording} of another user.
  * Stored in a {@link RecordingReview}.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class RecordingReviewValue {

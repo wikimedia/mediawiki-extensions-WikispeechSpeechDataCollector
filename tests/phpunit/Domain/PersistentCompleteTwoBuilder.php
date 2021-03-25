@@ -34,7 +34,6 @@ use MWTimestamp;
  * must set all required and non required values,
  * and the non-null values the two visitors set must differ from each other.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
  * @since 0.1.0
  */
 class PersistentCompleteTwoBuilder implements PersistentVisitor {

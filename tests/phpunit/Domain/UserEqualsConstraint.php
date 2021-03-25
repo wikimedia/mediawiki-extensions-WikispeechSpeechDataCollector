@@ -12,7 +12,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Domain
+ * @since 0.1.0
  */
 class UserEqualsConstraint extends PersistentEqualsConstraint {
 

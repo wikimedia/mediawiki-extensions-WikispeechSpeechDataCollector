@@ -13,7 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain
  * @since 0.1.0
  */

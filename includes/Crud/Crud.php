@@ -12,7 +12,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
  * Interface Crud
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  *
  * Database access for
  * instances of the corresponding underlying subclass of {@link Persistent}.

@@ -18,7 +18,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud;
  * i.e. name and content type of slots used by this extension.
  *
  * @since 0.1.0
- * @package MediaWiki\WikispeechSpeechDataCollector\Hooks
  */
 class McrHooks implements MediaWikiServicesHook {
 	/**

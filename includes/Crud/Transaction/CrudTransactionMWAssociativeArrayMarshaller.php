@@ -20,7 +20,6 @@ use MWException;
  *
  * Associative array serialization and deserialization for CRUD transaction API.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction
  * @since 0.1.0
  */
 class CrudTransactionMWAssociativeArrayMarshaller implements CrudTransactionMarshaller {

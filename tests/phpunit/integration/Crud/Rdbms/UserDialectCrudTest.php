@@ -13,8 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserDialectCrud;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Test\Integration\Crud\Rdbms
- *
  * @since 0.1.0
  * @group Database
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\UserDialectCrud

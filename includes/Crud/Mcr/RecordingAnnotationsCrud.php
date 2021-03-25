@@ -20,8 +20,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
 use MWException;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr
- *
  * Multi Content Revision mapping and access for {@link RecordingAnnotations}
  *
  * @since 0.1.0

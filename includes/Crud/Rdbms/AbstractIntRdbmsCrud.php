@@ -12,7 +12,6 @@ use ExternalStoreException;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms
  * @since 0.1.0
  *
  * Expects that the integer identity is created during insert to table.

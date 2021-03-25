@@ -13,7 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Tests\Unit\Domain
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt
  * @since 0.1.0
  */

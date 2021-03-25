@@ -12,7 +12,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\ManuscriptDomain;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms
  * @since 0.1.0
  */
 class ManuscriptDomainCrud extends AbstractUuidRdbmsCrud {

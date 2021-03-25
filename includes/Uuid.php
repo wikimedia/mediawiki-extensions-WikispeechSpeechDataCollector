@@ -13,7 +13,6 @@ use InvalidArgumentException;
 /**
  * UUID helper methods.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector
  * @since 0.1.0
  */
 class Uuid {

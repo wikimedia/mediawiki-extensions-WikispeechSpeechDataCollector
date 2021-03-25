@@ -10,7 +10,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction;
 
 /**
  * @todo This is part of an internal development API. It should be removed before deployment.
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction
  * @since 0.1.0
  */
 interface CrudTransactionMarshaller {

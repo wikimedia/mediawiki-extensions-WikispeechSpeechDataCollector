@@ -13,7 +13,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Uuid;
 
 /**
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  * @since 0.1.0
  *
  * Assigns a UUID as identity in local scope before insert to table.

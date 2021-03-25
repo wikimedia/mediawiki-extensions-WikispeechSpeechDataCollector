@@ -12,7 +12,6 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * How well a {@link User} understands a given {@link Language}
  * in written or spoken form.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class UserLanguageProficiencyLevel implements Persistent {

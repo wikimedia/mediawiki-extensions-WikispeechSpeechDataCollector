@@ -36,7 +36,6 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
  * Loads a graph of associated aggregated persistent objects per persistent class
  * as defined by the code of this visitor.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Crud
  * @since 0.1.0
  */
 class PersistentRootGraphLoader implements PersistentVisitor {

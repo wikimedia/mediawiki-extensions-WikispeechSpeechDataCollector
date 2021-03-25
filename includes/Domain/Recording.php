@@ -21,7 +21,6 @@ use MWTimestamp;
  *  * etc
  *  I.e. use denormalized information in the database, not database indices.
  *
- * @package MediaWiki\WikispeechSpeechDataCollector\Domain
  * @since 0.1.0
  */
 class Recording implements Persistent {
