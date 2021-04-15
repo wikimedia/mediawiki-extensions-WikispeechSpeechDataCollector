@@ -8,7 +8,6 @@
 	"action-wikispeech-sdc-record": "Sprache aufzeichnen",
 	"recordspeech": "Sprache aufzeichnen",
 	"wikispeech-sdc-record": "Aufzeichnen",
-	"wikispeech-sdc-play": "Abspielen",
 	"wikispeech-sdc-save": "Speichern",
 	"wikispeech-sdc-skip": "Überspringen",
 	"right-wikispeech-sdc-speech-recording": "Sprachaufnahme bearbeiten",
@@ -22,5 +21,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Antwort konnte nicht serialisiert werden.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Erstellen einer einzelnen neuen Benutzeranfrage.",
 	"apihelp-wikispeech-sdc-crud-example-2": "Lesen einer einzelnen Benutzeranfrage.",
-	"apihelp-wikispeech-sdc-crud-example-3": "Löschen einer einzelnen Benutzeranfrage."
+	"apihelp-wikispeech-sdc-crud-example-3": "Löschen einer einzelnen Benutzeranfrage.",
+	"wikispeech-sdc-status-starting": "Starten",
+	"wikispeech-sdc-status-ready": "Bereit",
+	"wikispeech-sdc-status-listening": "Abhören",
+	"wikispeech-sdc-status-recording": "Aufnahme"
 }

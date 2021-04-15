@@ -3,6 +3,7 @@
 		"authors": [
 			"Gomoko",
 			"Thibaut120094",
+			"Verdy p",
 			"Wladek92"
 		]
 	},
@@ -12,7 +13,6 @@
 	"action-wikispeech-sdc-record": "Enregistrer la voix",
 	"recordspeech": "Enregistrer la conversation",
 	"wikispeech-sdc-record": "Enregistrer",
-	"wikispeech-sdc-play": "Lecture",
 	"wikispeech-sdc-save": "Enregistrer",
 	"wikispeech-sdc-skip": "Sauter",
 	"right-wikispeech-sdc-speech-recording": "Modifier l’enregistrement vocal",
@@ -26,5 +26,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Échec de sérialisation de la réponse.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Créer une unique nouvelle requête Utilisateur.",
 	"apihelp-wikispeech-sdc-crud-example-2": "Lire une unique requête Utilisateur.",
-	"apihelp-wikispeech-sdc-crud-example-3": "Supprimer une unique requête Utilisateur."
+	"apihelp-wikispeech-sdc-crud-example-3": "Supprimer une unique requête Utilisateur.",
+	"wikispeech-sdc-status-starting": "Démarrage",
+	"wikispeech-sdc-status-ready": "Prêt",
+	"wikispeech-sdc-status-listening": "À l’écoute",
+	"wikispeech-sdc-status-recording": "Enregistrement en cours"
 }
