@@ -24,5 +24,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Falha ao serializar a resposta.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Crie uma única solicitação de novo usuário.",
 	"apihelp-wikispeech-sdc-crud-example-2": "Leia uma única solicitação do usuário.",
-	"apihelp-wikispeech-sdc-crud-example-3": "Exclua uma única solicitação do usuário."
+	"apihelp-wikispeech-sdc-crud-example-3": "Exclua uma única solicitação do usuário.",
+	"wikispeech-sdc-status-starting": "Iniciando",
+	"wikispeech-sdc-status-ready": "Preparando",
+	"wikispeech-sdc-status-listening": "Escutando",
+	"wikispeech-sdc-status-recording": "Gravando"
 }

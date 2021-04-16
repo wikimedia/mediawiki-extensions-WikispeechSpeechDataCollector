@@ -23,5 +23,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Не успеав да го серијализирам одговорот.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Создај единечно ново барање за корисник",
 	"apihelp-wikispeech-sdc-crud-example-2": "Читање на единечно барање за корисник",
-	"apihelp-wikispeech-sdc-crud-example-3": "Избриши единечно барање за корисник."
+	"apihelp-wikispeech-sdc-crud-example-3": "Избриши единечно барање за корисник.",
+	"wikispeech-sdc-status-starting": "Почнувам",
+	"wikispeech-sdc-status-ready": "Спремно",
+	"wikispeech-sdc-status-listening": "Слушам",
+	"wikispeech-sdc-status-recording": "Снимам"
 }
