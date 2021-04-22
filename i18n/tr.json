@@ -23,5 +23,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Cevap serileştirilemedi.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Yeni bir tek Kullanıcı isteği oluştur.",
 	"apihelp-wikispeech-sdc-crud-example-2": "Tek bir Kullanıcı isteği oku.",
-	"apihelp-wikispeech-sdc-crud-example-3": "Tek bir Kullanıcı isteği sil."
+	"apihelp-wikispeech-sdc-crud-example-3": "Tek bir Kullanıcı isteği sil.",
+	"wikispeech-sdc-status-starting": "Başlatılıyor",
+	"wikispeech-sdc-status-ready": "Hazır",
+	"wikispeech-sdc-status-listening": "Dinleniyor",
+	"wikispeech-sdc-status-recording": "Kaydediliyor"
 }

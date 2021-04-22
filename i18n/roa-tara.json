@@ -23,5 +23,9 @@
 	"apierror-wikispeech-sdc-crud-serialize-response": "Errore de serializzazione d'a resposte.",
 	"apihelp-wikispeech-sdc-crud-example-1": "Ccreje 'na richieste de singole Utende nuève.",
 	"apihelp-wikispeech-sdc-crud-example-2": "Lìgge 'na richieste de singole Utende.",
-	"apihelp-wikispeech-sdc-crud-example-3": "Scangìlle 'na richieste de singole Utende."
+	"apihelp-wikispeech-sdc-crud-example-3": "Scangìlle 'na richieste de singole Utende.",
+	"wikispeech-sdc-status-starting": "Stoche accumenze",
+	"wikispeech-sdc-status-ready": "Pronde",
+	"wikispeech-sdc-status-listening": "Stoche a sende",
+	"wikispeech-sdc-status-recording": "Stoche a reggìstre"
 }
