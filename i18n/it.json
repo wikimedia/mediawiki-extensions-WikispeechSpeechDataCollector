@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16"
 		]
 	},
@@ -8,5 +9,6 @@
 	"action-wikispeech-sdc-record": "registrare la voce",
 	"wikispeech-sdc-record": "Registra",
 	"wikispeech-sdc-save": "Salva",
-	"wikispeech-sdc-skip": "Salta"
+	"wikispeech-sdc-skip": "Salta",
+	"wikispeech-sdc-status-ready": "Pronto"
 }
