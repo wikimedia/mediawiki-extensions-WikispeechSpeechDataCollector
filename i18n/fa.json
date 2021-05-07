@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jeeputer",
 			"Reza koulivand"
 		]
 	},
@@ -10,5 +11,9 @@
 	"action-wikispeech-sdc-record": "ضبط صدا",
 	"recordspeech": "ضبط گفتار",
 	"wikispeech-sdc-record": "ضبط",
-	"wikispeech-sdc-skip": "پرش"
+	"wikispeech-sdc-skip": "پرش",
+	"wikispeech-sdc-status-starting": "شروع",
+	"wikispeech-sdc-status-ready": "آماده",
+	"wikispeech-sdc-status-listening": "در حال شنیدن",
+	"wikispeech-sdc-status-recording": "در حال ضبط"
 }
