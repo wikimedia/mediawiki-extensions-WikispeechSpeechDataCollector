@@ -28,7 +28,7 @@ class McrHooks implements MediaWikiServicesHook {
 	public function onMediaWikiServices( $services ) {
 		$services->addServiceManipulator(
 			'SlotRoleRegistry',
-			function ( SlotRoleRegistry $registry ) {
+			static function ( SlotRoleRegistry $registry ) {
 				$registry->defineRoleWithModel(
 					RecordingAnnotationsCrud::SLOT_ROLE,
 					CONTENT_MODEL_JSON
