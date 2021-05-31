@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Karl Wettin",
 			"Robby",
 			"Sebastian Berlin",
-			"Umherirrender",
-			"Amire80"
+			"Umherirrender"
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "{{doc-apihelp-summary|wikispeech-sdc-crud}}",
