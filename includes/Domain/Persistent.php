@@ -28,7 +28,7 @@ interface Persistent {
 	/**
 	 * @param mixed $identity object identity
 	 */
-	public function setIdentity( $identity ) : void;
+	public function setIdentity( $identity ): void;
 
 	/**
 	 * Visitor pattern accepting function.

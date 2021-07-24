@@ -31,7 +31,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	/**
 	 * @return string COLUMNS_PREFIX . 'class prefix' . '_'
 	 */
-	abstract protected function getClassColumnsPrefix() : string;
+	abstract protected function getClassColumnsPrefix(): string;
 
 	/** @var string Name of table column that holds the identity. */
 	private $identityColumn;
