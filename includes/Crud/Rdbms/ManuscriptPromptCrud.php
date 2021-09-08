@@ -88,6 +88,7 @@ class ManuscriptPromptCrud extends AbstractUuidRdbmsCrud {
 	public function listByManuscript(
 		string $manuscript
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_MANUSCRIPT => $manuscript
 		] );
@@ -102,6 +103,7 @@ class ManuscriptPromptCrud extends AbstractUuidRdbmsCrud {
 		string $manuscript,
 		int $index
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_MANUSCRIPT => $manuscript,
 			self::COLUMN_INDEX => $index

@@ -92,6 +92,7 @@ class RecordingReviewCrud extends AbstractUuidRdbmsCrud {
 	public function listByReviewer(
 		string $reviewer
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_REVIEWER => $reviewer
 		] );
@@ -104,6 +105,7 @@ class RecordingReviewCrud extends AbstractUuidRdbmsCrud {
 	public function listByRecording(
 		string $recording
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_RECORDING => $recording
 		] );
@@ -118,6 +120,7 @@ class RecordingReviewCrud extends AbstractUuidRdbmsCrud {
 		string $recording,
 		string $reviewer
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_RECORDING => $recording,
 			self::COLUMN_REVIEWER => $reviewer,

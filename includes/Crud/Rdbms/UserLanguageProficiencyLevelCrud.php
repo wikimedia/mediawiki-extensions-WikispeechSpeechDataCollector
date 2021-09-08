@@ -88,6 +88,7 @@ class UserLanguageProficiencyLevelCrud extends AbstractUuidRdbmsCrud {
 	public function listByUser(
 		string $user
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_USER => $user
 		] );
@@ -102,6 +103,7 @@ class UserLanguageProficiencyLevelCrud extends AbstractUuidRdbmsCrud {
 		string $user,
 		string $language
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_USER => $user,
 			self::COLUMN_LANGUAGE => $language

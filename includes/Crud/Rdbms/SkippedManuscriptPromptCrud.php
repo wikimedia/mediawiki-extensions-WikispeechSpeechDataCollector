@@ -88,6 +88,7 @@ class SkippedManuscriptPromptCrud extends AbstractUuidRdbmsCrud {
 	public function listByUser(
 		string $user
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_USER => $user
 		] );
@@ -100,6 +101,7 @@ class SkippedManuscriptPromptCrud extends AbstractUuidRdbmsCrud {
 	public function listByManuscriptPrompt(
 		string $manuscriptPrompt
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt
 		] );
@@ -114,6 +116,7 @@ class SkippedManuscriptPromptCrud extends AbstractUuidRdbmsCrud {
 		string $user,
 		string $manuscriptPrompt
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_USER => $user,
 			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt

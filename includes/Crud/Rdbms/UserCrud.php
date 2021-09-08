@@ -84,6 +84,7 @@ class UserCrud extends AbstractUuidRdbmsCrud {
 	public function getByMediaWikiUser(
 		int $mediaWikiUser
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_MEDIAWIKI_USER => $mediaWikiUser
 		] );

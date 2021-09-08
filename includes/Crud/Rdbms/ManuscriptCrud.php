@@ -97,6 +97,7 @@ class ManuscriptCrud extends AbstractUuidRdbmsCrud {
 	public function listByDomain(
 		string $domain
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_DOMAIN => $domain
 		] );
@@ -109,6 +110,7 @@ class ManuscriptCrud extends AbstractUuidRdbmsCrud {
 	public function listByLanguage(
 		string $language
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_LANGUAGE => $language
 		] );

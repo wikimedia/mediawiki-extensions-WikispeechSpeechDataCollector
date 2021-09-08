@@ -84,6 +84,7 @@ class ManuscriptDomainCrud extends AbstractUuidRdbmsCrud {
 	public function listByParent(
 		string $parent
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_PARENT => $parent
 		] );

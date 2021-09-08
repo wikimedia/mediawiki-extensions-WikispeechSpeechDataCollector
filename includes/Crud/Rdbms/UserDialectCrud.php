@@ -94,6 +94,7 @@ class UserDialectCrud extends AbstractUuidRdbmsCrud {
 	public function listByUser(
 		string $user
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_USER => $user
 		] );

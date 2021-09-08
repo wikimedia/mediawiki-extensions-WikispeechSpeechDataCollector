@@ -98,6 +98,7 @@ class RecordingCrud extends AbstractUuidRdbmsCrud {
 	public function listByVoiceOf(
 		string $voiceOf
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_VOICE_OF => $voiceOf
 		] );
@@ -110,6 +111,7 @@ class RecordingCrud extends AbstractUuidRdbmsCrud {
 	public function listByManuscriptPrompt(
 		string $manuscriptPrompt
 	): ?array {
+		// @phan-suppress-next-line PhanTypeMismatchReturn
 		return $this->listByConditions( [
 			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt
 		] );
@@ -124,6 +126,7 @@ class RecordingCrud extends AbstractUuidRdbmsCrud {
 		string $voiceOf,
 		string $manuscriptPrompt
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_VOICE_OF => $voiceOf,
 			self::COLUMN_MANUSCRIPT_PROMPT => $manuscriptPrompt,
@@ -137,6 +140,7 @@ class RecordingCrud extends AbstractUuidRdbmsCrud {
 	public function getByAudioFileWikiPageIdentity(
 		int $audioFileWikiPageIdentity
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_AUDIO_FILE_WIKI_PAGE_IDENTITY => $audioFileWikiPageIdentity
 		] );

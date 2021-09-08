@@ -96,6 +96,7 @@ class LanguageCrud extends AbstractUuidRdbmsCrud {
 	public function findLanguageByIso639a1(
 		string $iso639a1
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_ISO639A1 => $iso639a1
 		] );
@@ -108,6 +109,7 @@ class LanguageCrud extends AbstractUuidRdbmsCrud {
 	public function findLanguageByIso639a2b(
 		string $iso639a2b
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_ISO639A2B => $iso639a2b
 		] );
@@ -120,6 +122,7 @@ class LanguageCrud extends AbstractUuidRdbmsCrud {
 	public function findLanguageByIso639a2t(
 		string $iso639a2t
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_ISO639A2T => $iso639a2t
 		] );
@@ -132,6 +135,7 @@ class LanguageCrud extends AbstractUuidRdbmsCrud {
 	public function findLanguageByIso639a3(
 		string $iso639a3
 	): ?Persistent {
+		// @phan-suppress-next-line PhanTypeMismatchReturnSuperType
 		return $this->getByConditions( [
 			self::COLUMN_ISO639A3 => $iso639a3
 		] );

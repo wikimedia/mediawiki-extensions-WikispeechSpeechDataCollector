@@ -15,6 +15,7 @@ use Exception;
  * For use with those implementations that only add support for some of the persistent subclasses.
  *
  * Throws an exception on any non overridden invocation.
+ * @phan-file-suppress PhanPluginNeverReturnMethod
  *
  * @since 0.1.0
  */
