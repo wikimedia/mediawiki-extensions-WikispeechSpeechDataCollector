@@ -142,7 +142,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	/**
 	 * Picks up a single instance. Creates a new object instance.
 	 *
-	 * @param array $conditions See {@link \IDatabase::select} conditions.
+	 * @param array $conditions See {@link \Wikimedia\Rdbms\IDatabase::select} conditions.
 	 * @return Persistent|null
 	 * @since 0.1.0
 	 */
@@ -156,7 +156,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	/**
 	 * Picks up a single instance. Loads to existing object instance.
 	 *
-	 * @param array $conditions See {@link \IDatabase::select} conditions.
+	 * @param array $conditions See {@link \Wikimedia\Rdbms\IDatabase::select} conditions.
 	 * @param Persistent $instance Instance to be populated with data.
 	 * @return bool true if found, false if not found.
 	 * @since 0.1.0
