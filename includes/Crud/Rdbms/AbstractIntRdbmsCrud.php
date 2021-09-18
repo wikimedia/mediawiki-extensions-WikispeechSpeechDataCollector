@@ -33,7 +33,7 @@ abstract class AbstractIntRdbmsCrud extends AbstractRdbmsCrud {
 			throw new ExternalStoreException( 'Identity already set' );
 		}
 		$rows = $this->serializeFields( $instance );
-		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_PRIMARY );
 		$dbw->insert( $this->getTable(), $rows );
 		$instance->setIdentity( $dbw->insertId() );
 	}

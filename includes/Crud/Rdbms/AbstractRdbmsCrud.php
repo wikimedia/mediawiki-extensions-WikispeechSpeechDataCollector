@@ -117,7 +117,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		Persistent $instance
 	): void {
 		$set = $this->serializeFields( $instance );
-		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_PRIMARY );
 		$dbw->update( $this->getTable(), $set, [
 			$this->getIdentityColumn() => $instance->getIdentity()
 		] );
@@ -133,7 +133,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	public function delete(
 		$identity
 	): void {
-		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_MASTER );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_PRIMARY );
 		$dbw->delete( $this->getTable(), [
 			$this->getIdentityColumn() => $identity
 		] );
