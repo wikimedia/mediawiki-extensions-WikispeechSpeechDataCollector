@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT"
+		]
+	},
+	"wikispeech-sdc": "Збірник мовних даних Вікіпедії",
+	"wikispeech-sdc-desc": "Інструмент для запису, перегляду та коментування розмовних голосів.",
+	"right-wikispeech-sdc-record": "Запис голосу",
+	"action-wikispeech-sdc-record": "Запис голосу",
+	"recordspeech": "Запис промови",
+	"wikispeech-sdc-record": "Запис",
+	"wikispeech-sdc-save": "Зберегти",
+	"wikispeech-sdc-skip": "Пропустити",
+	"right-wikispeech-sdc-speech-recording": "Редагувати запис промови",
+	"action-wikispeech-sdc-speech-recording": "Редагувати запис промови",
+	"right-wikispeech-sdc-speech-recording-talk": "Обговорити запис промови",
+	"action-wikispeech-sdc-speech-recording-talk": "Обговорити запис промови"
+}

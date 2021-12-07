@@ -12,5 +12,9 @@
 	"wikispeech-sdc-record": "錄音",
 	"wikispeech-sdc-play": "播放",
 	"wikispeech-sdc-save": "儲存",
-	"wikispeech-sdc-skip": "跳過"
+	"wikispeech-sdc-skip": "跳過",
+	"right-wikispeech-sdc-speech-recording": "編輯發聲錄音",
+	"action-wikispeech-sdc-speech-recording": "編輯發聲錄音",
+	"right-wikispeech-sdc-speech-recording-talk": "討論發聲錄音",
+	"action-wikispeech-sdc-speech-recording-talk": "討論發聲錄音"
 }
