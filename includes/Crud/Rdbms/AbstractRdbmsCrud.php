@@ -166,22 +166,14 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		Persistent $instance
 	): bool {
 		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
-		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
-		try {
-			if ( !$res ) {
-				return false;
-			}
-			$row = $dbr->fetchObject( $res );
-			if ( !$row ) {
-				return false;
-			}
-			$rowArray = (array)$row;
-			$this->deserializeRowIdentity( $instance, $rowArray );
-			$this->deserializeRow( $instance, $rowArray );
-			return true;
-		} finally {
-			$dbr->freeResult( $res );
+		$row = $dbr->selectRow( $this->getTable(), $this->getAllColumns(), $conditions );
+		if ( !$row ) {
+			return false;
 		}
+		$rowArray = (array)$row;
+		$this->deserializeRowIdentity( $instance, $rowArray );
+		$this->deserializeRow( $instance, $rowArray );
+		return true;
 	}
 
 	/**
@@ -194,9 +186,6 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	): ?array {
 		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
 		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
-		if ( !$res ) {
-			return null;
-		}
 		$instances = [];
 		foreach ( $res as $row ) {
 			$rowArray = (array)$row;
