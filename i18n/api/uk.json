@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"DDPAT"
+			"DDPAT",
+			"Ice bulldog"
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "Загальний API постійного доступу до об'єктів домену.",
