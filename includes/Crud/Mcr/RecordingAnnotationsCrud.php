@@ -9,9 +9,9 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr;
  */
 
 use JsonContent;
+use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Storage\PageUpdater;
-use MediaWiki\Storage\RevisionRecord;
-use MediaWiki\Storage\SlotRecord;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonDeserializer;

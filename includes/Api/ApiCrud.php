@@ -14,7 +14,7 @@ use ApiUsageException;
 use Exception;
 use FormatJson;
 use MediaWiki\Logger\LoggerFactory;
-use MediaWiki\Storage\RevisionStore;
+use MediaWiki\Revision\RevisionStore;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction\CrudTransactionExecutor;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Transaction\CrudTransactionMWAssociativeArrayMarshaller;
