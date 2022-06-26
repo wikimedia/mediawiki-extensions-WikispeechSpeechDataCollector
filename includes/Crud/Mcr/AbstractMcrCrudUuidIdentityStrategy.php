@@ -9,6 +9,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr;
  */
 
 use JsonContent;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Uuid;
@@ -33,8 +34,12 @@ class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStra
 			Uuid::asHex( $identity ),
 			NS_SPEECH_RECORDING
 		);
-		// @todo When bumping MW core version up to 1.36, use WikiPageFactory from context.
-		return WikiPage::factory( $title );
+		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+			// MW 1.36+
+			return MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+		} else {
+			return WikiPage::factory( $title );
+		}
 	}
 
 	/**
