@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aboubacar.banamoridou.toure"
+			"Aboubacar.banamoridou.toure",
+			"Lancine.kounfantoh.fofana"
 		]
 	},
-	"action-wikispeech-sdc-record": "ߡߍ߲ߞߊ߲ ߠߊߞߎ߲ߘߎߟߊ߲",
+	"action-wikispeech-sdc-record": "ߡߍ߲ߞߊ߲ ߠߊߞߎ߲߬ߘߎ߫",
 	"recordspeech": "ߞߎߡߊߞߊ߲ ߠߊߞߎ߲ߘߎߟߊ߲",
 	"wikispeech-sdc-record": "ߟߊ߬ߞߎ߲߬ߘߎ߬ߟߌ"
 }
