@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asma",
+			"Meno25"
+		]
+	},
+	"right-wikispeech-sdc-record": "سجل صوت",
+	"wikispeech-sdc-record": "سجل",
+	"wikispeech-sdc-save": "حفظ",
+	"wikispeech-sdc-skip": "تجاوز",
+	"right-wikispeech-sdc-speech-recording-talk": "مناقشة تسجيل الكلام",
+	"wikispeech-sdc-status-starting": "البدء"
+}
