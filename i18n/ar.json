@@ -10,7 +10,10 @@
 	"wikispeech-sdc-record": "سجل",
 	"wikispeech-sdc-save": "حفظ",
 	"wikispeech-sdc-skip": "تجاوز",
+	"right-wikispeech-sdc-speech-recording": "مناقشة تسجيل الكلام",
+	"action-wikispeech-sdc-speech-recording": "مناقشة تسجيل الكلام",
 	"right-wikispeech-sdc-speech-recording-talk": "مناقشة تسجيل الكلام",
 	"action-wikispeech-sdc-speech-recording-talk": "مناقشة تسجيل الكلام",
-	"wikispeech-sdc-status-starting": "البدء"
+	"wikispeech-sdc-status-starting": "البدء",
+	"wikispeech-sdc-status-recording": "جارٍ التسجيل..."
 }
