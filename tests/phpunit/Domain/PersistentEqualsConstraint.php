@@ -51,14 +51,14 @@ abstract class PersistentEqualsConstraint extends Constraint {
 	 * @param Persistent $actual
 	 * @param string $description
 	 * @param bool|null $returnResult
-	 * @return bool Whether or not $actual passed assertion, or null if $returnResult is false.
+	 * @return bool|null Whether or not $actual passed assertion, or null if $returnResult is false.
 	 * @throws ExpectationFailedException if expected is not equal and $returnResult is false.
 	 */
 	final public function evaluate(
 		$actual,
 		string $description = '',
 		bool $returnResult = false
-	) {
+	): ?bool {
 		if ( $actual === null && $this->expected === null ) {
 			return $this->returnSuccessOrFail( $actual, $returnResult, $description );
 		}
