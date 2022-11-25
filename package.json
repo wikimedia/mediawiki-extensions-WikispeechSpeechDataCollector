@@ -11,8 +11,8 @@
 		"grunt": "1.4.0",
 		"grunt-banana-checker": "0.9.0",
 		"grunt-eslint": "23.0.0",
-		"grunt-stylelint": "0.16.0",
+		"grunt-stylelint": "0.18.0",
 		"jsdoc": "3.6.7",
-		"stylelint-config-wikimedia": "0.11.1"
+		"stylelint-config-wikimedia": "0.13.1"
 	}
 }
