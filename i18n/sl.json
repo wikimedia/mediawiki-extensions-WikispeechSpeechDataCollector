@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"wikispeech-sdc": "Zbiralnik govornih podatkov Wikispeech",
+	"wikispeech-sdc-desc": "Orodje za snemanje, pregledovanje in označevanje govorjenih glasov.",
+	"right-wikispeech-sdc-record": "Snemanje glasu",
+	"recordspeech": "Snemanje glasu",
+	"wikispeech-sdc-record": "Snemaj",
+	"wikispeech-sdc-save": "Shrani",
+	"wikispeech-sdc-skip": "Preskoči",
+	"right-wikispeech-sdc-speech-recording": "Urejanje posnetka govora",
+	"right-wikispeech-sdc-speech-recording-talk": "Razpravljanje o posnetku govora",
+	"wikispeech-sdc-status-starting": "Začenjanje",
+	"wikispeech-sdc-status-ready": "V pripravljenosti",
+	"wikispeech-sdc-status-listening": "Poslušanje",
+	"wikispeech-sdc-status-recording": "Snemanje"
+}
