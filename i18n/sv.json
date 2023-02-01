@@ -1,15 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
+			"André Costa (WMSE)",
+			"Jopparn",
 			"Sabelöga"
 		]
 	},
 	"wikispeech-sdc": "Wikispeech-taldatasamlare",
 	"wikispeech-sdc-desc": "Ett verktyg för att spela in, granska och kommentera på talade röster.",
 	"right-wikispeech-sdc-record": "Spela in en röst",
-	"action-wikispeech-sdc-record": "Spela in en röst",
+	"action-wikispeech-sdc-record": "spela in en röst",
 	"recordspeech": "Spela in tal",
 	"wikispeech-sdc-record": "Spela in",
 	"wikispeech-sdc-save": "Spara",
-	"wikispeech-sdc-skip": "Hoppa över"
+	"wikispeech-sdc-skip": "Hoppa över",
+	"right-wikispeech-sdc-speech-recording": "Redigera talinspelning",
+	"action-wikispeech-sdc-speech-recording": "redigera talinspelning",
+	"right-wikispeech-sdc-speech-recording-talk": "Diskutera talinspelning",
+	"action-wikispeech-sdc-speech-recording-talk": "diskutera talinspelning",
+	"wikispeech-sdc-status-starting": "Startar",
+	"wikispeech-sdc-status-ready": "Redo",
+	"wikispeech-sdc-status-listening": "Lyssnar",
+	"wikispeech-sdc-status-recording": "Spelar in"
 }
