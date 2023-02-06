@@ -4,8 +4,18 @@
 			"Mainframe98"
 		]
 	},
+	"right-wikispeech-sdc-record": "Spraak opnemen",
+	"action-wikispeech-sdc-record": "spraak op te nemen",
 	"recordspeech": "Spraak opnemen",
 	"wikispeech-sdc-record": "Opnemen",
 	"wikispeech-sdc-save": "Opslaan",
-	"wikispeech-sdc-skip": "Overslaan"
+	"wikispeech-sdc-skip": "Overslaan",
+	"right-wikispeech-sdc-speech-recording": "Spraakopnamen bewerken",
+	"action-wikispeech-sdc-speech-recording": "spraakopnamen te bewerken",
+	"right-wikispeech-sdc-speech-recording-talk": "Overleggen over spraakopnamen",
+	"action-wikispeech-sdc-speech-recording-talk": "te overleggen over spraakopnamen",
+	"wikispeech-sdc-status-starting": "Bezig met opstarten...",
+	"wikispeech-sdc-status-ready": "Gereed",
+	"wikispeech-sdc-status-listening": "Bezig met luisteren...",
+	"wikispeech-sdc-status-recording": "Bezig met opnemen..."
 }
