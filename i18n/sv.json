@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"André Costa (WMSE)",
+			"Jopparn"
 		]
 	},
 	"wikispeech-sdc": "Wikispeech-taldatasamlare",
@@ -11,5 +13,11 @@
 	"recordspeech": "Spela in tal",
 	"wikispeech-sdc-record": "Spela in",
 	"wikispeech-sdc-save": "Spara",
-	"wikispeech-sdc-skip": "Hoppa över"
+	"wikispeech-sdc-skip": "Hoppa över",
+	"right-wikispeech-sdc-speech-recording": "Redigera talinspelning",
+	"right-wikispeech-sdc-speech-recording-talk": "Diskutera talinspelning",
+	"wikispeech-sdc-status-starting": "Startar",
+	"wikispeech-sdc-status-ready": "Redo",
+	"wikispeech-sdc-status-listening": "Lyssnar",
+	"wikispeech-sdc-status-recording": "Spelar in"
 }
