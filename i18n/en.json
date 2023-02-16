@@ -6,9 +6,9 @@
 		]
 	},
 	"wikispeech-sdc": "Wikispeech Speech Data Collector",
-	"wikispeech-sdc-desc": "A tool to record, review and annotate spoken voices.",
-	"right-wikispeech-sdc-record": "Record voice",
-	"action-wikispeech-sdc-record": "record voice",
+	"wikispeech-sdc-desc": "A tool to record, review and annotate speech.",
+	"right-wikispeech-sdc-record": "Record speech",
+	"action-wikispeech-sdc-record": "record speech",
 	"recordspeech": "Record speech",
 	"wikispeech-sdc-record": "Record",
 	"wikispeech-sdc-save": "Save",
