@@ -1,6 +1,6 @@
 ( function () {
 	QUnit.module( 'ext.wikispeech-sdc.recorder', QUnit.newMwEnvironment( {
-		setup: function () {
+		beforeEach: function () {
 			var Recorder = require( '../../modules/ext.wikispeech-sdc.recorder.js' );
 			this.recorder = new Recorder();
 			this.recorder.linguaRecorder = { start: sinon.stub() };
