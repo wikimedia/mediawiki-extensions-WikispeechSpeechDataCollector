@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"wikispeech-sdc-desc": "E Geschier fir geschwate Stëmmen opzehuelen, nozekucken an ze kommentéieren.",
-	"right-wikispeech-sdc-record": "Stëmm ophuelen",
-	"action-wikispeech-sdc-record": "Stëmm ophuelen",
+	"right-wikispeech-sdc-record": "Sprooch ophuelen",
+	"action-wikispeech-sdc-record": "Sprooch opzehuelen",
 	"recordspeech": "Sprooch ophuelen",
 	"wikispeech-sdc-record": "Ophuelen",
 	"wikispeech-sdc-save": "Späicheren",

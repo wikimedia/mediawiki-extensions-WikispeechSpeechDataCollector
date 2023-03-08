@@ -3,7 +3,7 @@
 		"authors": []
 	},
 	"wikispeech-sdc": "Wikispeech-Sprachdatensammler",
-	"wikispeech-sdc-desc": "Ein Werkzeug zum Aufnehmen, Überprüfen und Kommentieren von gesprochenen Stimmen.",
+	"wikispeech-sdc-desc": "Ein Werkzeug zum Aufnehmen, Überprüfen und Kommentieren von Sprache.",
 	"right-wikispeech-sdc-record": "Sprache aufzeichnen",
 	"action-wikispeech-sdc-record": "Sprache aufzeichnen",
 	"recordspeech": "Sprache aufzeichnen",

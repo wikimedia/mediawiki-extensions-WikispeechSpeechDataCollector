@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
+	"wikispeech-sdc-desc": "Een hulpmiddel om spraak op te nemen, te beoordelen en te annoteren.",
 	"right-wikispeech-sdc-record": "Spraak opnemen",
 	"action-wikispeech-sdc-record": "spraak op te nemen",
 	"recordspeech": "Spraak opnemen",

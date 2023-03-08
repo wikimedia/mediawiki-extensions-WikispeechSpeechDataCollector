@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Re demz"
 		]
 	},
 	"wikispeech-sdc": "Coletor de dados de falo do Wikispeech",
-	"wikispeech-sdc-desc": "Uma ferramenta para gravar, revisar e anotar vozes faladas.",
-	"right-wikispeech-sdc-record": "Gravar voz",
-	"action-wikispeech-sdc-record": "Gravar voz",
+	"wikispeech-sdc-desc": "Uma ferramenta para gravar, revisar e anotar falas.",
+	"right-wikispeech-sdc-record": "Gravar fala",
+	"action-wikispeech-sdc-record": "Gravar fala",
 	"recordspeech": "Gravar fala",
 	"wikispeech-sdc-record": "Gravar",
 	"wikispeech-sdc-save": "Salvar",
