@@ -7,6 +7,7 @@
 	},
 	"wikispeech-sdc-desc": "スピーチの録音、レビュー、注釈ツール。",
 	"right-wikispeech-sdc-record": "スピーチを録音する",
+	"action-wikispeech-sdc-record": "スピーチを録音する",
 	"wikispeech-sdc-save": "保存",
 	"wikispeech-sdc-skip": "スキップ"
 }

@@ -8,9 +8,9 @@
 		]
 	},
 	"wikispeech-sdc": "Collecteur de données de parole de Wikispeech",
-	"wikispeech-sdc-desc": "Un outil pour enregistrer, relire et annoter les voix parlées.",
-	"right-wikispeech-sdc-record": "Enregistrer la voix",
-	"action-wikispeech-sdc-record": "enregistrer la voix",
+	"wikispeech-sdc-desc": "Un outil pour enregistrer, relire et annoter les discours.",
+	"right-wikispeech-sdc-record": "Enregistrer le discours",
+	"action-wikispeech-sdc-record": "enregistrer le discours",
 	"recordspeech": "Enregistrer la conversation",
 	"wikispeech-sdc-record": "Enregistrer",
 	"wikispeech-sdc-save": "Enregistrer",
