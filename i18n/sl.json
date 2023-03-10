@@ -5,9 +5,9 @@
 		]
 	},
 	"wikispeech-sdc": "Zbiralnik govornih podatkov Wikispeech",
-	"wikispeech-sdc-desc": "Orodje za snemanje, pregledovanje in označevanje govorjenih glasov.",
-	"right-wikispeech-sdc-record": "Snemanje glasu",
-	"action-wikispeech-sdc-record": "snemanje glasu",
+	"wikispeech-sdc-desc": "Orodje za snemanje, pregledovanje in označevanje govora.",
+	"right-wikispeech-sdc-record": "Snemanje govora",
+	"action-wikispeech-sdc-record": "snemanje govora",
 	"recordspeech": "Snemanje glasu",
 	"wikispeech-sdc-record": "Snemaj",
 	"wikispeech-sdc-save": "Shrani",
