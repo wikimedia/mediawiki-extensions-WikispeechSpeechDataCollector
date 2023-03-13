@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nike"
+			"Nike",
+			"Pyscowicz"
 		]
 	},
 	"wikispeech-sdc": "Wikispeech-puhedatankeräilin",
 	"wikispeech-sdc-desc": "Työkalu puheen äänittämiseen, tarkistamiseen ja annotoimiseen",
-	"right-wikispeech-sdc-record": "Nauhoittaa ääntä",
-	"action-wikispeech-sdc-record": "nauhoittaa ääntä",
+	"right-wikispeech-sdc-record": "Nauhoittaa puhetta",
+	"action-wikispeech-sdc-record": "nauhoittaa puhetta",
 	"recordspeech": "Äänitä puhetta",
 	"wikispeech-sdc-record": "Äänitä",
 	"wikispeech-sdc-save": "Tallenna",
