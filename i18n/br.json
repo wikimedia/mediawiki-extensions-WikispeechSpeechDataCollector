@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adriendelucca"
+		]
+	},
+	"wikispeech-sdc": "Wikispeech Speech Data Collector",
+	"wikispeech-sdc-record": "Enrollañ",
+	"wikispeech-sdc-save": "Enrollañ",
+	"wikispeech-sdc-skip": "Mont e-biou",
+	"wikispeech-sdc-status-ready": "Prest",
+	"wikispeech-sdc-status-listening": "O selaou",
+	"wikispeech-sdc-status-recording": "Oc'h enrollañ"
+}
