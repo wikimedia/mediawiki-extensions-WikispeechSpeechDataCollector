@@ -117,7 +117,7 @@ abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
 		$this->assertThat( $deserialized, $instance->accept( new PersistentEqualsConstraintFactory() ) );
 	}
 
-	public function provideTestSerializationPersistentBuilders() {
+	public static function provideTestSerializationPersistentBuilders() {
 		return [
 			'completeOne' => [
 				[ new PersistentCompleteOneBuilder() ]

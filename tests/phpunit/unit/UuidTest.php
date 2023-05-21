@@ -32,7 +32,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		$this->assertTrue( Uuid::isHex( $uuid ) );
 	}
 
-	public function provideTestIsHex_isHex() {
+	public static function provideTestIsHex_isHex() {
 		return [
 			'validHexWithoutDashes_isHex' => [ '20354d7ae4fe47af8ff6187bca92f3f9' ],
 			'validHexWithDashes_isHex' => [ '20354d7a-e4fe-47af-8ff6-187bca92f3f9' ],
@@ -51,7 +51,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		$this->assertFalse( Uuid::isHex( $uuid ) );
 	}
 
-	public function provideTestIsHex_isNotHex() {
+	public static function provideTestIsHex_isNotHex() {
 		return [
 			'validHexWithDashesInWrongPlace_isNotHex' => [ '20354d-7ae4fe-47af-8ff6-187bca92f3f9' ],
 			'validHexNotUuidTooFewBytes_isNotHex' => [ 'cafe' ],
@@ -74,7 +74,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		$this->assertTrue( Uuid::isBytes( $uuid ) );
 	}
 
-	public function provideTestIsBytes_isBytes() {
+	public static function provideTestIsBytes_isBytes() {
 		return [
 			'validBinaryUuid_isBytes' => [ hex2bin( '20354d7ae4fe47af8ff6187bca92f3f9' ) ],
 			'generated_isBytes' => [ Uuid::v4BytesFactory() ]
@@ -91,7 +91,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		$this->assertFalse( Uuid::isBytes( $uuid ) );
 	}
 
-	public function provideTestIsBytes_isNotBytes() {
+	public static function provideTestIsBytes_isNotBytes() {
 		return [
 			'invalidBinaryUuidTooFewBytes_isNotBytes' =>
 				[ hex2bin( '010203040506070809101112131415' ) ],
@@ -120,7 +120,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		);
 	}
 
-	public function provideTestAsBytes_isSame(): array {
+	public static function provideTestAsBytes_isSame(): array {
 		$validV4BytesUuid = hex2bin( '20354d7ae4fe47af8ff6187bca92f3f9' );
 		return [
 			'null' => [ null, null ],
@@ -142,7 +142,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		);
 	}
 
-	public function provideTestAsHexWithDashes_isSame(): array {
+	public static function provideTestAsHexWithDashes_isSame(): array {
 		$validV4HexUuid = '20354d7a-e4fe-47af-8ff6-187bca92f3f9';
 		return [
 			'null' => [ null, null ],
@@ -164,7 +164,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		);
 	}
 
-	public function provideTestAsHexWithoutDashes_isSame(): array {
+	public static function provideTestAsHexWithoutDashes_isSame(): array {
 		$validV4HexUuid = '20354d7ae4fe47af8ff6187bca92f3f9';
 		return [
 			'null' => [ null, null ],
@@ -201,7 +201,7 @@ class UuidTest extends MediaWikiUnitTestCase {
 		Uuid::asHex( $testedUuid, false );
 	}
 
-	public function provideTestAsHexAsBytes_invalid(): array {
+	public static function provideTestAsHexAsBytes_invalid(): array {
 		return [
 			'hexTooShort' => [ '010203040506070809101112131415' ],
 			'hexTooLong' => [ '0102030405060708091011121314151617' ],
