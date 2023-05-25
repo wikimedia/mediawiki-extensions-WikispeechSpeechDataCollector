@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Buntschann",
-			"もなー(偽物)"
+			"もなー(偽物)",
+			"Shirayuki"
 		]
 	},
 	"wikispeech-sdc-desc": "スピーチの録音、レビュー、注釈ツール。",
-	"right-wikispeech-sdc-record": "スピーチを録音する",
-	"action-wikispeech-sdc-record": "スピーチを録音する",
+	"right-wikispeech-sdc-record": "スピーチを録音",
+	"action-wikispeech-sdc-record": "スピーチの録音",
 	"wikispeech-sdc-save": "保存",
 	"wikispeech-sdc-skip": "スキップ"
 }
