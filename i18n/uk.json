@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
-			"Ice bulldog"
+			"Ice bulldog",
+			"Movses"
 		]
 	},
 	"wikispeech-sdc": "Збірник мовних даних Вікіпедії",
@@ -14,9 +15,9 @@
 	"wikispeech-sdc-save": "Зберегти",
 	"wikispeech-sdc-skip": "Пропустити",
 	"right-wikispeech-sdc-speech-recording": "Редагувати запис промови",
-	"action-wikispeech-sdc-speech-recording": "Редагувати запис промови",
+	"action-wikispeech-sdc-speech-recording": "редагувати запис розмови",
 	"right-wikispeech-sdc-speech-recording-talk": "Обговорити запис промови",
-	"action-wikispeech-sdc-speech-recording-talk": "Обговорити запис промови",
+	"action-wikispeech-sdc-speech-recording-talk": "обговорити запис розмови",
 	"wikispeech-sdc-status-starting": "Початок",
 	"wikispeech-sdc-status-ready": "Готово",
 	"wikispeech-sdc-status-listening": "Слухати",
