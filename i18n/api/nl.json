@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-wikispeech-sdc-crud-summary": "Generieke API voor toegang tot permanente domeinobjecten.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Kan transactie-JSON niet deserialiseren.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Kan de transactie niet deserialiseren.",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "Kan transactie niet uitvoeren.",
+	"apierror-wikispeech-sdc-crud-serialize-response": "Kan het antwoord niet serialiseren.",
+	"apihelp-wikispeech-sdc-crud-example-1": "Maak één nieuw gebruikersverzoek.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Lees een enkel gebruikersverzoek.",
+	"apihelp-wikispeech-sdc-crud-example-3": "Verwijder een enkel gebruikersverzoek."
+}
