@@ -4,9 +4,9 @@
 			"Hamilton Abreu"
 		]
 	},
-	"wikispeech-sdc-desc": "Uma ferramenta para gravar, rever e anotar vozes faladas.",
-	"right-wikispeech-sdc-record": "Gravar voz",
-	"action-wikispeech-sdc-record": "Gravar uma voz",
+	"wikispeech-sdc-desc": "Uma ferramenta para gravar, rever e anotar fala.",
+	"right-wikispeech-sdc-record": "Gravação de fala",
+	"action-wikispeech-sdc-record": "gravação de fala",
 	"recordspeech": "Gravação de fala",
 	"wikispeech-sdc-record": "Iniciar gravação",
 	"wikispeech-sdc-save": "Gravar",
