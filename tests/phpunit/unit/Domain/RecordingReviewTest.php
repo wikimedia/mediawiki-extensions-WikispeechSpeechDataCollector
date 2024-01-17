@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingReview
  * @since 0.1.0
  */
-class RecordingReviewTest extends AbstractPersistentTest {
+class RecordingReviewTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new RecordingReview();

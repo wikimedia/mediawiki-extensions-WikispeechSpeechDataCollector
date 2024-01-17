@@ -25,7 +25,9 @@
 		"MediaWiki\\WikispeechSpeechDataCollector\\": "includes/"
 	},
 	"TestAutoloadNamespaces": {
-		"MediaWiki\\WikispeechSpeechDataCollector\\Tests\\": "tests/phpunit/"
+		"MediaWiki\\WikispeechSpeechDataCollector\\Tests\\": "tests/phpunit/",
+		"MediaWiki\\WikispeechSpeechDataCollector\\Tests\\Integration\\": "tests/phpunit/integration/",
+		"MediaWiki\\WikispeechSpeechDataCollector\\Tests\\Unit\\": "tests/phpunit/unit/"
 	},
 	"SpecialPages": {
 		"RecordSpeech": "MediaWiki\\WikispeechSpeechDataCollector\\Specials\\SpecialRecordSpeech"

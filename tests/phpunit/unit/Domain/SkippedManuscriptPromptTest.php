@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\SkippedManuscriptPrompt
  * @since 0.1.0
  */
-class SkippedManuscriptPromptTest extends AbstractPersistentTest {
+class SkippedManuscriptPromptTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new SkippedManuscriptPrompt();

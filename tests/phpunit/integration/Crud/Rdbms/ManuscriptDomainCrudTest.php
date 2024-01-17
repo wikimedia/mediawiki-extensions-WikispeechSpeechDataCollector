@@ -17,7 +17,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\ManuscriptDomainCrud;
  * @group Database
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\ManuscriptDomainCrud
  */
-class ManuscriptDomainCrudTest extends AbstractRdbmsCrudTest {
+class ManuscriptDomainCrudTest extends AbstractRdbmsCrudTestBase {
 	protected function newCrudInstance(
 		CrudContext $context
 	): AbstractCrud {

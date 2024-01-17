@@ -28,7 +28,7 @@ use Psr\Log\LoggerInterface;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Clud
  * @since 0.1.0
  */
-abstract class AbstractCrudTest extends MediaWikiIntegrationTestCase {
+abstract class AbstractCrudTestBase extends MediaWikiIntegrationTestCase {
 
 	/** @var LoggerInterface */
 	private $logger;

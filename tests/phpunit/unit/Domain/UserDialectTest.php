@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\UserDialect
  * @since 0.1.0
  */
-class UserDialectTest extends AbstractPersistentTest {
+class UserDialectTest extends AbstractPersistentTestBase {
 	protected function instanceFactory(): Persistent {
 		return new UserDialect();
 	}

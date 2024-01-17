@@ -12,12 +12,12 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\AbstractCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\AbstractMcrCrud;
-use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudTest;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudTestBase;
 
 /**
  * @since 0.1.0
  */
-abstract class AbstractMcrCrudTest extends AbstractCrudTest {
+abstract class AbstractMcrCrudTestBase extends AbstractCrudTestBase {
 
 	/** @var CrudContext */
 	private $context;

@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\User;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\User
  * @since 0.1.0
  */
-class UserTest extends AbstractPersistentTest {
+class UserTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new User();

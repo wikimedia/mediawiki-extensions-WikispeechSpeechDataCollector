@@ -29,7 +29,7 @@ use MediaWikiUnitTestCase;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentJsonSerializer
  * @since 0.1.0
  */
-abstract class AbstractPersistentTest extends MediaWikiUnitTestCase {
+abstract class AbstractPersistentTestBase extends MediaWikiUnitTestCase {
 
 	/**
 	 * @return Persistent A new instance of the underlying Persistent class this test covers.

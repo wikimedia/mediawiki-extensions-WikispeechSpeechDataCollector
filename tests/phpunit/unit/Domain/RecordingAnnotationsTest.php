@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\RecordingAnnotations
  * @since 0.1.0
  */
-class RecordingAnnotationsTest extends AbstractPersistentTest {
+class RecordingAnnotationsTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new RecordingAnnotations();

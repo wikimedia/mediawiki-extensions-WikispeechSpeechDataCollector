@@ -12,7 +12,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\AbstractCrud;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\Rdbms\AbstractRdbmsCrud;
-use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudTest;
+use MediaWiki\WikispeechSpeechDataCollector\Tests\Integration\Crud\AbstractCrudTestBase;
 use Wikimedia\TestingAccessWrapper;
 
 /**
@@ -21,7 +21,7 @@ use Wikimedia\TestingAccessWrapper;
  * @since 0.1.0
  * @group Database
  */
-abstract class AbstractRdbmsCrudTest extends AbstractCrudTest {
+abstract class AbstractRdbmsCrudTestBase extends AbstractCrudTestBase {
 
 	/** @var CrudContext */
 	private $context;

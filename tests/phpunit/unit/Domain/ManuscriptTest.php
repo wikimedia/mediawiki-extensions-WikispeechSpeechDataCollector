@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\Manuscript
  * @since 0.1.0
  */
-class ManuscriptTest extends AbstractPersistentTest {
+class ManuscriptTest extends AbstractPersistentTestBase {
 	protected function instanceFactory(): Persistent {
 		return new Manuscript();
 	}

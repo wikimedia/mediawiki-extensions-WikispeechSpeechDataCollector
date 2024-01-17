@@ -21,7 +21,7 @@ use MWException;
  * @since 0.1.0
  * @group Database
  */
-class RecordingAnnotationsMcrCrudTest extends AbstractMcrCrudTest {
+class RecordingAnnotationsMcrCrudTest extends AbstractMcrCrudTestBase {
 	/**
 	 * @todo Need to add identity on Crud::create in the CrudFactory of the CLUD in the test.
 	 * Until then, this test is disabled.

@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\Recording;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\Recording
  * @since 0.1.0
  */
-class RecordingTest extends AbstractPersistentTest {
+class RecordingTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new Recording();

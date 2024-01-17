@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\UserLanguageProficiencyLevel
  * @since 0.1.0
  */
-class UserLanguageProficiencyLevelTest extends AbstractPersistentTest {
+class UserLanguageProficiencyLevelTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new UserLanguageProficiencyLevel();

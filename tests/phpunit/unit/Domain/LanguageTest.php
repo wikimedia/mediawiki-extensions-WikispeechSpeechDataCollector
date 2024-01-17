@@ -16,7 +16,7 @@ use MediaWiki\WikispeechSpeechDataCollector\Domain\PersistentVisitorAdapter;
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Domain\Language
  * @since 0.1.0
  */
-class LanguageTest extends AbstractPersistentTest {
+class LanguageTest extends AbstractPersistentTestBase {
 
 	protected function instanceFactory(): Persistent {
 		return new Language();
