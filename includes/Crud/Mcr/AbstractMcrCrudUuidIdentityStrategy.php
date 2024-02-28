@@ -38,6 +38,7 @@ class AbstractMcrCrudUuidIdentityStrategy implements AbstractMcrCrudIdentityStra
 			// MW 1.36+
 			return MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
 		} else {
+			// @phan-suppress-next-line PhanUndeclaredStaticMethod
 			return WikiPage::factory( $title );
 		}
 	}
