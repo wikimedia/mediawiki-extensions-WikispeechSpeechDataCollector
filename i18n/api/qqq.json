@@ -9,6 +9,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "{{doc-apihelp-summary|wikispeech-sdc-crud}}",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "{{doc-apihelp-param|wikispeech-sdc-crud|transaction}}",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "{{doc-apierror}}",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "{{doc-apierror}}",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "{{doc-apierror}}",
