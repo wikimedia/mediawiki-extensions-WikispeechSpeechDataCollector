@@ -19,6 +19,7 @@ use MWException;
 /**
  * @covers \MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr\RecordingAnnotationsCrud
  * @since 0.1.0
+ * @group Database
  */
 class RecordingAnnotationsMcrCrudTest extends AbstractMcrCrudTest {
 	/**
