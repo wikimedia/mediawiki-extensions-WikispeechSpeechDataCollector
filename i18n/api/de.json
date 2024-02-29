@@ -3,6 +3,7 @@
 		"authors": []
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "Generische API für den Zugriff auf persistente Domänenobjekte.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Die JSON-Daten der Transaktion.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Die JSON-Transaktion konnte nicht deserialisiert werden.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Die Transaktion konnte nicht deserialisiert werden.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Die Transaktion konnte nicht ausgeführt werden.",
