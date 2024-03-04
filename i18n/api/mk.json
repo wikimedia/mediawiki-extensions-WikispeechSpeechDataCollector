@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "Приложник за пристап до објект на општонаменски траен домен",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "JSON-податоци за трансакцијата.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Не успеав да го десеријализирам JSON на трансакцијата.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Не успеав да ја десеријализирам трансакцијата.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Не успеав да ја извршам трансакцијата.",
