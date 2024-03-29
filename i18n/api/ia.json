@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "API de accesso a objectos generic de dominio persistente.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Le datos JSON del traduction.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Non poteva de-serialisar le JSON del transaction.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Non poteva de-serialisar le transaction.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Non poteva executar le transaction.",
