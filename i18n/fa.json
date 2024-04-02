@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Jeeputer",
-			"Reza koulivand"
+			"Reza koulivand",
+			"Ebraminio"
 		]
 	},
-	"wikispeech-sdc": "گردآورنده داده های گفتاری ویکی‌گفتار",
-	"wikispeech-sdc-desc": "ابزاری برای ضبط ، مرور و حاشیه نویسی صداهای گفتاری.",
+	"wikispeech-sdc": "گردآورنده داده‌های گفتاری ویکی‌گفتار",
+	"wikispeech-sdc-desc": "ابزاری برای ضبط، مرور و حاشیه نویسی صداهای گفتاری.",
 	"right-wikispeech-sdc-record": "ضبط صدا",
 	"action-wikispeech-sdc-record": "ضبط صدا",
 	"recordspeech": "ضبط گفتار",
