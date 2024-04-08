@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "存取 API 的通用固定網域對象。",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "處理 JSON 資料。",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "反序列化處置 JSON 失敗。",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "反序列化處置失敗。",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "執行處置失敗。",
