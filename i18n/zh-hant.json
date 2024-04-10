@@ -5,9 +5,9 @@
 		]
 	},
 	"wikispeech-sdc": "Wikispeech 語音資料收集器",
-	"wikispeech-sdc-desc": "用來錄製、審閱和註釋語音的工具。",
-	"right-wikispeech-sdc-record": "錄製聲音",
-	"action-wikispeech-sdc-record": "錄製聲音",
+	"wikispeech-sdc-desc": "用來錄製、審閱和註釋口音的工具。",
+	"right-wikispeech-sdc-record": "錄製口音",
+	"action-wikispeech-sdc-record": "錄製口音",
 	"recordspeech": "錄製發言",
 	"wikispeech-sdc-record": "錄音",
 	"wikispeech-sdc-save": "儲存",
