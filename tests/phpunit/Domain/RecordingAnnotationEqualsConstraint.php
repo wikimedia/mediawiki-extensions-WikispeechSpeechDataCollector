@@ -164,7 +164,7 @@ class RecordingAnnotationEqualsConstraint extends Constraint {
 		$actual
 	) {
 		$this->matchIsSame( 'start', $expected->getStart(), $actual->getStart() );
-		$this->matchIsSame( 'end',	$expected->getEnd(), $actual->getEnd() );
+		$this->matchIsSame( 'end', $expected->getEnd(), $actual->getEnd() );
 		$this->matchIsSame( 'stereotype', $expected->getStereotype(), $actual->getStereotype() );
 		$this->matchIsSame( 'value', $expected->getValue(), $actual->getValue() );
 	}
