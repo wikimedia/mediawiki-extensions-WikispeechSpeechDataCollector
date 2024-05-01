@@ -8,7 +8,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Domain;
  * @license GPL-2.0-or-later
  */
 
-use Exception;
+use LogicException;
 
 /**
  * An adapter pattern with no actual implementations on top of the persistent visitor.
@@ -27,7 +27,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitLanguage(
 		Language $language
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -36,7 +36,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitManuscript(
 		Manuscript $manuscript
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -45,7 +45,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitManuscriptDomain(
 		ManuscriptDomain $manuscriptDomain
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -54,7 +54,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitManuscriptPrompt(
 		ManuscriptPrompt $manuscriptPrompt
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -63,7 +63,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitRecording(
 		Recording $recording
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -72,7 +72,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitRecordingAnnotations(
 		RecordingAnnotations $recordingAnnotations
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -81,7 +81,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitRecordingReview(
 		RecordingReview $recordingReview
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -90,7 +90,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitSkippedManuscriptPrompt(
 		SkippedManuscriptPrompt $skippedManuscriptPrompt
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -99,7 +99,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitUser(
 		User $user
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -108,7 +108,7 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitUserDialect(
 		UserDialect $userDialect
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 
 	/**
@@ -117,6 +117,6 @@ abstract class PersistentVisitorAdapter implements PersistentVisitor {
 	public function visitUserLanguageProficiencyLevel(
 		UserLanguageProficiencyLevel $languageProficiencyLevel
 	) {
-		throw new Exception( 'Not implemented' );
+		throw new LogicException( 'Not implemented' );
 	}
 }
