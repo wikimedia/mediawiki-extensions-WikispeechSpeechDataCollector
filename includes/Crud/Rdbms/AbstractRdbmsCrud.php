@@ -117,7 +117,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		Persistent $instance
 	): void {
 		$set = $this->serializeFields( $instance );
-		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update( $this->getTable(), $set, [
 			$this->getIdentityColumn() => $instance->getIdentity()
 		] );
@@ -133,7 +133,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	public function delete(
 		$identity
 	): void {
-		$dbw = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_PRIMARY );
+		$dbw = $this->getContext()->getDbLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->delete( $this->getTable(), [
 			$this->getIdentityColumn() => $identity
 		] );
@@ -165,7 +165,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		array $conditions,
 		Persistent $instance
 	): bool {
-		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
+		$dbr = $this->getContext()->getDbLoadBalancer()->getConnection( DB_REPLICA );
 		$row = $dbr->selectRow( $this->getTable(), $this->getAllColumns(), $conditions );
 		if ( !$row ) {
 			return false;
@@ -184,7 +184,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 	public function listByConditions(
 		array $conditions
 	): ?array {
-		$dbr = $this->getContext()->getDbLoadBalancer()->getConnectionRef( DB_REPLICA );
+		$dbr = $this->getContext()->getDbLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
 		$instances = [];
 		foreach ( $res as $row ) {
