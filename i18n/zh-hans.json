@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ZhuofanWu"
+			"ZhuofanWu",
+			"沈澄心"
 		]
 	},
 	"wikispeech-sdc-save": "保存",
-	"wikispeech-sdc-skip": "跳过"
+	"wikispeech-sdc-skip": "跳过",
+	"wikispeech-sdc-status-ready": "就绪"
 }
