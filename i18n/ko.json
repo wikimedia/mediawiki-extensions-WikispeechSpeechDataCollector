@@ -1,12 +1,23 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Suleiman the Magnificent Television"
 		]
 	},
-	"right-wikispeech-sdc-record": "목소리 녹음",
+	"wikispeech-sdc-desc": "음성 녹음, 검토 및 주석을 위한 도구.",
+	"right-wikispeech-sdc-record": "음성 녹음하기",
 	"action-wikispeech-sdc-record": "음성을 녹음할",
+	"recordspeech": "음성 녹음하기",
 	"wikispeech-sdc-record": "녹음",
 	"wikispeech-sdc-save": "저장",
-	"wikispeech-sdc-skip": "건너뛰기"
+	"wikispeech-sdc-skip": "건너뛰기",
+	"right-wikispeech-sdc-speech-recording": "음성 녹음을 편집하기",
+	"action-wikispeech-sdc-speech-recording": "음성 녹음을 편집할",
+	"right-wikispeech-sdc-speech-recording-talk": "음성 녹음에 대해 논의하기",
+	"action-wikispeech-sdc-speech-recording-talk": "음성 녹음을 논의할",
+	"wikispeech-sdc-status-starting": "시작 중",
+	"wikispeech-sdc-status-ready": "준비됨",
+	"wikispeech-sdc-status-listening": "청취 중",
+	"wikispeech-sdc-status-recording": "녹음 중"
 }
