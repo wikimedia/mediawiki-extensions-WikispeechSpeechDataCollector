@@ -120,7 +120,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		$dbw = $this->getContext()->getDbLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->update( $this->getTable(), $set, [
 			$this->getIdentityColumn() => $instance->getIdentity()
-		] );
+		], __METHOD__ );
 	}
 
 	/**
@@ -136,7 +136,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		$dbw = $this->getContext()->getDbLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->delete( $this->getTable(), [
 			$this->getIdentityColumn() => $identity
-		] );
+		], __METHOD__ );
 	}
 
 	/**
@@ -166,7 +166,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		Persistent $instance
 	): bool {
 		$dbr = $this->getContext()->getDbLoadBalancer()->getConnection( DB_REPLICA );
-		$row = $dbr->selectRow( $this->getTable(), $this->getAllColumns(), $conditions );
+		$row = $dbr->selectRow( $this->getTable(), $this->getAllColumns(), $conditions, __METHOD__ );
 		if ( !$row ) {
 			return false;
 		}
@@ -185,7 +185,7 @@ abstract class AbstractRdbmsCrud extends AbstractCrud {
 		array $conditions
 	): ?array {
 		$dbr = $this->getContext()->getDbLoadBalancer()->getConnection( DB_REPLICA );
-		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions );
+		$res = $dbr->select( $this->getTable(), $this->getAllColumns(), $conditions, __METHOD__ );
 		$instances = [];
 		foreach ( $res as $row ) {
 			$rowArray = (array)$row;

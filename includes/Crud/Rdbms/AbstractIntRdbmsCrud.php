@@ -34,7 +34,7 @@ abstract class AbstractIntRdbmsCrud extends AbstractRdbmsCrud {
 		}
 		$rows = $this->serializeFields( $instance );
 		$dbw = $this->getContext()->getDbLoadBalancer()->getConnection( DB_PRIMARY );
-		$dbw->insert( $this->getTable(), $rows );
+		$dbw->insert( $this->getTable(), $rows, __METHOD__ );
 		$instance->setIdentity( $dbw->insertId() );
 	}
 
