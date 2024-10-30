@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Mahabarata"
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "API générique d’accès à l’objet domaine persistant",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Les données JSON de la transaction.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Échec de désérialisation du JSON de la transaction.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Échec de désérialisation de la transaction.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Échec d’exécution de la transaction.",
