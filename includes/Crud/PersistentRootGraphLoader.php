@@ -53,7 +53,7 @@ class PersistentRootGraphLoader implements PersistentVisitor {
 	 */
 	public function __construct(
 		CrudContext $context,
-		PersistentSet $loadedInstances = null
+		?PersistentSet $loadedInstances = null
 	) {
 		$this->context = $context;
 		$this->loadedInstances = $loadedInstances ?? new PersistentSet();
