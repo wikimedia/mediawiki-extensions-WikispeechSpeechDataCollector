@@ -5,9 +5,9 @@
 			"Meno25"
 		]
 	},
-	"wikispeech-sdc-desc": "أداة لتسجيل ومراجعة والتعليق على الأصوات المنطوقة.",
-	"right-wikispeech-sdc-record": "سجل صوت",
-	"action-wikispeech-sdc-record": "سجل صوت",
+	"wikispeech-sdc-desc": "أداة لتسجيل الكلام ومراجعته والتعليق عليه.",
+	"right-wikispeech-sdc-record": "تسجيل الكلام",
+	"action-wikispeech-sdc-record": "تسجيل الكلام",
 	"recordspeech": "سجل الكلام",
 	"wikispeech-sdc-record": "سجل",
 	"wikispeech-sdc-save": "حفظ",
