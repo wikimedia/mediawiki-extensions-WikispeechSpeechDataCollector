@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anna-Maria Jerdak (WMSE)"
+		]
+	},
+	"apihelp-wikispeech-sdc-crud-summary": "Generiskt API för beständig domänobjektåtkomst.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Transaktionsdata från JSON.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Misslyckades med att deseralisera transaktionen JSON.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Det gick inte att deserialisera transaktionen.",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "Det gick inte att utföra transaktionen.",
+	"apierror-wikispeech-sdc-crud-serialize-response": "Det gick inte att serialisera svaret.",
+	"apihelp-wikispeech-sdc-crud-example-1": "Skapa en ny användarförfrågan.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Läs en användarförfrågan.",
+	"apihelp-wikispeech-sdc-crud-example-3": "Radera en användarförfrågan."
+}

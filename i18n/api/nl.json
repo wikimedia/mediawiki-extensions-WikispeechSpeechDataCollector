@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "Generieke API voor toegang tot permanente domeinobjecten.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "De JSON-gegevens van de transactie.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Kan transactie-JSON niet deserialiseren.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Kan de transactie niet deserialiseren.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Kan transactie niet uitvoeren.",
