@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cabal"
+		]
+	},
+	"wikispeech-sdc-save": "ਸਾਂਭੋ",
+	"wikispeech-sdc-skip": "ਛੱਡੋ",
+	"wikispeech-sdc-status-starting": "ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ",
+	"wikispeech-sdc-status-ready": "ਤਿਆਰ ਹੈ",
+	"wikispeech-sdc-status-listening": "ਸੁਣ ਰਿਹਾ ਹੈ"
+}
