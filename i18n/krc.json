@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Къарачайлы"
+		]
+	},
+	"wikispeech-sdc": "Викисёлешиу Сёлешиу Билгини Джыйыучусу",
+	"wikispeech-sdc-desc": "Сёлешиу джаздырыуну, къарау эмда оюм къоюууну адыры.",
+	"right-wikispeech-sdc-record": "Сёлешиуню джаздырыу",
+	"action-wikispeech-sdc-record": "сёлешиуню джаздырыу",
+	"recordspeech": "Сёлешиуню джаздырыу",
+	"wikispeech-sdc-record": "Джаздырыу",
+	"wikispeech-sdc-save": "Сакъландыр",
+	"wikispeech-sdc-skip": "Атлат",
+	"right-wikispeech-sdc-speech-recording": "Сёлешиуню джаздырыуун тюзет",
+	"action-wikispeech-sdc-speech-recording": "сёлешиуню джаздырыуун тюзет",
+	"right-wikispeech-sdc-speech-recording-talk": "Сёлешиуню джаздырыуун сюз",
+	"action-wikispeech-sdc-speech-recording-talk": "сёлешиуню джаздырыуун сюз",
+	"wikispeech-sdc-status-starting": "Башлатылады",
+	"wikispeech-sdc-status-ready": "Хазыр",
+	"wikispeech-sdc-status-listening": "Тынгыланады",
+	"wikispeech-sdc-status-recording": "Джаздырылады"
+}
