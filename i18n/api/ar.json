@@ -5,6 +5,7 @@
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "واجهة برمجة تطبيقات الوصول إلى كائن المجال الدائم العام.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "بيانات المعاملة JSON.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "فشل إلغاء تسلسل المعاملة JSON.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "فشل إلغاء تسلسل المعاملة.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "فشل تنفيذ المعاملة.",
