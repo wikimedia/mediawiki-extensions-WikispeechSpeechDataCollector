@@ -44,7 +44,6 @@ abstract class AbstractRdbmsCrudTestBase extends AbstractCrudTestBase {
 			null
 		);
 		$crudWrapper = TestingAccessWrapper::newFromObject( $this->newCrudInstance( $this->context ) );
-		$this->tablesUsed[] = $crudWrapper->getTable();
 	}
 
 }
