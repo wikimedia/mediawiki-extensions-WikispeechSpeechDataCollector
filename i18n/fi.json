@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Samoasambia"
 		]
 	},
 	"wikispeech-sdc": "Wikispeech-puhedatankeräilin",
-	"wikispeech-sdc-desc": "Työkalu puheen äänittämiseen, tarkistamiseen ja annotoimiseen",
+	"wikispeech-sdc-desc": "Työkalu puheen äänittämiseen, tarkistamiseen ja annotoimiseen.",
 	"right-wikispeech-sdc-record": "Nauhoittaa puhetta",
 	"action-wikispeech-sdc-record": "nauhoittaa puhetta",
 	"recordspeech": "Äänitä puhetta",
