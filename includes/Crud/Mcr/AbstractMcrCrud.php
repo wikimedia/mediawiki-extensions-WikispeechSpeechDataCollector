@@ -134,8 +134,13 @@ abstract class AbstractMcrCrud extends AbstractCrud {
 			return false;
 		}
 		/** @var $revisionRecord RevisionRecord|bool */
-		$revisionRecord = $this->getContext()->getRevisionStore()->getKnownCurrentRevision(
-			$page->getTitle() );
+		$revisionStore = $this->getContext()->getRevisionStore();
+		if ( method_exists( $revisionStore, 'getKnownLatestRevision' ) ) {
+			// MW 1.46+
+			$revisionRecord = $revisionStore->getKnownLatestRevision( $page->getTitle() );
+		} else {
+			$revisionRecord = $revisionStore->getKnownCurrentRevision( $page->getTitle() );
+		}
 		if ( $revisionRecord === false ) {
 			throw new ExternalStoreException(
 				'The page ' . $page->getTitle() . ' exists, but there is no revision record!'
