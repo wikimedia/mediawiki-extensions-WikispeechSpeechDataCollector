@@ -10,10 +10,10 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Crud\Mcr;
 
 use JsonContent;
 use MediaWiki\MediaWikiServices;
+use Mediawiki\Title\Title;
 use MediaWiki\WikispeechSpeechDataCollector\Crud\CrudContext;
 use MediaWiki\WikispeechSpeechDataCollector\Domain\Persistent;
 use MediaWiki\WikispeechSpeechDataCollector\Uuid;
-use Title;
 use WikiPage;
 
 /**

@@ -8,7 +8,7 @@ namespace MediaWiki\WikispeechSpeechDataCollector\Specials;
  * @license GPL-2.0-or-later
  */
 
-use Html;
+use MediaWiki\Html\Html;
 use OOUI\ButtonWidget;
 use OOUI\FieldLayout;
 use OOUI\FieldsetLayout;

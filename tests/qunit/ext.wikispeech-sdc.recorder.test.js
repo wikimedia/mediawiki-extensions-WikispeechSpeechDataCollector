@@ -1,7 +1,7 @@
 ( function () {
 	QUnit.module( 'ext.wikispeech-sdc.recorder', QUnit.newMwEnvironment( {
 		beforeEach: function () {
-			var Recorder = require( '../../modules/ext.wikispeech-sdc.recorder.js' );
+			const Recorder = require( '../../modules/ext.wikispeech-sdc.recorder.js' );
 			this.recorder = new Recorder();
 			this.recorder.linguaRecorder = { start: sinon.stub() };
 			this.recorder.recordButton = { setDisabled: sinon.stub() };
@@ -10,7 +10,7 @@
 	} ) );
 
 	QUnit.test( 'startRecording()', function () {
-		var clock = this.sandbox.useFakeTimers();
+		const clock = this.sandbox.useFakeTimers();
 		this.recorder.startRecording();
 		clock.tick( 500 );
 
@@ -35,7 +35,7 @@
 	} );
 
 	QUnit.test( 'finishRecording()', function () {
-		var recording = { getObjectURL: sinon.stub().returns( 'audio url' ) };
+		const recording = { getObjectURL: sinon.stub().returns( 'audio url' ) };
 		this.recorder.$previewPlayer = { attr: sinon.stub() };
 
 		this.recorder.finishRecording( recording );

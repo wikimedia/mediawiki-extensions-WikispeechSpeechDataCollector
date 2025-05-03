@@ -31,12 +31,12 @@
 	 * @memberof Recorder
 	 */
 	Recorder.prototype.startRecording = function () {
-		var self = this;
+		const self = this;
 		this.recordButton.setDisabled( true );
 		// Wait a short moment before starting to listen to not pick
 		// up click from mouse or keyboard.
 		window.setTimeout(
-			function () {
+			() => {
 				self.linguaRecorder.start();
 			},
 			500

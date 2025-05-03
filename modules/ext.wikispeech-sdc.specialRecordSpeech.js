@@ -3,7 +3,7 @@
 	 * Add functionality to Special:RecordSpeech.
 	 */
 
-	var Recorder, $content, recordButton, recordStatusLabel, $previewPlayer,
+	let Recorder, $content, recordButton, recordStatusLabel, $previewPlayer,
 		linguaRecorder, recorder;
 
 	Recorder = require( './ext.wikispeech-sdc.recorder.js' );
@@ -29,14 +29,14 @@
 		$previewPlayer
 	);
 	recordButton.on( 'click', recorder.startRecording.bind( recorder ) );
-	linguaRecorder.on( 'listening', function () {
+	linguaRecorder.on( 'listening', () => {
 		recorder.setStatus( 'wikispeech-sdc-status-listening' );
 	} );
-	linguaRecorder.on( 'started', function () {
+	linguaRecorder.on( 'started', () => {
 		recorder.setStatus( 'wikispeech-sdc-status-recording' );
 	} );
 	linguaRecorder.on( 'stoped', recorder.finishRecording.bind( recorder ) );
-	linguaRecorder.on( 'ready', function () {
+	linguaRecorder.on( 'ready', () => {
 		recorder.recordButton.setDisabled( false );
 		recorder.setStatus( 'wikispeech-sdc-status-ready' );
 	} );
