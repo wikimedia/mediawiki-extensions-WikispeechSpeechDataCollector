@@ -93,6 +93,7 @@ abstract class AbstractMcrCrud extends AbstractCrud {
 	/**
 	 * @inheritDoc
 	 * @since 0.10.
+	 * @throws ExternalStoreException
 	 */
 	public function create( Persistent $instance ): void {
 		$page = $this->getIdentityStrategy()->getWikiPage(

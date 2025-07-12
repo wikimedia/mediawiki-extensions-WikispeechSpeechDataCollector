@@ -51,7 +51,7 @@ class SpecialRecordSpeech extends SpecialPage {
 			'ext.wikispeech-sdc.specialRecordSpeech'
 		] );
 		$out->enableOOUI();
-		$out->setPageTitle( $this->msg( 'recordspeech' ) );
+		$out->setPageTitle( $this->msg( 'recordspeech' )->text() );
 		$this->addElements();
 	}
 
