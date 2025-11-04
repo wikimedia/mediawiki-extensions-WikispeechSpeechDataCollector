@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"apihelp-wikispeech-sdc-crud-summary": "API xenérica de acceso a obxectos de dominio persistente.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Os datos JSON da transacción.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Produciuse un erro ao deserializar o JSON da transacción.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Non se puido deserializar a transacción.",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "Non se puido executar a transacción.",
+	"apierror-wikispeech-sdc-crud-serialize-response": "Non se puido serializar a resposta.",
+	"apihelp-wikispeech-sdc-crud-example-1": "Crear unha única solicitude de usuario novo.",
+	"apihelp-wikispeech-sdc-crud-example-2": "Ler unha única solicitude de usuario.",
+	"apihelp-wikispeech-sdc-crud-example-3": "Eliminar unha única solicitude de usuario."
+}

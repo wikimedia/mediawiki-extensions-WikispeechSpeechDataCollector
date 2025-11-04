@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"wikispeech-sdc": "Colector de datos de voz de Wikispeech",
+	"wikispeech-sdc-desc": "Unha ferramenta para gravar, revisar e anotar discursos.",
+	"right-wikispeech-sdc-record": "Gravar discursos",
+	"action-wikispeech-sdc-record": "gravar o discurso",
+	"recordspeech": "Gravar discursos",
+	"wikispeech-sdc-record": "Gravar",
+	"wikispeech-sdc-save": "Gardar",
+	"wikispeech-sdc-skip": "Omitir",
+	"right-wikispeech-sdc-speech-recording": "Editar gravacións de voz",
+	"action-wikispeech-sdc-speech-recording": "editar a gravación de voz",
+	"right-wikispeech-sdc-speech-recording-talk": "Conversar sobre gravacións de voz",
+	"action-wikispeech-sdc-speech-recording-talk": "conversar sobre a gravación de voz",
+	"wikispeech-sdc-status-starting": "Iniciando",
+	"wikispeech-sdc-status-ready": "Listo",
+	"wikispeech-sdc-status-listening": "Escoitando",
+	"wikispeech-sdc-status-recording": "Gravando"
+}
