@@ -1,19 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseph"
+			"Joseph",
+			"SaldırganSincap"
 		]
 	},
 	"wikispeech-sdc": "Vikisöylev Konuşma Veri Toplayıcısı",
-	"wikispeech-sdc-desc": "Konuşma seslerini kaydetmek, gözden geçirmek ve not eklemek için bir araç.",
-	"right-wikispeech-sdc-record": "Ses kaydet",
-	"action-wikispeech-sdc-record": "Ses kaydetmeye",
+	"wikispeech-sdc-desc": "Konuşmayı kaydetmek, incelemek ve not almak için bir araç.",
+	"right-wikispeech-sdc-record": "Konuşmayı kaydet",
+	"action-wikispeech-sdc-record": "konuşmayı kaydetme",
 	"recordspeech": "Konuşma kaydı",
 	"wikispeech-sdc-record": "Kayıt",
 	"wikispeech-sdc-save": "Kaydet",
 	"wikispeech-sdc-skip": "Atla",
 	"right-wikispeech-sdc-speech-recording": "Konuşma kaydını düzenle",
-	"action-wikispeech-sdc-speech-recording": "konuşma kaydını düzenlemeye",
+	"action-wikispeech-sdc-speech-recording": "konuşma kaydını değiştirmeye",
 	"right-wikispeech-sdc-speech-recording-talk": "Konuşma kaydını tartış",
 	"action-wikispeech-sdc-speech-recording-talk": "konuşma kaydını tartışmaya",
 	"wikispeech-sdc-status-starting": "Başlatılıyor",
