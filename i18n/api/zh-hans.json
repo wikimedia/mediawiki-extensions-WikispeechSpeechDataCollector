@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anterdc99"
+		]
+	},
+	"apihelp-wikispeech-sdc-crud-param-transaction": "处理事务JSON数据。",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "反序列化事务JSON失败。",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "反序列化事务失败。",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "执行事务失败。",
+	"apierror-wikispeech-sdc-crud-serialize-response": "序列化相应失败。",
+	"apihelp-wikispeech-sdc-crud-example-1": "创建新的单一用户请求。",
+	"apihelp-wikispeech-sdc-crud-example-2": "读取单一用户请求。",
+	"apihelp-wikispeech-sdc-crud-example-3": "删除单一用户请求。"
+}
