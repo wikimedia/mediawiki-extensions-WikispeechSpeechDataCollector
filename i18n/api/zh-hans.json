@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Anterdc99"
+			"Anterdc99",
+			"Peterxy12"
 		]
 	},
+	"apihelp-wikispeech-sdc-crud-summary": "访问API的通用固定域名对象。",
 	"apihelp-wikispeech-sdc-crud-param-transaction": "处理事务JSON数据。",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "反序列化事务JSON失败。",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "反序列化事务失败。",
