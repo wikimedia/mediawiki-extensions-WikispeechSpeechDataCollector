@@ -2,10 +2,23 @@
 	"@metadata": {
 		"authors": [
 			"ZhuofanWu",
-			"沈澄心"
+			"沈澄心",
+			"Peterxy12"
 		]
 	},
+	"wikispeech-sdc-desc": "用来录制、审阅和注释口音的工具。",
+	"right-wikispeech-sdc-record": "录制口音",
+	"action-wikispeech-sdc-record": "录制口音",
+	"recordspeech": "录制发言",
+	"wikispeech-sdc-record": "录音",
 	"wikispeech-sdc-save": "保存",
 	"wikispeech-sdc-skip": "跳过",
-	"wikispeech-sdc-status-ready": "就绪"
+	"right-wikispeech-sdc-speech-recording": "编辑发声录音",
+	"action-wikispeech-sdc-speech-recording": "编辑发声录音",
+	"right-wikispeech-sdc-speech-recording-talk": "讨论发声录音",
+	"action-wikispeech-sdc-speech-recording-talk": "讨论发声录音",
+	"wikispeech-sdc-status-starting": "正在开始",
+	"wikispeech-sdc-status-ready": "就绪",
+	"wikispeech-sdc-status-listening": "正在聆听",
+	"wikispeech-sdc-status-recording": "录音中"
 }
