@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"wikispeech-sdc": "ويکي‌وينا د وينا اومتوکو راټولوونکی",
+	"wikispeech-sdc-desc": "د خبرو د ثبت، بياکتنې او تشريح کولو اوزار.",
+	"right-wikispeech-sdc-record": "وينا ثبتول",
+	"action-wikispeech-sdc-record": "وينا ثبتول",
+	"recordspeech": "وينا ثبتول",
+	"wikispeech-sdc-record": "غږثبتول",
+	"wikispeech-sdc-save": "خوندي‌:ول",
+	"wikispeech-sdc-skip": "تېرېدل",
+	"right-wikispeech-sdc-speech-recording": "وينا ثبت سمول",
+	"action-wikispeech-sdc-speech-recording": "وينا ثبت سمول",
+	"right-wikispeech-sdc-speech-recording-talk": "د وينا ثبتولو په اړه شننه کول",
+	"action-wikispeech-sdc-speech-recording-talk": "د وينا ثبتولو په اړه شننه کول",
+	"wikispeech-sdc-status-starting": "پيل",
+	"wikispeech-sdc-status-ready": "چمتو",
+	"wikispeech-sdc-status-listening": "اورېدل",
+	"wikispeech-sdc-status-recording": "ثبتول"
+}
