@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
-	"wikispeech-sdc-save": "Vuorkkii"
+	"wikispeech-sdc-save": "Vuorkkii",
+	"wikispeech-sdc-skip": "Njuškii paijeel"
 }
