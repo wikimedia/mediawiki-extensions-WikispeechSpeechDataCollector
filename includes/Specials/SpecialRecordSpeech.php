@@ -134,14 +134,14 @@ class SpecialRecordSpeech extends SpecialPage {
 		);
 
 		$this->getOutput()->addHTML(
-			new FieldsetLayout( [
+			strval( new FieldsetLayout( [
 				'items' => [
 					$promptField,
 					$recordField,
 					$previewPlayer,
 					$actionButtons
 				]
-			] )
+			] ) )
 		);
 	}
 }
