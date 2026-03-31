@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
-	"apihelp-wikispeech-sdc-crud-summary": "Priložnik za generički postojani pristup objektu domene.",
+	"apihelp-wikispeech-sdc-crud-summary": "API za generički postojani pristup objektu domene.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Deserijalizacija transakcije JSON nije uspjela.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Deserijalizacija transakcije nije uspjela.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Izvršenje transakcije nije uspjelo.",
