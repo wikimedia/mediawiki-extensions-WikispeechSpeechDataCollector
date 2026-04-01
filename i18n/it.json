@@ -7,8 +7,13 @@
 	},
 	"right-wikispeech-sdc-record": "Registra discorso",
 	"action-wikispeech-sdc-record": "registrare il discorso",
+	"recordspeech": "Registra discorso",
 	"wikispeech-sdc-record": "Registra",
 	"wikispeech-sdc-save": "Salva",
 	"wikispeech-sdc-skip": "Salta",
-	"wikispeech-sdc-status-ready": "Pronto"
+	"right-wikispeech-sdc-speech-recording": "Modifica registrazione del discorso",
+	"action-wikispeech-sdc-speech-recording": "modificare la registrazione del discorso",
+	"wikispeech-sdc-status-ready": "Pronto",
+	"wikispeech-sdc-status-listening": "Ascolto",
+	"wikispeech-sdc-status-recording": "Registrazione"
 }
