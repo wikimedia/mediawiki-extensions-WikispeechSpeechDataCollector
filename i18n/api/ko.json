@@ -1,11 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
+	"apihelp-wikispeech-sdc-crud-summary": "일반적인 영구 도메인 객체 접근 API입니다.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "트랜잭션 JSON 데이터입니다.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "트랜잭션 JSON 역직렬화를 실패했습니다.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "트랜잭션 역직렬화를 실패했습니다.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "트랜잭션 실행을 실패했습니다.",
 	"apierror-wikispeech-sdc-crud-serialize-response": "응답 직렬화를 실패했습니다.",
+	"apihelp-wikispeech-sdc-crud-example-1": "단일 사용자 요청을 생성합니다.",
 	"apihelp-wikispeech-sdc-crud-example-2": "단일 사용자 요청을 읽습니다.",
 	"apihelp-wikispeech-sdc-crud-example-3": "단일 사용자 요청을 삭제합니다."
 }
