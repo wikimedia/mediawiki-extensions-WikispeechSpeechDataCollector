@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
-			"Ice bulldog"
+			"Ice bulldog",
+			"Movses"
 		]
 	},
 	"apihelp-wikispeech-sdc-crud-summary": "Загальний API постійного доступу до об'єктів домену.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Дані транзакції у форматі JSON.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Не вдалося десеріалізувати транзакцію JSON.",
 	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Не вдалося десеріалізувати транзакцію.",
 	"apierror-wikispeech-sdc-crud-execute-transaction": "Не вдалося виконати транзакцію.",
