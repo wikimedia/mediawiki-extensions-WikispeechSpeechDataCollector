@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maddi Eseberri Colomo"
+		]
+	},
+	"right-wikispeech-sdc-record": "Hitzaldia grabatu",
+	"action-wikispeech-sdc-record": "hitzaldia grabatu",
+	"recordspeech": "Hitzaldia grabatu",
+	"wikispeech-sdc-record": "Grabatu",
+	"wikispeech-sdc-save": "Gorde",
+	"wikispeech-sdc-skip": "Utzi",
+	"wikispeech-sdc-status-ready": "Prest"
+}
