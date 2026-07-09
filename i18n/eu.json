@@ -4,11 +4,19 @@
 			"Maddi Eseberri Colomo"
 		]
 	},
+	"wikispeech-sdc-desc": "Hizketa grabatzeko, berrikusteko eta oharrak idazteko tresna.",
 	"right-wikispeech-sdc-record": "Hitzaldia grabatu",
 	"action-wikispeech-sdc-record": "hitzaldia grabatu",
 	"recordspeech": "Hitzaldia grabatu",
 	"wikispeech-sdc-record": "Grabatu",
 	"wikispeech-sdc-save": "Gorde",
 	"wikispeech-sdc-skip": "Utzi",
-	"wikispeech-sdc-status-ready": "Prest"
+	"right-wikispeech-sdc-speech-recording": "Editatu ahots-grabazioa",
+	"action-wikispeech-sdc-speech-recording": "editatu ahots-grabazioa",
+	"right-wikispeech-sdc-speech-recording-talk": "Ahots-grabazioari buruzko eztabaida",
+	"action-wikispeech-sdc-speech-recording-talk": "ahots-grabazioari buruzko eztabaida",
+	"wikispeech-sdc-status-starting": "Abiatzen...",
+	"wikispeech-sdc-status-ready": "Prest",
+	"wikispeech-sdc-status-listening": "Entzuten",
+	"wikispeech-sdc-status-recording": "Grabatzen"
 }
