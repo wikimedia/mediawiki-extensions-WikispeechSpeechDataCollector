@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maddi Eseberri Colomo"
+		]
+	},
+	"apihelp-wikispeech-sdc-crud-summary": "Domeinu objektu iraunkor generikoetarako sarbide APIa.",
+	"apihelp-wikispeech-sdc-crud-param-transaction": "Transakzioaren JSON datuak.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction-json": "Huts egin du JSON transakzioa deserializatzean.",
+	"apierror-wikispeech-sdc-crud-deserialize-transaction": "Huts egin du transakzioa deserializatzean.",
+	"apierror-wikispeech-sdc-crud-execute-transaction": "Huts egin du transakzioa exekutatzean.",
+	"apierror-wikispeech-sdc-crud-serialize-response": "Huts egin du erantzuna serializatzean.",
+	"apihelp-wikispeech-sdc-crud-example-1": "Erabiltzaile-eskaera berri bat sortu",
+	"apihelp-wikispeech-sdc-crud-example-2": "Irakurri erabiltzaile-eskaera bat",
+	"apihelp-wikispeech-sdc-crud-example-3": "Ezabatu erabiltzaile-eskaera jakin bat."
+}
